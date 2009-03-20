@@ -1,0 +1,646 @@
+% $Header: /cvsroot/latex-beamer/latex-beamer/solutions/conference-talks/conference-ornate-20min.en.tex,v 1.7 2007/01/28 20:48:23 tantau Exp $
+
+\documentclass[17pt]{beamer}
+
+% This file is a solution template for:
+
+% - Talk at a conference/colloquium.
+% - Talk length is about 20min.
+% - Style is ornate.
+
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+
+\mode<presentation>
+{
+  \usetheme{Pittsburgh}
+  \usecolortheme[rgb={0,0,0.6}]{structure}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title[CtFwS] % (optional, use only with long paper titles)
+{Capture The Flag With Stuff}
+
+\subtitle
+{Rules Presentation}
+
+\author[KGB] % (optional, use only with lots of authors)
+{KGB}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[Carnegie Mellon University] % (optional, but mostly needed)
+{
+%  \inst{1}%
+%  Department of Computer Science\\
+%  University of Somewhere
+%  \and
+%  \inst{2}%
+%  Department of Theoretical Philosophy\\
+% University of Elsewhere
+}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[Spring 2009] % (optional, should be abbreviation of conference name)
+{Spring 2009}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+%\subject{Theoretical Computer Science}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+% Set up colors
+\newcommand{\R}{\textcolor[HTML]{C00000}}
+\newcommand{\G}{\textcolor[HTML]{008000}}
+\newcommand{\B}{\textcolor[HTML]{0000C0}}
+\newcommand{\subitem}[1]{\begin{itemize} \item #1 \end{itemize}}
+
+\newcommand{\pair}[2]{\begin{tabular}{c} #1 \\ #2 \end{tabular}}
+
+\newcommand{\sep}{ $^\odot$ }
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+% Structuring a talk is a difficult task and the following structure
+% may not be suitable. Here are some rules that apply for this
+% solution: 
+
+% - Exactly two or three sections (other than the summary).
+% - At *most* three subsections per section.
+% - Talk about 30s to 2min per frame. So there should be between about
+%   15 and 30 frames, all told.
+
+% - A conference audience is likely to know very little of what you
+%   are going to talk about. So *simplify*!
+% - In a 20min talk, getting the main ideas across is hard
+%   enough. Leave out details, even if it means being less precise than
+%   you think necessary.
+% - If you omit details that are vital to the proof/implementation,
+%   just say so once. Everybody will be happy with that.
+
+\section{Preview}
+
+\subsection{You won't understand yet}
+
+\begin{frame}{Base Rules}{Preview}
+  \begin{itemize}
+  \item Capture the Flag
+  \item Teams
+    \begin{itemize}
+    \item Red/Yellow
+    \item Doherty/Wean
+    \end{itemize}
+ \item Capture
+ \item Don't be a jackass
+ \item Setup
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Stuff}{Preview}
+  \small
+  \begin{tabular}{|@{}l@{}||@{}c@{}|@{}c@{}|@{}c@{}|}
+  \hline
+          & \R{Red} & \G{Green} & \B{Blue} \\
+  \hline
+  \hline
+     Wand & \pair{\R{Vengeance}}{"toast"}
+          & \pair{\G{Stun}}{stun target}
+          & \pair{\B{Dispel}}{remove magic} \\
+  \hline
+     Belt & \pair{\R{Warhol}}{mass stun}
+          & \pair{\G{Goombah}}{immune}
+          & \pair{\B{Doc Ock}}{lots of captives} \\
+  \hline
+     Potion & \pair{\R{Ninja}}{mass stun}
+            & \pair{\G{Key}}{free}
+            & \pair{\B{Light Grenade}}{dumb stun} \\
+  \hline
+  \end{tabular}
+
+  \subitem{Flags}
+\end{frame}
+
+\begin{frame}{Stuff}{Preview}
+  \begin{itemize}
+  \item Glyphs
+    {\small
+    \hspace{1in} \begin{tabular}{|c||c|c|}
+    \hline
+    Entrancement & Gotcha & Stunned \\
+    \hline
+    Alarm & Alarm & Be loud \\
+    \hline
+    Jail & Jail & Jail \\
+    \hline
+    \pair{Disgusting}{Doorknob} & Yukko & Can't open door \\
+    \hline
+    \end{tabular}}
+  \item Jailor
+    \begin{itemize}
+    \item Fedora
+    \item Truth Serum
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{View}
+
+\subsection{Things should start to click}
+
+\begin{frame}{Teams and Territories}{Base Rules}
+  \begin{itemize}
+  \item Teams
+    \begin{itemize}
+    \item Red/yellow armbands
+    \item Judges: Blue armbands/berets
+    \end{itemize}
+  \item Territory
+    \begin{itemize}
+    \item Doherty
+    \item Wean
+    \item Forbidden
+    \item Neutral
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pre-/Post-Conditions}{Base Rules}
+  \begin{itemize}
+  \item Fifteen minutes of setup
+    \begin{itemize}
+    \item Flag/glyph placement
+    \item Stuff distribution
+    \item Can't enter enemy territory
+    \end{itemize}
+  \item Game ends
+    \begin{itemize}
+    \item After one hour
+    \item All flags captured
+    \item Winner by points ($\approx$ flags)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Useful Terms}{Base Rules}
+  \begin{itemize}
+  \item Concealable
+    \subitem{Potions are}
+  \item Cooldown
+    \subitem{Wait a minute}
+  \item See
+    \begin{itemize}
+    \item Field of view
+    \item Recognizable
+    \end{itemize}
+  \item Line of Sight
+    \subitem{Field of view by rotating}
+  \item Stun
+    \subitem{Sit for a minute}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Useful Terms}{Base Rules}
+  \begin{itemize}
+  \item \R{Sacrificial}:
+    \begin{itemize}
+    \item Only usable in enemy territory
+    \item Drop on use
+    \item Cannot be moved in enemy territory
+    \end{itemize}
+  \item Key words/phrases:
+    \begin{itemize}
+    \item Must say to activate
+    \item Action occurs at end of phrase
+    \item Must be said in territory where used
+    \end{itemize}
+  \item Jackass
+    \subitem{Don't be a}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Flags}{Base Rules}
+  \begin{itemize}
+  \item You want these
+    \subitem{Each has some point value}
+  \item Restrictions on placement
+    \subitem{Supervised by judges}
+  \item Carried flags dispel all items
+    \subitem{They remain dispelled for one minute}
+  \item No flags within 10 feet of glyphs
+    \subitem{If dropped, glyph dispelled}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Capture}{Base Rules}
+  \begin{itemize}
+  \item Tag enemy in your home territory
+  \item Drop flags
+  \item Take nonconcealable stuff
+     \subitem{And known concealed}
+  \item Escort to Jail (all the way)
+  \item If stunned/captured, captive freed
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Jail}{Base Rules}
+  \begin{itemize}
+  \item Touch Glyph, possibly via chains
+  \item Jailbreak every 15 minutes
+    \begin{itemize}
+    \item Free backs (jazz hands!)
+    \end{itemize}
+  \item Free teammate, receive free backs
+  \item Jailer Fedora
+    \begin{itemize}
+    \item Not necessary for functioning jail
+    \item Can relax chain requirement
+    \item Truth serum
+      \item Pinky finger
+      \item Six Y/N questions, then freed
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The Fun Part}{\sep Stuff}
+  \small
+  \begin{tabular}{|@{}l@{}||@{}c@{}|@{}c@{}|@{}c@{}|}
+  \hline
+          & \R{Red} & \G{Green} & \B{Blue} \\
+  \hline
+  \hline
+     Wand & \pair{\R{Vengeance}}{"toast"}
+          & \pair{\G{Stun}}{stun target}
+          & \pair{\B{Dispel}}{remove magic} \\
+  \hline
+     Belt & \pair{\R{Warhol}}{mass stun}
+          & \pair{\G{Goombah}}{immune}
+          & \pair{\B{Doc Ock}}{lots of captives} \\
+  \hline
+     Potion & \pair{\R{Ninja}}{mass stun}
+            & \pair{\G{Key}}{free}
+            & \pair{\B{Light Grenade}}{dumb stun} \\
+  \hline
+  \end{tabular}
+  \pause
+  \\[0.3in] \centerline{Don't be a jackass}
+\end{frame}
+
+\begin{frame}{Types of Stuff}{\sep Stuff}
+  \begin{itemize}
+  \item Wands
+    \subitem{Whap someone, say the keyword}
+  \item Belts
+    \begin{itemize}
+    \item Must wear to be used 
+    \item One belt/person per person/belt
+    \end{itemize}
+  \item Potions
+    \begin{itemize}
+    \item Used in various ways
+    \item Concealable
+    \end{itemize}
+  \item{Glyphs}
+    \subitem{Only affect the other team}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Wand of Vengeance}{\sep Stuff}
+  \begin{itemize}
+  \item \R{Red Wand}
+  \item Keyword: ``Toast''
+  \item Capture in enemy territory
+    \subitem{Ethereal until your territory}
+  \item \R{Sacrificial}
+    \begin{itemize}
+    \item Drop it on use
+    \item Drop it on use
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Wand of Stun}{\sep Stuff}
+  \begin{itemize}
+  \item \G{Green Wand}
+  \item Keyword: ``Stun''
+  \item Has cooldown 
+        \hfill\textcolor{yellow}{\small Don't be \hspace{0.4in} \ }
+  \item Stun a player
+        \hfill\textcolor{yellow}{\small a jackass}
+    \subitem{(for one minute)}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Wand of Dispel}{\sep Stuff}
+  \begin{itemize}
+  \item \B{Blue Wand}
+  \item Keyword: ``Dispel''
+  \item Has cooldown
+  \item Dispel a glyph or person
+    \subitem{(for one minute)}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Andy Warhol's Belt}{of Pop Occultism \sep Stuff}
+  \begin{itemize}
+  \item \R{Red Belt}
+  \item Yell ``Leeeeroy Jenkins''
+  \item Stuns all enemies in line of sight
+    \subitem{(for one minute)}
+  \item \R{Sacrificial}
+    \begin{itemize}
+    \item Only in enemy territory
+    \item Drop the belt
+    \item Yes, you were wearing it
+    \item Drop the belt
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Goombah's Belt}{of Humiliating Protection \sep Stuff}
+  \begin{itemize}
+  \item \G{Green Belt}
+  \item Skip and sing Yankee Doodle
+  \item Immune from capture and stun
+  \item Hold hands, share the fun
+    \subitem{Dispel acts on the whole chain}
+  \item \textbf{Does not work in elevators}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Doc Ock's Belt}{of Many Arms \sep Stuff}
+  \begin{itemize}
+  \item \B{Blue Belt}
+  \item Up to four captives
+    \subitem{Within arm's reach}
+  \item Still escort to jail
+  \item If dispelled, free all but first
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Ninja Potion}{of Magic Smoke \sep Stuff}
+  \begin{itemize}
+  \item \R{Red Potion}
+  \item Only usable when captive
+  \item Throw on the ground
+  \item Yell ``Poof, I am a Ninja''
+  \item Stuns all enemies in line of sight
+    \subitem{(for \textbf{ten seconds})}
+  \item \R{Sacrificial}
+    \begin{itemize}
+    \item Leave it there
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Potion of Wait...}{There's a Key at the Bottom of This \sep Stuff}
+  \begin{itemize}
+  \item \G{Green Potion}
+  \item Has cooldown
+  \item Bonk \textbf{self} on head
+  \item Say ``Key'', ``Lolt'', or ``Jube''
+  \item Either:
+    \begin{itemize}
+    \item Freed from jail (no backs)
+    \item Unstun
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Light Grenade}{\sep Stuff}
+  \begin{itemize}
+  \item \B{Blue potion}
+  \item Stunned if
+    \begin{itemize}
+    \item Pick up in enemy territory
+    \item Receive from any player anywhere
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Glyph of Jail}{\sep Stuff}
+  \begin{itemize}
+  \item It's the Jail
+
+  \vspace{1in} \small jackass a be Don't
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Entrancement}{(Glyph of) \sep Stuff}
+  \begin{itemize}
+  \item Stunned for one minute
+  \item Only if you \textbf{see} it
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Glyph of Alarm}{\sep Stuff}
+  \begin{itemize}
+  \item Yell "Alarm" or be loud
+  \begin{itemize}
+    \item For one minute
+    \item Or until entering neutral space
+    \item Or until captured
+  \end{itemize}
+  \item Only if you \textbf{see} it
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Disgusting Doorknob}{(Glyph of) \sep Stuff}
+  \begin{itemize}
+  \item Can't open the door from this side
+  \subitem{Double doors}
+  \item Can't call elevators
+  \subitem{\textbf{Next to} buttons}
+  \item Can't be completely trapped
+  \item Can't go on outside surfaces
+  \item \textbf{Not} affecting by seeing
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Sportsmanship}{The Boring Part}
+  \begin{itemize}
+   \item Don't block people
+   \item Don't mess with elevators
+   \item Don't use fake stuff
+   \item Don't lie about things that matter
+   \item \textbf{Don't be a jackass}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{A Note From EMS}{The Boring Part}
+  \begin{itemize}
+  \item If you're hurt, get help immediately
+  \begin{itemize}
+    \item Not at 4:00 in the morning
+    \item Judge's Room, 8427 Wean
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Postview}
+\subsection{One more time through}
+
+\begin{frame}{Stuff}{Postview}
+  \small
+  \begin{tabular}{|@{}l@{}||@{}c@{}|@{}c@{}|@{}c@{}|}
+  \hline
+          & \R{Red} & \G{Green} & \B{Blue} \\
+  \hline
+  \hline
+     Wand & \pair{\R{Vengeance}}{"toast"}
+          & \pair{\G{Stun}}{stun target}
+          & \pair{\B{Dispel}}{remove magic} \\
+  \hline
+     Belt & \pair{\R{Warhol}}{mass stun}
+          & \pair{\G{Goombah}}{immune}
+          & \pair{\B{Doc Ock}}{lots of captives} \\
+  \hline
+     Potion & \pair{\R{Ninja}}{mass stun}
+            & \pair{\G{Key}}{free}
+            & \pair{\B{Light Grenade}}{dumb stun} \\
+  \hline
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Stuff}{Postview}
+  \begin{itemize}
+  \item Glyphs
+    {\small
+    \hspace{1in} \begin{tabular}{|c||c|c|}
+    \hline
+    Entrancement & Gotcha & Stunned \\
+    \hline
+    Alarm & Alarm & Be loud \\
+    \hline
+    Jail & Jail & Jail \\
+    \hline
+    \pair{Disgusting}{Doorknob} & Yukko & Can't open door \\
+    \hline
+    \end{tabular}}
+  \item Jailor
+    \begin{itemize}
+    \item Fedora
+    \item Truth Serum
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\subsection{Things you will forget}
+
+\begin{frame}{Reminders}{Postview}
+  \begin{itemize}
+  \item Flags dispel stuff
+    \subitem{(For one minute after dropping)}
+  \item Drop \R{sacrificial} things
+  \item All times are \textbf{one minute}
+    \subitem{Except for Ninja Potion: \textbf{10 seconds}}
+  \item Don't be a jackass
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{A Brief Message}{From Our Sponsors}
+  \begin{itemize}
+  \item KGB
+  \item Meetings 4:30, MM A14
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Questions?}{Fin}
+  \small
+  \begin{tabular}{|@{}l@{}||@{}c@{}|@{}c@{}|@{}c@{}|}
+  \hline
+          & \R{Red} & \G{Green} & \B{Blue} \\
+  \hline
+  \hline
+     Wand & \pair{\R{Vengeance}}{"toast"}
+          & \pair{\G{Stun}}{stun target}
+          & \pair{\B{Dispel}}{remove magic} \\
+  \hline
+     Belt & \pair{\R{Warhol}}{mass stun}
+          & \pair{\G{Goombah}}{immune}
+          & \pair{\B{Doc Ock}}{lots of captives} \\
+  \hline
+     Potion & \pair{\R{Ninja}}{mass stun}
+            & \pair{\G{Key}}{free}
+            & \pair{\B{Light Grenade}}{dumb stun} \\
+  \hline
+  \end{tabular}
+  \\[12pt]
+
+  \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+  \hline
+  Entrancement & Alarm & Jail & Disgusting Doorknob \\
+  \hline
+  \end{tabular}
+\end{frame}
+
+\end{document}
