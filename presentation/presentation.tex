@@ -71,8 +71,8 @@
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date[Spring 2009] % (optional, should be abbreviation of conference name)
-{Spring 2009}
+\date[Fall 2009] % (optional, should be abbreviation of conference name)
+{Fall 2009}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -113,6 +113,13 @@
 \newcommand{\G}{\textcolor[HTML]{008000}}
 \newcommand{\B}{\textcolor[HTML]{0000C0}}
 \newcommand{\subitem}[1]{\begin{itemize} \item #1 \end{itemize}}
+\newcommand{\doublebackground}[3]{
+   \setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\centerline{\includegraphics[width=3.5in]{#1.pdf}}}}
+   \begin{frame}{#2}{#3}
+   \end{frame} 
+
+\setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\centerline{\includegraphics[width=3.5in]{#1_dim.pdf}}}}
+}
 
 \newcommand{\pair}[2]{\begin{tabular}{c} #1 \\ #2 \end{tabular}}
 
@@ -301,6 +308,10 @@
   \end{itemize}
 \end{frame}
 
+
+{
+\doublebackground{gotcha}{Capture}{Base Rules}
+
 \begin{frame}{Capture}{Base Rules}
   \begin{itemize}
   \item Tag enemy in your home territory
@@ -311,6 +322,7 @@
   \item If stunned/captured, captive freed
   \end{itemize}
 \end{frame}
+}
 
 \begin{frame}{Jail}{Base Rules}
   \begin{itemize}
@@ -374,6 +386,8 @@
   \end{itemize}
 \end{frame}
 
+{
+\doublebackground{toast}{Wand of Vengeance}{\sep Stuff}
 \begin{frame}{Wand of Vengeance}{\sep Stuff}
   \begin{itemize}
   \item \R{Red Wand}
@@ -387,6 +401,10 @@
     \end{itemize}
   \end{itemize}
 \end{frame}
+}
+
+{
+\doublebackground{stun}{Wand of Stun}{\sep Stuff}
 
 \begin{frame}{Wand of Stun}{\sep Stuff}
   \begin{itemize}
@@ -399,6 +417,10 @@
     \subitem{(for one minute)}
   \end{itemize}
 \end{frame}
+}
+
+{
+\doublebackground{dispel}{Wand of Dispel}{\sep Stuff}
 
 \begin{frame}{Wand of Dispel}{\sep Stuff}
   \begin{itemize}
@@ -409,6 +431,10 @@
     \subitem{(for one minute)}
   \end{itemize}
 \end{frame}
+}
+
+{
+\doublebackground{jenkins}{Andy Warhol's Belt}{of Pop Occultism \sep Stuff}
 
 \begin{frame}{Andy Warhol's Belt}{of Pop Occultism \sep Stuff}
   \begin{itemize}
@@ -425,7 +451,10 @@
     \end{itemize}
   \end{itemize}
 \end{frame}
+}
 
+{
+\doublebackground{goombah}{Goombah's Belt}{of Humiliating Protection \sep Stuff}
 \begin{frame}{Goombah's Belt}{of Humiliating Protection \sep Stuff}
   \begin{itemize}
   \item \G{Green Belt}
@@ -436,7 +465,10 @@
   \item \textbf{Does not work in elevators}
   \end{itemize}
 \end{frame}
+}
 
+{
+\doublebackground{ock}{Doc Ock's Belt}{of Many Arms \sep Stuff}
 \begin{frame}{Doc Ock's Belt}{of Many Arms \sep Stuff}
   \begin{itemize}
   \item \B{Blue Belt}
@@ -446,7 +478,11 @@
   \item If dispelled, free all but first
   \end{itemize}
 \end{frame}
+}
 
+
+{
+\doublebackground{ninja}{Ninja Potion}{of Magic Smoke \sep Stuff}
 \begin{frame}{Ninja Potion}{of Magic Smoke \sep Stuff}
   \begin{itemize}
   \item \R{Red Potion}
@@ -461,7 +497,10 @@
     \end{itemize}
   \end{itemize}
 \end{frame}
+}
 
+{
+\doublebackground{jolt}{Potion of Wait...}{There's a Key at the Bottom of This \sep Stuff}
 \begin{frame}{Potion of Wait...}{There's a Key at the Bottom of This \sep Stuff}
   \begin{itemize}
   \item \G{Green Potion}
@@ -475,7 +514,10 @@
     \end{itemize}
   \end{itemize}
 \end{frame}
+}
 
+{
+\doublebackground{grenade}{Light Grenade}{\sep Stuff}
 \begin{frame}{Light Grenade}{\sep Stuff}
   \begin{itemize}
   \item \B{Blue potion}
@@ -486,6 +528,7 @@
     \end{itemize}
   \end{itemize}
 \end{frame}
+}
 
 \begin{frame}{Glyph of Jail}{\sep Stuff}
   \begin{itemize}
