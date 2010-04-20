@@ -10,7 +10,7 @@
 $hfudge = "0pt"
 $vfudge = "0pt"
 $infiledefault = "full.txt"
-$htmlfile = "full.html"
+$htmlfile = "full.php"
 $pdffile = "handbook.pdf"
 
 def usage
@@ -131,6 +131,14 @@ def read_file(f)
             subsectacc += [lineacc] if lineacc != ""
 
             lineacc = [1, l[2,l.length].lstrip]
+         when /^:\*[^\*]/
+            subsectacc += [lineacc] if lineacc != ""
+
+            lineacc = [2, l[2,l.length].lstrip]
+         when /^:\*\*/
+            subsectacc += [lineacc] if lineacc != ""
+
+            lineacc = [3, l[3,l.length].lstrip]
          when /^\\/
             case l.chomp
                when /^\\section = (.*)$/
@@ -203,15 +211,17 @@ def write_html(file, sections)
          ss[0] = check_label(ss[0], labels, sectionc, subsectionc)
          lines += ["", "<h3> " + roman(sectionc) + "." + letter(subsectionc) + ". " + ss[0] + " </h3>"]
          ss[2, ss.length].each {|n, r|
-            if n == 0 then
+            highstart = n & 2 == 0 ? "" : '<span class="change">'
+            highend = n & 2 == 0 ? "" : '</span>'
+            if n & 1 == 0 then
                rulec += 1
                subrulec = 0
                r = check_label(r, labels, sectionc, subsectionc, rulec)
-               lines += ["<p> " + roman(sectionc) + "." + letter(subsectionc) + "." + number(rulec) + ". " + r.chomp + " </p>"]
+               lines += ["<p> " + highstart + roman(sectionc) + "." + letter(subsectionc) + "." + number(rulec) + ". " + r.chomp + highend + " </p>"]
             else
                subrulec += 1
                r = check_label(r, labels, sectionc, subsectionc, rulec, subrulec)
-               lines += ["<p> " + roman(sectionc) + "." + letter(subsectionc) + "." + number(rulec) + "." + letterl(subrulec) + ". " + r.chomp + " </p>"]
+               lines += ["<p> " + highstart + roman(sectionc) + "." + letter(subsectionc) + "." + number(rulec) + "." + letterl(subrulec) + ". " + r.chomp + highend + " </p>"]
             end
 
          }
@@ -222,7 +232,9 @@ def write_html(file, sections)
    if file then
       File.open(file, "w") { |f|
          f.puts(PHP_HEADER)
-         lines.each {|l| f.puts(l.gsub(/\[\[([a-zA-Z0-9_-]*)\]\]/) { labels[$1] }.
+         lines.each {|l| f.puts(l.gsub(/\(:/, '<span class="change">').
+                                  gsub(/:\)/, '</span>').
+                                  gsub(/\[\[([a-zA-Z0-9_-]*)\]\]/) { labels[$1] }.
                                   gsub(/\{[^}]*\}/, '')) }
          f.puts(PHP_FOOTER)
       }
@@ -232,10 +244,12 @@ end
 def write_tex(file, fin)
    lines = File.readlines(fin)
    out = lines.collect {|l|
+      l.gsub!(/\(:/, '')
+      l.gsub!(/:\)/, '')
       l.sub!(/^!\s*([^!].*?)\s*$/, '\section{\1}')
       l.sub!(/^!!\s*(.*?)\s*$/, '\subsection{\1}')
-      l.sub!(/^\*\s*([^*])/, '\rule \1')
-      l.sub!(/^\*\*\s*/, '\subrule ')
+      l.sub!(/^:?\*\s*([^*])/, '\rule \1')
+      l.sub!(/^:?\*\*\s*/, '\subrule ')
       l.sub!(/^\\([a-z]*)\s*=\s*(.*?)\s*$/, '\setcounter{\1}{\2}')
       l.sub!(/^@\s*(.*?)\s*$/, '\def\thesection {\arabic{section}} \setcounter{section}{-1} \section{\1}')
       l.gsub!(/\[\[([a-zA-Z0-9_-]*)\]\]/, '\ref{\1}')
@@ -247,6 +261,7 @@ def write_tex(file, fin)
          f.puts(TEX_HEADER)
          f.puts("\\def\\vfudge{#{$vfudge}}")
          f.puts("\\def\\hfudge{#{$hfudge}}")
+         f.puts("\\def\\tfudge{0pt}")
          lines.each {|l| f.puts l}
          f.puts(TEX_FOOTER)
       }
@@ -282,6 +297,11 @@ h3, .h3
    font-size: 11pt;
    color: #000000;
    margin-left: 0.5em;
+}
+
+span.change
+{
+   color: red;
 }
 </style></head><body>
 
@@ -320,13 +340,13 @@ else
    <br>
    <i>Revised 3/2008 by edanaher, csjackso, ddagradi, cmartens, jgg, csawyer, ehohenst, mglisson...</i>
    <br>
-   <i>Revised 8/10/2008, <font color="#ff0000">2/8/2009</font> by edanaher</i>
+   <i>Revised 8/10/2008, 2/8/2009, <font color="#ff0000">11/5/2009</font> by edanaher</i>
    <br>
    <i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
    <br>
    <br>
-<h3>These are the official rules for the Spring 2008 game of Capture the Flag with Stuff.</h3>
+<h3>These are the <span class="change">preliminary</span> rules for the Spring 2010 game of Capture the Flag with Stuff.</h3>
    <br>
 <?php
 if (!$view_print)
@@ -385,7 +405,7 @@ h3, .h3
    color: #000000;
    margin-left: 0.5em;
 }
-</style><script charset="utf-8" id="injection_graph_func" src="ctfws_formal_rules_files/injection_graph_func.js"></script></head><body>
+</style></script></head><body>
 
 <html>
 	<head>
