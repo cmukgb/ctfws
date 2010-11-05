@@ -40,7 +40,11 @@
 \usepackage[latin1]{inputenc}
 % or whatever
 
+\usepackage{tikz}
+\usepgflibrary{shapes}
+\usetikzlibrary{calc}
 \usepackage{times}
+\usepackage{aurical}
 \usepackage[T1]{fontenc}
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
@@ -71,8 +75,8 @@
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date[Fall 2009] % (optional, should be abbreviation of conference name)
-{Fall 2009}
+\date % (optional, should be abbreviation of conference name)
+{Fall 2010}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -112,47 +116,322 @@
 \newcommand{\R}{\textcolor[HTML]{C00000}}
 \newcommand{\G}{\textcolor[HTML]{008000}}
 \newcommand{\B}{\textcolor[HTML]{0000C0}}
+\newcommand{\flavortext}[1]{}
+%\newcommand{\flavortext}[1]{\textcolor[HTML]{B0B0B0}{\Fontlukas \fontsize{28pt}{35pt} \selectfont #1}}
 \newcommand{\subitem}[1]{\begin{itemize} \item #1 \end{itemize}}
+
+\newcommand{\singlebackground}[3]{
+\setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\onslide<12>\vspace{2.2cm}\centerline{#3}\onslide<1>}}
+
+\begin{frame}{#1}{#2}
+}
+
 \newcommand{\doublebackground}[3]{
-   \setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\centerline{\includegraphics[width=3.5in]{#1.pdf}}}}
-   \begin{frame}{#2}{#3}
+   \setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\vspace{2.2cm}\centerline{#3}}}
+   \begin{frame}{#1}{#2}
    \end{frame} 
 
-\setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\centerline{\includegraphics[width=3.5in]{#1_dim.pdf}}}}
+\setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\onslide<12>\vspace{2.2cm}\centerline{#3}\onslide<1>}}
+
+\begin{frame}{#1}{#2}
+   \transglitter[duration=0.2]
 }
 
 \newcommand{\pair}[2]{\begin{tabular}{c} #1 \\ #2 \end{tabular}}
 
 \newcommand{\sep}{ $^\odot$ }
 
+% =========== Tikz helpers ====================
+
+\definecolor{epyellow}{rgb}{0.887,0.730,0}
+\definecolor{epred}{rgb}{0.894,0,0}
+\definecolor{epjudge}{rgb}{0.1,0.2,0.9}
+\definecolor{epgray}{rgb}{0.402,0.402,0.402}
+\definecolor{stuffred}{rgb}{0.860,0,0}
+\definecolor{stuffgreen}{rgb}{0.110,0.725,0}
+\definecolor{stuffblue}{rgb}{0,0.418,0.855}
+\definecolor{floorgray}{rgb}{0.76,0.76,0.76}
+
+\def\epbodyheight{2.56}
+\def\epheadheight{1.618}
+\def\eplegwidth{0.667}
+\def\eplegheight{2.222}
+\def\eplegjointoffset{0.50*\epbodyheight}
+\def\epbodyspacing{0.05}
+\def\eparmjointoffset{0.10*\epbodyheight}
+\def\eparmjoint{0.75*\epbodyheight}
+\def\eparmlength{2.06}
+\def\eparmwidth{0.62}
+
+\makeatletter
+\define@key{ellipseperson}{color}{\def\epcolor{#1}}
+\define@key{ellipseperson}{head angle}{\def\epheadangle{#1}}
+\define@key{ellipseperson}{x}{\def\epx{#1}}
+\define@key{ellipseperson}{y}{\def\epy{#1}}
+\define@key{ellipseperson}{left arm}[0]{\def\eplarm{#1}}
+\define@key{ellipseperson}{right arm}[0]{\def\eprarm{#1}}
+\define@key{ellipseperson}{right potion}{\def\eprpotion{#1}}
+\define@key{ellipseperson}{front arm}[0]{\def\epfarm{#1}}
+\define@key{ellipseperson}{front potion}{\def\epfpotion{#1}}
+\define@key{ellipseperson}{front wand}{\def\epfwand{#1}}
+\define@key{ellipseperson}{front wand angle}{\def\epfwandangle{#1}}
+\define@key{ellipseperson}{front flag}{\def\epfflag{#1}}
+\define@key{ellipseperson}{front flag angle}{\def\epfflagangle{#1}}
+\define@key{ellipseperson}{back arm}[0]{\def\epbarm{#1}}
+\define@key{ellipseperson}{back potion}{\def\epbpotion{#1}}
+\define@key{ellipseperson}{back wand}{\def\epbwand{#1}}
+\define@key{ellipseperson}{back wand angle}{\def\epbwandangle{#1}}
+\define@key{ellipseperson}{belt}{\def\epbelt{#1}}
+\define@key{ellipseperson}{belt right}[0]{\def\epbeltreflect{-1}}
+\define@key{ellipseperson}{belt left}[0]{\def\epbeltreflect{1}}
+\define@key{ellipseperson}{right leg}[15]{\def\eprightleg{#1}\def\epcenterleg{*}}
+\define@key{ellipseperson}{left leg}[-15]{\def\epleftleg{#1}\def\epcenterleg{*}}
+\define@key{ellipseperson}{sitting}[1]{\def\epsitting{#1}}
+\define@key{ellipseperson}{name}{\def\epname{#1}}
+\newcommand{\epdefaults}{
+   \def\epcolor{epgray}
+   \def\epheadangle{0}
+   \def\epx{0}
+   \def\epy{0}
+   \def\epfarm{*}
+   \def\epbarm{*}
+   \def\eplarm{*}
+   \def\eprarm{*}
+   \def\epbelt{*}
+   \def\epbeltreflect{1}
+   \def\eprpotion{*}
+   \def\epfpotion{*}
+   \def\epbpotion{*}
+   \def\epfwand{*}
+   \def\epfflag{*}
+   \def\epfflagangle{0}
+   \def\epfwandangle{-90}
+   \def\epbwand{*}
+   \def\epbwandangle{-90}
+   \def\epcenterleg{!}
+   \def\epleftleg{*}
+   \def\eprightleg{*}
+   \def\epsitting{0}
+   \def\epname{*}
+}
+\makeatother
+
+\newcommand\drawbelt[2] {
+   \begin{scope}[every path/.style={#1}]
+      \begin{scope}
+         \clip      (-1, -1) rectangle (1, 1)
+                    (0, 1) ellipse (1 and 0.3);
+         \fill[#2] (-0.90, 0.99) rectangle (0.90, 0)
+                    (0, 0) ellipse (0.90 and 0.3);
+      \end{scope}
+      \fill[xshift=1,#2] (-0.92, 0.92) .. controls +(-0.2, -0.0) and +(0.10,0.4) ..
+                 (-1.5,0.1) .. controls +(-0.1, -0.3) and +(0,0) ..
+                 (-1.9, -0.7) .. controls +(0,0) and +(0,0) ..
+                 (-1.8, -1.3) .. controls +(0,0) and +(-0.18, -0.4) ..
+                 (-1.2, -0.5) .. controls +(0.18,0.4) and +(0, 0) ..
+                 (-0.90, 0)
+                        ;
+   \end{scope}
+}
+
+%\newcommand\makenode[3]{\relax}
+\newcommand\person[1]{
+   \epdefaults
+   \setkeys{ellipseperson}{#1}
+
+   %\if\epname*
+   %   \renewcommand\makenode[3]{\relax}
+   %\else
+   %   \renewcommand\makenode[3] {
+   %      \node(\epname \#1) at (\#2,\#3) ;
+   %   }
+   %\fi
+
+   \ifnum\epsitting=1
+      \let\oldepy\epy
+      \def\epy{0.5*\oldepy{}-0.7*\eplegheight{}cm}
+   \fi
+
+   \begin{scope}[every path/.style={xshift=\epx,yshift=\epy,color=gray}]
+      \if\epbarm* \else
+         % back arm
+         \fill[yshift=\eparmjoint*0.5cm,rotate=\epbarm] (0,-\eparmlength) ellipse ({\eparmwidth} and \eparmlength);
+         % back potion
+         \if\epbpotion* \else
+            \fill[color=\epbpotion,yshift=\eparmjoint*0.5cm,rotate=\epbarm,yshift=-2*\eparmlength*0.5cm,rotate=-\epbarm]
+               (0,0) ellipse (0.34 and 0.48);
+         \fi
+         %back wand
+         \begin{scope}
+            \useasboundingbox (0, 0);
+            \if\epbwand* \else
+               \fill[color=\epbwand,yshift=\eparmjoint*0.5cm,rotate=\epbarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm+0.3cm,rotate=-\epbarm,rotate=\epbwandangle]
+                  (-0.5,-0.3) rectangle (0.5, 3.8);
+               \fill[color=black,yshift=\eparmjoint*0.5cm,rotate=\epbarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm+0.3cm,rotate=-\epbarm,rotate=\epbwandangle]
+                  (-0.5,0.5) rectangle (0.5, 3.0);
+            \fi
+         \end{scope}
+      \fi
+
+
+      %body
+      \fill[line width=2pt,draw=white] (0,0) ellipse (1 and \epbodyheight);
+
+      %head
+      \fill[color=\epcolor,yshift=\epbodyheight{}*0.5cm-0.1cm,rotate=\epheadangle] (0,0.2+\epheadheight+\epbodyspacing) ellipse (1 and \epheadheight);
+      %\if\epname* \else
+         %\node[yshift=\epbodyheight{}*0.5cm-0.1cm,rotate=\epheadangle,minimum size=2*\epheadheight*0.5cm]
+         %   (\epname head) at (0,0.2+\epheadheight+\epbodyspacing) {};
+      %\fi
+
+      \ifnum\epsitting=1
+         %legs for sitting
+         \fill[line width=2pt,draw=white,yshift=(-\epbodyheight-0.2*\eplegjointoffset)*0.5cm,rotate=-60]
+         (0,-\eplegjointoffset-\epbodyspacing-\eplegheight+4) ellipse ({\eplegwidth} and \eplegheight);
+         \fill[line width=2pt,draw=white,yshift=(-\epbodyheight-0.2*\eplegjointoffset)*0.5cm,rotate=60]
+         (0,-\eplegjointoffset-\epbodyspacing-\eplegheight+4) ellipse ({\eplegwidth} and \eplegheight);
+      \else
+         \if\epcenterleg* \else
+            %center leg
+            \fill[line width=2pt,draw=white] (0,-\epbodyheight-\eplegheight-\epbodyspacing) ellipse ({\eplegwidth} and \eplegheight);
+         \fi
+         \if\epleftleg* \else
+            %left leg
+            \fill[line width=2pt,draw=white,yshift=(-\epbodyheight+\eplegjointoffset)*0.5cm,rotate=\epleftleg]
+            (0,-\eplegjointoffset-\epbodyspacing-\eplegheight) ellipse ({\eplegwidth} and \eplegheight);
+         \fi
+         \if\eprightleg* \else
+            %left leg
+            \fill[line width=2pt,draw=white,yshift=(-\epbodyheight+\eplegjointoffset)*0.5cm,rotate=\eprightleg]
+            (0,-\eplegjointoffset-\epbodyspacing-\eplegheight) ellipse ({\eplegwidth} and \eplegheight);
+         \fi
+      \fi
+         
+      %belt
+      \if\epbelt* \else
+         \drawbelt{xshift=\epx,yshift=\epy-\epbodyheight*3/5*0.5cm,xscale=\epbeltreflect}{\epbelt}
+      \fi
+
+      \if\epfarm* \else
+         %front arm
+         \fill[line width=2pt,yshift=\eparmjoint*0.5cm,rotate=\epfarm,draw=white] (0,-\eparmlength+\eparmjointoffset) ellipse ({\eparmwidth} and \eparmlength);
+         \if\epfpotion* \else
+            %front potion
+            \fill[color=\epfpotion,yshift=\eparmjoint*0.5cm,rotate=\epfarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm,rotate=-\epfarm]
+               (0,0) ellipse (0.34 and 0.48);
+         \fi
+         \if\epfwand* \else
+            %front wand
+            \fill[color=\epfwand,yshift=\eparmjoint*0.5cm,rotate=\epfarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm+0.3cm,rotate=-\epfarm,rotate=\epfwandangle]
+               (-0.5,-0.3) rectangle (0.5, 3.8);
+            \fill[color=black,yshift=\eparmjoint*0.5cm,rotate=\epfarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm+0.3cm,rotate=-\epfarm,rotate=\epfwandangle]
+               (-0.5,0.5) rectangle (0.5, 3.0);
+         \fi
+         \if\epfflag* \else
+            %front flag
+            \fill[color=\epfflag,yshift=\eparmjoint*0.5cm,rotate=\epfarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm+0.3cm,rotate=-\epfarm,rotate=-90,rotate=\epfflagangle]
+               (0.0,0.0) rectangle (1.5, 1.5);
+         \fi
+      \fi
+
+      \if\eplarm* \else
+         %left arm
+         \fill[line width=2pt,yshift=\eparmjoint*0.5cm,xshift=-0.4cm,rotate=\eplarm,draw=white] (0,-\eparmlength+\eparmjointoffset) ellipse ({\eparmwidth} and \eparmlength);
+      \fi
+      \if\eprarm* \else
+         %right arm
+         \fill[line width=2pt,yshift=\eparmjoint*0.5cm,xshift=0.4cm,rotate=\eprarm,draw=white] (0,-\eparmlength+\eparmjointoffset) ellipse ({\eparmwidth} and \eparmlength);
+         \if\eprpotion* \else
+            %right potion
+            \fill[color=\eprpotion,yshift=\eparmjoint*0.5cm,xshift=0.4cm,rotate=\eprarm,yshift=(-2*\eparmlength+\eparmjointoffset)*0.5cm,rotate=-\eprarm]
+               (-0.3cm,0) ellipse (0.34 and 0.48);
+         \fi
+      \fi
+
+   \end{scope}
+}
+
+\makeatletter
+\define@key{floor}{color}{\def\floorcolor{#1}}
+\define@key{floor}{x}{\def\floorx{#1}}
+\define@key{floor}{y}{\def\floory{#1}}
+\define@key{floor}{angle}{\def\floorangle{#1}}
+\define@key{floor}{width}{\def\floorwidth{#1}}
+\define@key{floor}{height}{\def\floorheight{#1}}
+\newcommand{\floordefaults}{
+   \def\floorcolor{floorgray}
+   \def\floorx{0}
+   \def\floory{0}
+   \def\floorangle{30}
+   \def\floorheight{3}
+   \def\floorwidth{12}
+}
+\makeatother
+
+\newcommand\drawfloor[1] {
+   \floordefaults
+   \setkeys{floor}{#1}
+   \fill[color=\floorcolor]
+         (\floorx-1.5cm, \floory-3.75cm) --
+       ++(90-\floorangle:\floorheight) -- 
+       ++(\floorwidth, 0) --
+       ++(270-\floorangle:\floorheight);
+}
+
+\newcommand\drawjail[2] {
+   \begin{scope}[#1,xscale=0.4,yslant=0.866]
+      \fill[color=#2] (-1cm, -1.5cm) rectangle (1cm, 1.5cm);
+      \fill[color=black] (-0.5cm, -1.0cm) rectangle (0.5cm, 0cm);
+      \draw[line width=2pt,color=black]
+            (0.25cm, -0.5cm) .. controls +(0, 1.2) and +(0.4, 0) ..
+            (0, 0.75cm);
+      \draw[line width=2pt,color=black]
+            (-0.25cm, -0.5cm) .. controls +(0, 1.2) and +(-0.4, 0) ..
+            (0, 0.75cm);
+   \end{scope}
+}
+
+\newcommand\motionlines[1] {
+   \begin{scope}[line width=4pt, #1,color=epgray]
+      \draw (0, -0.5cm) -- +(1cm, 0)
+            (0, 0)      -- +(1cm, 0)
+            (0, 0.5cm)  -- +(1cm, 0);
+   \end{scope}
+}
+
+% =========== End Tikz helpers ================
+
+
 \begin{document}
 
+{
+\setbeamertemplate{background}{\parbox[c][\paperheight]{\paperwidth}{\centerline{
+   \onslide<12>
+   \vspace{-3cm}
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{color=epred,width=8}
+      \person{x=0.8cm, color=epyellow,
+              left leg=-30, right leg=20, front arm=70,
+              front flag=epred, front flag angle=20}
+      \drawfloor{x=7.8cm, color=epgray,width=12}
+      \person{x=8.0cm,y=0, color=epyellow, front arm=50,
+              front flag=epred, front flag angle=10}
+      \person{x=11.6cm,color=epjudge, front arm=-30}
+   \end{tikzpicture}
+   \onslide<1>
+}}}
 \begin{frame}
   \titlepage
 \end{frame}
+}
+
+\setbeamertemplate{background}{}
 
 \begin{frame}{Outline}
   \tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
 
-
-% Structuring a talk is a difficult task and the following structure
-% may not be suitable. Here are some rules that apply for this
-% solution: 
-
-% - Exactly two or three sections (other than the summary).
-% - At *most* three subsections per section.
-% - Talk about 30s to 2min per frame. So there should be between about
-%   15 and 30 frames, all told.
-
-% - A conference audience is likely to know very little of what you
-%   are going to talk about. So *simplify*!
-% - In a 20min talk, getting the main ideas across is hard
-%   enough. Leave out details, even if it means being less precise than
-%   you think necessary.
-% - If you omit details that are vital to the proof/implementation,
-%   just say so once. Everybody will be happy with that.
 
 \section{Preview}
 
@@ -192,6 +471,11 @@
             & \pair{\B{Light Grenade}}{dumb stun} \\
   \hline
   \end{tabular}
+
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (16, -2.8) [rotate=16] {\flavortext{Where am I?}};
+   \end{tikzpicture}
 
   \subitem{Flags}
 \end{frame}
@@ -238,6 +522,10 @@
     \item Neutral
     \end{itemize}
   \end{itemize}
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (16, 3.0) [rotate=-16] {\flavortext{No...  not here!}};
+   \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Pre-/Post-Conditions}{Base Rules}
@@ -281,6 +569,7 @@
     \begin{itemize}
     \item Only usable in enemy territory
     \item Drop on use
+    \item<2> Drop it like it's hot
     \item Cannot be moved in enemy territory
     \end{itemize}
   \item Key words/phrases:
@@ -310,9 +599,29 @@
 
 
 {
-\doublebackground{gotcha}{Capture}{Base Rules}
+\doublebackground{Capture}{Base Rules}{
+   \centerline{
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{color=epred,width=8}
+      \person{x=1.8cm,y=0, color=epyellow}
+      \person{color=epred,front arm=60}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large Gotcha};
+         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+      \end{scope}
+%
+      \drawjail{xshift=4.5cm}{epred}
+      \drawfloor{x=5.8cm, color=epred,width=8}
+      \person{x=6.0cm,y=0, color=epyellow, front arm=-50}
+      \person{x=7.6cm,color=epred}
+      \motionlines{xshift=8.6cm,yshift=0.5cm}
+   \end{tikzpicture}
+   }
+}
 
-\begin{frame}{Capture}{Base Rules}
   \begin{itemize}
   \item Tag enemy in your home territory
   \item Drop flags
@@ -321,10 +630,29 @@
   \item Escort to Jail (all the way)
   \item If stunned/captured, captive freed
   \end{itemize}
+
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (7.5, 14.4) [rotate=-12] {\flavortext{Help!  I'm trapped}};
+      \node at (5.1, 13.2) [rotate=-12] {\flavortext{in a slide factory!}};
+   \end{tikzpicture}
+
 \end{frame}
 }
 
-\begin{frame}{Jail}{Base Rules}
+{
+\doublebackground{Jail}{Base Rules} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawjail{xshift=0.0cm}{epred}
+      \drawfloor{x=1.0cm, color=epred,width=25}
+      \person{x=3.1cm,y=1.0cm,  color=epyellow, sitting}
+      \person{x=4.9cm,y=1.0cm,  color=epyellow, sitting}
+      \person{x=7.5cm,y=1.0cm,  color=epyellow, sitting}
+      \person{x=1.9cm,y=0, color=epyellow, left arm=-40, right arm=70}
+      \person{x=6.1cm,y=0.1cm, color=epyellow, left arm=-75, right arm=80}
+      \person{x=10.1cm,y=0.6cm, color=epyellow, left arm=-70, right arm = 70}
+   \end{tikzpicture}
+}
   \begin{itemize}
   \item Touch Glyph, possibly via chains
   \item Jailbreak every 15 minutes
@@ -339,9 +667,12 @@
     \item Truth serum
       \item Pinky finger
       \item Six Y/N questions, then freed
+      \item One lie
     \end{itemize}
   \end{itemize}
+
 \end{frame}
+}
 
 \begin{frame}{The Fun Part}{\sep Stuff}
   \small
@@ -387,8 +718,30 @@
 \end{frame}
 
 {
-\doublebackground{toast}{Wand of Vengeance}{\sep Stuff}
-\begin{frame}{Wand of Vengeance}{\sep Stuff}
+\doublebackground{Wand of Vengeance}{\sep Stuff}{
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=10,color=epred}
+      \person{x=-0.2cm,color=epred}
+      \person{x=3.1cm, color=epyellow,
+              front arm=-60,
+              front wand=stuffred, front wand angle=100}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (5.5, 7) -- (5.4,6.2) -- (4.6,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large TOAST};
+         \fill[white] (5.5, 7) -- (5.4,6.2) -- (4.6,7);
+      \end{scope}
+%
+      \drawfloor{x=6cm,width=10,color=epyellow}
+      \drawjail{xshift=10.0cm,xscale=-1,yshift=0.5cm}{epyellow}
+      \person{x=8.2cm,color=epred, front arm = 70}
+      \person{x=6.5cm,color=epyellow}
+      \motionlines{xshift=4.8cm,yshift=0.5cm}
+      %Glyph of jail
+   \end{tikzpicture}
+   }
+
   \begin{itemize}
   \item \R{Red Wand}
   \item Keyword: ``Toast''
@@ -397,16 +750,40 @@
   \item \R{Sacrificial}
     \begin{itemize}
     \item Drop it on use
-    \item Drop it on use
+    \item Drop it like it's hot
     \end{itemize}
   \end{itemize}
+
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (18.0, 7.5) [rotate=-50] {\flavortext{Jared, is that you?}};
+   \end{tikzpicture}
 \end{frame}
 }
 
 {
-\doublebackground{stun}{Wand of Stun}{\sep Stuff}
+\doublebackground{Wand of Stun}{\sep Stuff}{
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=9}
+      \person{x=2.6cm, color=epyellow}
+      \person{x=-0.2cm,color=epred,front arm=60,
+              front wand=stuffgreen, front wand angle=-80}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large STUN};
+         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+      \end{scope}
+%
+      \drawfloor{x=6cm,width=9}
+      \person{name=y2, x=8.2cm, color=epyellow, sitting}
+      \person{x=5.8cm,color=epred, front arm=20,
+              front wand=stuffgreen, front wand angle=-170}
+      %Glyph of jail
+   \end{tikzpicture}
+   }
 
-\begin{frame}{Wand of Stun}{\sep Stuff}
   \begin{itemize}
   \item \G{Green Wand}
   \item Keyword: ``Stun''
@@ -420,23 +797,75 @@
 }
 
 {
-\doublebackground{dispel}{Wand of Dispel}{\sep Stuff}
+\doublebackground{Wand of Dispel}{\sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=10}
+      \person{x=3.1cm, color=epyellow,
+              front arm=20, front potion=stuffgreen,
+              back arm=-140,
+              back wand=stuffred, back wand angle=10,
+              belt=stuffred, belt left}
+      \person{x=-0.2cm,color=epred,
+              front arm=70,
+              front wand=stuffblue, front wand angle=-85}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large DISPEL};
+         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+      \end{scope}
+%
+      \drawfloor{x=6cm,width=10}
+      \person{x=9.1cm, color=epyellow, head angle=32,
+              front arm=-12, front potion=stuffgreen,
+              back arm=-40,
+              back wand=stuffred, back wand angle=180,
+              belt=stuffred, belt left}
+      \person{x=5.8cm,color=epred,
+              front arm=20,
+              front wand=stuffblue, front wand angle=-170}
+      %Glyph of jail
+   \end{tikzpicture}
+   }
 
-\begin{frame}{Wand of Dispel}{\sep Stuff}
   \begin{itemize}
   \item \B{Blue Wand}
   \item Keyword: ``Dispel''
   \item Has cooldown
   \item Dispel a glyph or person
-    \subitem{(for one minute)}
+  \begin{itemize}
+    \item (for one minute)
+    \item (not retroactive)
+  \end{itemize}
   \end{itemize}
 \end{frame}
 }
 
 {
-\doublebackground{jenkins}{Andy Warhol's Belt}{of Pop Occultism \sep Stuff}
+\doublebackground{Andy Warhol's Belt}{of Pop Occultism \sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=10,color=epyellow}
+      \person{x=-0.2cm,color=epred,
+              belt=stuffred, belt right}
+      \person{x=3.1cm, color=epyellow}
+      \person{x=1.5cm, y=0.3cm,color=epyellow}
+%
+      \drawfloor{x=6cm, width=14,color=epyellow}
+      \person{x=8.4cm, y=0.6cm, color=epyellow, sitting}
+      \person{x=6.3cm, color=epyellow, sitting}
+      \drawbelt{xshift=8.3cm,yshift=-3.1cm}{stuffred}
+      \person{x=10.8cm, color=epred, left leg=-30, right leg=20, front arm=70}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=2cm,yshift=-0.5cm]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large LEEROY JENKINS};
+         \fill[white] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+      \end{scope}
+   \end{tikzpicture}
+   }
 
-\begin{frame}{Andy Warhol's Belt}{of Pop Occultism \sep Stuff}
   \begin{itemize}
   \item \R{Red Belt}
   \item Yell ``Leeeeroy Jenkins''
@@ -454,8 +883,38 @@
 }
 
 {
-\doublebackground{goombah}{Goombah's Belt}{of Humiliating Protection \sep Stuff}
-\begin{frame}{Goombah's Belt}{of Humiliating Protection \sep Stuff}
+\doublebackground{Goombah's Belt}{of Humiliating Protection \sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=22}
+      \person{x=-0.2cm,color=epred,
+              left leg = -5, right leg = 30,
+              left arm = -20, right arm = 60}
+      \person{x=3.1cm,y=0.6cm,color=epred,
+              belt=stuffgreen,
+              left leg = -10, right leg = 20,
+              left arm = -40, right arm = 30}
+      \person{x=6.1cm,y=0.2cm,color=epred,
+              left leg = -30, right leg = 10,
+              left arm = -50, right arm = 30}
+      \person{x=8.7cm,y=0.3cm,color=epred,
+              left leg = -20, right leg = 15,
+              left arm = -30, right arm = 20}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=2cm,yshift=-0.2cm]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+         \draw[line width=4pt] (4.0, 7) -- (3.6,5.9) -- (5.2,7);
+         \draw[line width=4pt] (6.2, 7) -- (6.6,6.0) -- (5.0,7);
+         \draw[line width=4pt] (11.5, 7.5) -- (11.9,6.5) -- (10.3,7.5);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.4cm,fill=white] (bubble) at (2.5, 8) {\large YANKEE DOODLE...};
+         \fill[white] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+         \fill[white] (4.0, 7) -- (3.6,5.9) -- (5.2,7);
+         \fill[white] (6.2, 7) -- (6.6,6.0) -- (5.0,7);
+         \fill[white] (11.5, 7.5) -- (11.9,6.5) -- (10.3,7.5);
+      \end{scope}
+   \end{tikzpicture}
+   }
+
   \begin{itemize}
   \item \G{Green Belt}
   \item Skip and sing Yankee Doodle
@@ -468,8 +927,29 @@
 }
 
 {
-\doublebackground{ock}{Doc Ock's Belt}{of Many Arms \sep Stuff}
-\begin{frame}{Doc Ock's Belt}{of Many Arms \sep Stuff}
+\doublebackground{Doc Ock's Belt}{of Many Arms \sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{color=epred,width=10}
+      \person{x=-0.2cm,color=epyellow}
+      \person{x=3.2cm,color=epyellow}
+      \person{x=1.6cm,color=epred,left arm=-60, right arm = 50, belt=stuffblue}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large Gotcha};
+         \fill[white] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+      \end{scope}
+%
+      \drawjail{xshift=5.5cm}{epred}
+      \drawfloor{x=6.8cm, color=epred,width=10}
+      \person{x=7.0cm,y=0, color=epyellow, front arm=-50}
+      \person{x=8.2cm,y=0, color=epyellow, front arm=-15}
+      \person{x=9.8cm,color=epred, belt=stuffblue}
+      \motionlines{xshift=10.6cm,yshift=0.5cm}
+   \end{tikzpicture}
+   }
+
   \begin{itemize}
   \item \B{Blue Belt}
   \item Up to four captives
@@ -477,13 +957,39 @@
   \item Still escort to jail
   \item If dispelled, free all but first
   \end{itemize}
+
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (14.0, 9.0) [rotate=-30] {\flavortext{Can you help me?}};
+   \end{tikzpicture}
+
 \end{frame}
 }
 
-
 {
-\doublebackground{ninja}{Ninja Potion}{of Magic Smoke \sep Stuff}
-\begin{frame}{Ninja Potion}{of Magic Smoke \sep Stuff}
+\doublebackground{Ninja Potion}{of Magic Smoke \sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=10,color=epyellow}
+      \person{x=3.1cm, color=epyellow}
+      \person{x=1.5cm, y=0.3cm,color=epyellow}
+      \person{x=-0.2cm,color=epred,
+              front arm=50, front potion=stuffred}
+%
+      \drawfloor{x=6cm, width=15,color=epyellow}
+      \person{x=8.4cm, y=0.6cm, color=epyellow, sitting}
+      \person{x=6.3cm, color=epyellow, sitting}
+      \person{x=10.8cm, color=epred, left leg=-30, right leg=20, front arm=70}
+      \fill[stuffred] (8.3cm,-3.3cm) ellipse (0.34 and 0.48);
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=3cm,yshift=-0.5cm]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (-4.5, 7) -- (-4.8,6.0) -- (-3.6,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large POOF!  I AM A NINJA};
+         \fill[white] (-4.5, 7) -- (-4.8,6.0) -- (-3.6,7);
+      \end{scope}
+   \end{tikzpicture}
+   }
+
   \begin{itemize}
   \item \R{Red Potion}
   \item Only usable when captive
@@ -500,8 +1006,25 @@
 }
 
 {
-\doublebackground{jolt}{Potion of Wait...}{There's a Key at the Bottom of This \sep Stuff}
-\begin{frame}{Potion of Wait...}{There's a Key at the Bottom of This \sep Stuff}
+\doublebackground{Potion of Wait...}{There's a Key at the Bottom of This \sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=8}
+      \person{x=1cm,y=0.2cm,color=epyellow, sitting,
+         right arm=170, right potion=stuffgreen}
+%
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=-0.7cm,yshift=-1.5cm]
+         \useasboundingbox (0, 0);
+         \draw[line width=4pt] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large KEY};
+         \fill[white] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+      \end{scope}
+%
+      \drawfloor{x=5.8cm,width=8}
+      \person{x=7cm,color=epyellow,
+         front arm=20, front potion=stuffgreen}
+   \end{tikzpicture}
+   }
+
   \begin{itemize}
   \item \G{Green Potion}
   \item Has cooldown
@@ -513,12 +1036,30 @@
     \item Unstun
     \end{itemize}
   \end{itemize}
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (18.5, 10.5) [rotate=-50] {\flavortext{Hmm...}};
+      \node at (17.5, 7.5) [rotate=-50] {\flavortext{That might work...}};
+   \end{tikzpicture}
 \end{frame}
 }
 
 {
-\doublebackground{grenade}{Light Grenade}{\sep Stuff}
-\begin{frame}{Light Grenade}{\sep Stuff}
+\doublebackground{Light Grenade}{\sep Stuff} {
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{width=9}
+      \person{x=2.6cm, color=epyellow, front arm=-30}
+      \person{x=-0.2cm,color=epred,
+              front arm=60, front potion=stuffblue}
+%
+      \drawfloor{x=6cm,width=9}
+      \person{name=y2, x=8.2cm, color=epyellow, sitting,
+              front arm=-20, front potion=stuffblue}
+      \person{x=5.8cm,color=epred}
+      %Glyph of jail
+   \end{tikzpicture}
+   }
+
   \begin{itemize}
   \item \B{Blue potion}
   \item Stunned if
@@ -530,15 +1071,30 @@
 \end{frame}
 }
 
-\begin{frame}{Glyph of Jail}{\sep Stuff}
+{
+\singlebackground{Glyph of Jail}{\sep Stuff}{
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawjail{xshift=0.0cm}{epred}
+      \drawfloor{x=1.0cm, color=epred,width=25}
+      \person{x=3.1cm,y=1.0cm,  color=epyellow, sitting}
+      \person{x=4.9cm,y=1.0cm,  color=epyellow, sitting}
+      \person{x=7.5cm,y=1.0cm,  color=epyellow, sitting}
+      \person{x=1.9cm,y=0, color=epyellow, left arm=-40, right arm=70}
+      \person{x=6.1cm,y=0.1cm, color=epyellow, left arm=-75, right arm=80}
+      \person{x=10.1cm,y=0.6cm, color=epyellow, left arm=-70, right arm = 70}
+   \end{tikzpicture}
+}
   \begin{itemize}
   \item It's the Jail
+  \item It can't be dispelled
 
   \vspace{1in} \small jackass a be Don't
   \end{itemize}
 \end{frame}
+}
 
 \begin{frame}{Entrancement}{(Glyph of) \sep Stuff}
+  %IMAGE
   \begin{itemize}
   \item Stunned for one minute
   \item Only if you \textbf{see} it
@@ -546,6 +1102,7 @@
 \end{frame}
 
 \begin{frame}{Glyph of Alarm}{\sep Stuff}
+  %IMAGE
   \begin{itemize}
   \item Yell "Alarm" or be loud
   \begin{itemize}
@@ -558,8 +1115,9 @@
 \end{frame}
 
 \begin{frame}{Disgusting Doorknob}{(Glyph of) \sep Stuff}
+  %IMAGE
   \begin{itemize}
-  \item Can't open the door from this side
+  \item Can't open/hold door from this side
   \subitem{Double doors}
   \item Can't call elevators
   \subitem{\textbf{Next to} buttons}
@@ -569,14 +1127,27 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{After the Game}{The Boring Part}
+  \begin{itemize}
+     \item Collect all the stuff
+     \item Come back to 7500
+     \subitem{With stuff}
+   \end{itemize}
+\end{frame}
+
 \begin{frame}{Sportsmanship}{The Boring Part}
   \begin{itemize}
    \item Don't block people
    \item Don't mess with elevators
    \item Don't use fake stuff
+   \item Don't harm stuff
    \item Don't lie about things that matter
    \item \textbf{Don't be a jackass}
   \end{itemize}
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (8.5, 12.5) [rotate=-20] {\flavortext{Yes!  Free at last!}};
+   \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{A Note From EMS}{The Boring Part}
@@ -584,7 +1155,7 @@
   \item If you're hurt, get help immediately
   \begin{itemize}
     \item Not at 4:00 in the morning
-    \item Judge's Room, 8427 Wean
+    \item Judge's Room, between Wean/Doherty fifth/A
   \end{itemize}
   \end{itemize}
 \end{frame}
@@ -655,6 +1226,12 @@
   \item KGB
   \item Meetings 4:30, MM A14
   \end{itemize}
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (9.5, 9.5) [rotate=-10] {\flavortext{Thank you, Jared, for two years}};
+      \node at (9.5, 9.5) [rotate=-10,yshift=-1.0cm] {\flavortext{of engaging rules presentations.}};
+      \node at (16.5, 2.5) [rotate=40,yshift=-1.0cm] {\flavortext{You are amazing.}};
+   \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Questions?}{Fin}
@@ -684,6 +1261,289 @@
   Entrancement & Alarm & Jail & Disgusting Doorknob \\
   \hline
   \end{tabular}
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (3.5, 1.5) [rotate=10,yshift=-1.0cm] {\flavortext{Burma Shave}};
+   \end{tikzpicture}
 \end{frame}
+
+%\begin{frame}{Capture}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{color=epred,width=8}
+%      \person{x=1.8cm,y=0, color=epyellow}
+%      \person{color=epred,front arm=60}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large Gotcha};
+%         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%      \end{scope}
+%%
+%      \drawjail{xshift=4.5cm}{epred}
+%      \drawfloor{x=5.8cm, color=epred,width=8}
+%      \person{x=6.0cm,y=0, color=epyellow, front arm=-50}
+%      \person{x=7.6cm,color=epred}
+%      \motionlines{xshift=8.6cm,yshift=0.5cm}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Flags}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{color=epred,width=8}
+%      \person{x=1.8cm,y=0, color=epyellow}
+%      \person{color=epred,front arm=60,front flag=stuffred, front flag angle=10}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large Gotcha};
+%         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%      \end{scope}
+%%
+%      \drawjail{xshift=4.5cm}{epred}
+%      \drawfloor{x=5.8cm, color=epred,width=8}
+%      \person{x=6.0cm,y=0, color=epyellow, front arm=-50}
+%      \person{x=7.6cm,color=epred}
+%      \motionlines{xshift=8.6cm,yshift=0.5cm}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Stun}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=9}
+%      \person{x=2.6cm, color=epyellow}
+%      \person{x=-0.2cm,color=epred,front arm=60,
+%              front wand=stuffgreen, front wand angle=-80}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large STUN};
+%         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%      \end{scope}
+%%
+%      \drawfloor{x=6cm,width=9}
+%      \person{name=y2, x=8.2cm, color=epyellow, sitting}
+%      \person{x=5.8cm,color=epred, front arm=20,
+%              front wand=stuffgreen, front wand angle=-170}
+%      %Glyph of jail
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Vengeance}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=10,color=epred}
+%      \person{x=-0.2cm,color=epred}
+%      \person{x=3.1cm, color=epyellow,
+%              front arm=-60,
+%              front wand=stuffred, front wand angle=100}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (5.5, 7) -- (5.4,6.2) -- (4.6,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large TOAST};
+%         \fill[white] (5.5, 7) -- (5.4,6.2) -- (4.6,7);
+%      \end{scope}
+%%
+%      \drawfloor{x=6cm,width=10,color=epyellow}
+%      \drawjail{xshift=10.0cm,xscale=-1,yshift=0.5cm}{epyellow}
+%      \person{x=8.2cm,color=epred, front arm = 70}
+%      \person{x=6.5cm,color=epyellow}
+%      \motionlines{xshift=4.8cm,yshift=0.5cm}
+%      %Glyph of jail
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Dispel}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=10}
+%      \person{x=3.1cm, color=epyellow,
+%              front arm=20, front potion=stuffgreen,
+%              back arm=-140,
+%              back wand=stuffred, back wand angle=10,
+%              belt=stuffred, belt left}
+%      \person{x=-0.2cm,color=epred,
+%              front arm=70,
+%              front wand=stuffblue, front wand angle=-85}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large DISPEL};
+%         \fill[white] (0.5, 7) -- (0.6,6.0) -- (1.4,7);
+%      \end{scope}
+%%
+%      \drawfloor{x=6cm,width=10}
+%      \person{x=9.1cm, color=epyellow, head angle=32,
+%              front arm=-12, front potion=stuffgreen,
+%              back arm=-40,
+%              back wand=stuffred, back wand angle=180,
+%              belt=stuffred, belt left}
+%      \person{x=5.8cm,color=epred,
+%              front arm=20,
+%              front wand=stuffblue, front wand angle=-170}
+%      %Glyph of jail
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Andy Warhol}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=10,color=epyellow}
+%      \person{x=-0.2cm,color=epred,
+%              belt=stuffred, belt right}
+%      \person{x=3.1cm, color=epyellow}
+%      \person{x=1.5cm, y=0.3cm,color=epyellow}
+%%
+%      \drawfloor{x=6cm, width=14,color=epyellow}
+%      \person{x=8.4cm, y=0.6cm, color=epyellow, sitting}
+%      \person{x=6.3cm, color=epyellow, sitting}
+%      \drawbelt{xshift=8.3cm,yshift=-3.1cm}{stuffred}
+%      \person{x=10.8cm, color=epred, left leg=-30, right leg=20, front arm=70}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=2cm,yshift=-0.5cm]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large LEEROY JENKINS};
+%         \fill[white] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+%      \end{scope}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Goombah}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=22}
+%      \person{x=-0.2cm,color=epred,
+%              left leg = -5, right leg = 30,
+%              left arm = -20, right arm = 60}
+%      \person{x=3.1cm,y=0.6cm,color=epred,
+%              belt=stuffgreen,
+%              left leg = -10, right leg = 20,
+%              left arm = -40, right arm = 30}
+%      \person{x=6.1cm,y=0.2cm,color=epred,
+%              left leg = -30, right leg = 10,
+%              left arm = -50, right arm = 30}
+%      \person{x=8.7cm,y=0.3cm,color=epred,
+%              left leg = -20, right leg = 15,
+%              left arm = -30, right arm = 20}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=2cm,yshift=-0.2cm]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+%         \draw[line width=4pt] (4.0, 7) -- (3.6,5.9) -- (5.2,7);
+%         \draw[line width=4pt] (6.2, 7) -- (6.6,6.0) -- (5.0,7);
+%         \draw[line width=4pt] (11.5, 7.5) -- (11.9,6.5) -- (10.3,7.5);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large YANKEE DOODLE...};
+%         \fill[white] (-2.5, 7) -- (-2.8,6.0) -- (-1.6,7);
+%         \fill[white] (4.0, 7) -- (3.6,5.9) -- (5.2,7);
+%         \fill[white] (6.2, 7) -- (6.6,6.0) -- (5.0,7);
+%         \fill[white] (11.5, 7.5) -- (11.9,6.5) -- (10.3,7.5);
+%      \end{scope}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Doc Ock}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{color=epred,width=10}
+%      \person{x=-0.2cm,color=epyellow}
+%      \person{x=3.2cm,color=epyellow}
+%      \person{x=1.6cm,color=epred,left arm=-60, right arm = 50, belt=stuffblue}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large Gotcha};
+%         \fill[white] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+%      \end{scope}
+%%
+%      \drawjail{xshift=5.5cm}{epred}
+%      \drawfloor{x=6.8cm, color=epred,width=10}
+%      \person{x=7.0cm,y=0, color=epyellow, front arm=-50}
+%      \person{x=8.2cm,y=0, color=epyellow, front arm=-15}
+%      \person{x=9.8cm,color=epred, belt=stuffblue}
+%      \motionlines{xshift=10.6cm,yshift=0.5cm}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%
+%\begin{frame}{Wait...}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=8}
+%      \person{x=1cm,y=0.2cm,color=epyellow, sitting,
+%         right arm=170, right potion=stuffgreen}
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=-0.7cm,yshift=-1.5cm]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large KEY};
+%         \fill[white] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
+%      \end{scope}
+%%
+%      \drawfloor{x=5.8cm,width=8}
+%      \person{x=7cm,color=epyellow,
+%         front arm=20, front potion=stuffgreen}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Ninja}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=10,color=epyellow}
+%      \person{x=3.1cm, color=epyellow}
+%      \person{x=1.5cm, y=0.3cm,color=epyellow}
+%      \person{x=-0.2cm,color=epred,
+%              front arm=50, front potion=stuffred}
+%%
+%      \drawfloor{x=6cm, width=15,color=epyellow}
+%      \person{x=8.4cm, y=0.6cm, color=epyellow, sitting}
+%      \person{x=6.3cm, color=epyellow, sitting}
+%      \person{x=10.8cm, color=epred, left leg=-30, right leg=20, front arm=70}
+%      \fill[stuffred] (8.3cm,-3.3cm) ellipse (0.34 and 0.48);
+%%
+%      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=3cm,yshift=-0.5cm]
+%         \useasboundingbox (0, 0);
+%         \draw[line width=4pt] (-4.5, 7) -- (-4.8,6.0) -- (-3.6,7);
+%         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large POOF!  I AM A NINJA};
+%         \fill[white] (-4.5, 7) -- (-4.8,6.0) -- (-3.6,7);
+%      \end{scope}
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+%
+%\begin{frame}{Light Grenade}{Tikz}
+%   \centerline{
+%   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+%      \drawfloor{width=9}
+%      \person{x=2.6cm, color=epyellow, front arm=-30}
+%      \person{x=-0.2cm,color=epred,
+%              front arm=60, front potion=stuffblue}
+%%
+%      \drawfloor{x=6cm,width=9}
+%      \person{name=y2, x=8.2cm, color=epyellow, sitting,
+%              front arm=-20, front potion=stuffblue}
+%      \person{x=5.8cm,color=epred}
+%      %Glyph of jail
+%   \end{tikzpicture}
+%   }
+%\end{frame}
+
 
 \end{document}

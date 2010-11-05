@@ -43,6 +43,12 @@
 %%    This is a special hack for rule 0.  It makes it section 0, and the HTML
 %%    is a bit bigger than a normal section.
 %%
+%% (: Text :)
+%% :*
+%% :**
+%%    Recent changes; this will show up as red in the HTML.  The first is for
+%%    small changes, the second two for new rules/subrules
+%%
 %% Also, note that the conversions are a bit hackish and do basically no error
 %% checking, so mistakes will likely manifest as either broken formatting or
 %% bizarre TeX errors.  However, the format should be simple enough to avoid
@@ -71,18 +77,18 @@ at all times.
 is Doherty. The teams should swap territories after each game. The
 territory is defined as the volume and all surfaces inside the building
 with the doors closed, or as defined by the judges in the case of
-ambiguity. Where there is a chamber between two sets of doors, the
-chamber is included in the building.
+ambiguity. Where there is a chamber between two sets of doors, the chamber
+is included in the building.
 * Certain areas such as labs, clusters, and any normally
 inaccessible or otherwise restricted areas are forbidden. No player may
 enter these areas at any time during the game.
 * All areas which are neither a team's home territory nor
-forbidden are neutral. There must always at least ten feet of neutral
+forbidden are neutral. There must always be at least ten feet of neutral
 territory between opposing teams' home territories.
 * A player is considered to be in a team's territory if any
-part of his body is in the team's territory. If a player is in neither
+part of his body is in the team's territory. If a player is in (:no:)
 team's territory, he is in neutral territory. Magic items have no
-effect on players in neutral territory.
+effect on players (:who are:) in neutral territory.
 ** The inside of a door leading out of a team's territory is in
 the team's territory, so can have a glyph applied to it. However, a
 player touching this surface is next to the team's territory, not
@@ -99,7 +105,8 @@ is not affected by magic items, may not capture, and may not be
 captured. A player may use jazz hands to signal ethereality.
 
 * A captive is a player who has been captured (see [[capture]]).
-Captives may not move or touch enemy flags and may not use magic items.
+Captives may not move or touch enemy flags and may not use (:or drop:)
+   magic items (:(except for the Ninja Potion; see [[ninja]]):).
 * A captor is a player who has captured another player (see
 [[capture]]). Captors must lead their captives to the jail (see [[capture]]), but are
 otherwise normal players.
@@ -112,6 +119,8 @@ identically to a prisoner except where specified.
 off. If he is captured while stunned, he becomes unstunned. A player may
 not be stunned again while stunned.  Stunned players may not capture.
 * Only normal players and captors can be stunned.
+:** If John Mackey changes a player's major during the game, the player is
+stunned for one minute.
 
 !!{capture}[capture] Capture and Imprisonment 
 * If a player touches an enemy when both are in the first
@@ -128,7 +137,7 @@ item.
 *[may_not_capture] A captor must lead his captive directly to his team's Glyph
 of Jail (see [[glyph_of_jail]]) at a reasonable speed. He cannot make any more
 captures until his captive has entered jail by touching the Glyph of
-Jail, either directly or through a chain of other prisoners. Once this
+Jail (:or another prisoner in the jail:).  Once this
 occurs, the captor is again a normal player, and the captive becomes a
 prisoner.
 * If a captor is stunned, his captive becomes a normal player.
@@ -155,11 +164,11 @@ all prisoners are released from all jails. Released prisoners must
 return to their home territories at reasonable speed, by the most
 direct route. Prisoners released in this manner are ethereal until they
 re-enter their home territories.
-* A player in a normal state may touch a prisoner in another team's
-jail. As long as freeing the prisoner does not break a chain leading back to
-the jail, the prisoner is freed. Both players are ethereal and must return to
-their home territories by the most direct route; they need not remain
-together.
+* A player in a normal state (:not carrying a flag:) may touch a prisoner
+in another team's jail. As long as freeing the prisoner does not break a
+chain leading back to the jail, the prisoner is freed. Both players are
+ethereal and must return to their home territories by the most direct
+route; they need not remain together.
 * The jailer has a supply of Truth Serum, which he may use by
 poking a prisoner in the shoulder with a pinky finger. The prisoner
 then becomes an interrogation victim.
@@ -168,7 +177,7 @@ questions, and the victim may lie no more than once. The victim may
 answer "I don't know" if she really doesn't know, but then the question
 doesn't count against the six.
 * Upon completion of questioning, the victim is freed from jail
-and must return to his home territory as after a jailbreak (see [[jailbreak]]).
+and must return to her home territory as after a jailbreak (see [[jailbreak]]).
 Questioning is complete when the victim answers the sixth question, if
 the jailer decides he is done with this victim, if the victim is
 freed, at jailbreak, if there is no jailer, or if the jailer leaves line of
@@ -199,11 +208,14 @@ asks for it specifically and knows that she has the item.
 * Dispelling: A dispelled item may not be used for its magical effects.
 * Line of Sight: A player is within line of sight of an item or event
 if he can rotate himself to bring it into his field of view.
-* See: A player sees an item or event if it passes within his field of
-view and he can recognize it.
+* See: A player sees an item or event if it passes within her field of
+view and she can recognize it.
 * Sacrificial: Certain items are sacrificial. These items may
 only be used in enemy territory, must be dropped upon use, and may not
 be picked up or moved when in enemy territory.
+:* Whap: A player is whapped by a wand if it hits her at approximately the same
+time the wand bearer shouts the key word.
+:** As wands are fairly soft, whapping a player on the head counts but is discouraged.
 * Key Words/Phrases: Some items have a key word or phrase used to
 activate them.  This phrase must be said entirely in the territory where the
 use occurs, and the action occurs upon completion of the phrase.
@@ -214,8 +226,8 @@ use occurs, and the action occurs upon completion of the phrase.
 ** Judges may or may not inform the players of these values on a per-game basis.
 * Flags must be placed during the initial setup time, and their
 placement must be supervised by a judge. They must be placed no higher
-than six feet above the floor; at least half the flag must be visible
-from every angle; flags must be placed no more than one flag per
+than six feet above the floor; (:the flag must be clearly visible from most
+angles:); flags must be placed no more than one flag per
 hallway or corridor. If the flag is placed inside a container, there
 must be an obvious way to remove the flag in one smooth motion.
 * No flag may ever exist in an area with fewer than two exits,
@@ -230,7 +242,7 @@ team the number of points associated with the flag. The flag is then
 out of play for the remainder of the game.
 
 !!{judges} Judges
-* Judges are indicated by blue headbands, and are responsible for keeping the game running smoothly.
+* Judges are indicated by blue (:or silver:) headbands, and are responsible for keeping the game running smoothly.
 * The head judge is the final arbiter and scorekeeper, and should remain in the judges' room, Wean Hall 8427.
 * An assistant head judge should reside at each team's jail.
 * Each team should also have at least 3 roaming judges whose
@@ -246,10 +258,15 @@ judge's decision is final.
 * Glyphs are large sheets of paper or posterboard marked with a spell.
 * Each glyph is owned by a particular team, indicated by the coloring of the glyph.
 * A glyph must be taped to a wall or door in the team's territory.
-* A glyph affects all players except those of its owning team.
-* A glyph may not be placed within ten feet of a flag. If a
-flag is dropped within ten feet of a dispellable glyph, the glyph is
-dispelled for as long as the flag remains, and for one minute after.
+* A glyph affects all players (:on opposing teams in its owning team's
+  territory.:)
+* A glyph may not be placed within ten feet of a flag.  If a flag is dropped
+  within ten feet of a dispellable glyph, the glyph is dispelled for as long as
+  the flag remains, and for one minute after.
+% UPDATE? * A glyph may not be placed within ten feet of a flag.  (:(REMOVE THE
+% UPDATE? FOLLOWING? If a flag is dropped within ten feet of a dispellable glyph,
+% UPDATE? the glyph is dispelled for as long as the flag remains, and for one minute
+% UPDATE? after.):)
 
 !!{jail}[glyph_of_jail] Glyph of Jail
 * The Glyph of Jail is indicated by the word "Jail".
@@ -266,6 +283,8 @@ dispelled for as long as the flag remains, and for one minute after.
 door facing a player, she may not open the door or prevent it from
 closing. If the Glyph is mounted on one of a set of doors, all doors
 are affected.
+:* The counting of exits for purposes of flag placement is unaffected by
+this glyph.
 * If a Glyph of the Disgusting Doorknob is mounted next to the
 buttons controlling an elevator, no affected player may push any of the
 buttons or prevent the elevator doors from closing.
@@ -278,17 +297,17 @@ glyph.
 !! Glyph of Alarm 
 * The Glyph of Alarm is indicated by the word "Alarm".
 * A player who sees the Glyph of Alarm must shout or sing
-"Alarm" or a similar phrase as loudly as possible for one minute or
+"Alarm" or (:another:) phrase as loudly as possible for one minute or
 until she is captured or returns to neutral space.
 
 
 ! Potions
 
 !!{potions} General
-* Potions are foam-rubber balls.
+* Potions are (:small pieces of foam wrapped in colored tape:).
 * Potions are concealable.
 
-!! Ninja Potion of Magic Smoke 
+!![ninja] Ninja Potion of Magic Smoke 
 * The Ninja Potion of Magic Smoke is red and sacrificial.
 * A captive may throw this potion onto the ground and yell as
 loudly as possible "Poof, I am a Ninja!". All enemy players who hear this
@@ -315,28 +334,29 @@ with this potion and use one of the key words "Lolt", "Jube", or "Key".
 ! Wands
 
 !!{wands} General
-* Wands are two-foot lengths of foam rubber.
-* A wand is used by whapping a person or glyph and shouting the keyword.
-* Each use of the keyword invokes at most one wand on one subject.
+* Wands are (:eighteen-inch:) lengths of foam rubber.
+* A wand is used by whapping a person or glyph (:(including shouting the
+  key word):).
+* Each use of the key word invokes at most one wand on one subject.
 
 !! Wand of Vengeance 
-* The Wand of Vengeance has keyword "Toast", and is red and sacrificial.
-* A player may whap an enemy in the enemy's home territory.
+* The Wand of Vengeance has key word "Toast", and is red and sacrificial.
+* A (:normal:) player may whap an enemy in the enemy's home territory.
 The user captures the enemy, and both players become ethereal.  The user
 must lead the enemy back to his jail as directly as possible at reasonable
 speed.
 * Upon entry into the user's home territory, the user becomes a captor and the enemy becomes a captive.
 
 !! Wand of Stun 
-* The Wand of Stun has keyword "Stun", and is green and has cooldown.
+* The Wand of Stun has key word "Stun", and is green and has cooldown.
 * Any player whapped with this wand is stunned for one minute.
 
 !! Wand of Dispel 
-* The Wand of Dispel has keyword "Dispel", and is blue and has cooldown.
+* The Wand of Dispel has key word "Dispel", and is blue and has cooldown.
 * If a player is whapped with the wand of dispel, all magic items he is carrying are dispelled for one minute.
 * If two players simultaneously use this wand on each other,
 all items carried by both players are dispelled for one minute.
-* A glyph which is whapped by the Wand of Dispel is dispelled for one minute.
+* A (:dispellable:) glyph which is whapped by the Wand of Dispel is dispelled for one minute.
 
 
 ! Belts
@@ -374,7 +394,7 @@ arm's length of each previous captive at the time of the next enemy's
 capture.
 ** Once any captures have been made, he must still lead the
 captives back to jail as usual, but may still capture on the
-way to jail according to [[doc_ock_may_capture]].
+way to jail according to ([[doc_ock_may_capture]]).
 * If the belt is dispelled, all captives except the first are freed. If
 there is a tie, the captor may choose which one to keep.
 
