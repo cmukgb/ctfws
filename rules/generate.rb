@@ -340,18 +340,20 @@ else
    <br>
    <i>Revised 3/2008 by edanaher, csjackso, ddagradi, cmartens, jgg, csawyer, ehohenst, mglisson...</i>
    <br>
-   <i>Revised 8/10/2008, 2/8/2009, <font color="#ff0000">11/5/2009</font> by edanaher</i>
+   <i>Revised 8/10/2008, 2/8/2009, 11/5/2009 by edanaher</i>
+   <br>
+   <i>Revised <font color="#ff0000">2/20/2012</font> by tbroman, kharring, mjsulliv, eforney, aleibowi...
    <br>
    <i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
    <br>
    <br>
-<h3>These are the <span class="change">preliminary</span> rules for the Spring 2010 game of Capture the Flag with Stuff.</h3>
+<h3>These are the <span class="change">preliminary</span> rules for the Spring 2012 game of Capture the Flag with Stuff.</h3>
    <br>
 <?php
 if (!$view_print)
 {
-?> <a href="ctfws_rules_full.php?p=1">Printable Version</a>
+?> <a href="full.php?p=1">Printable Version</a>
 <?php
 }
 ?>

@@ -76,7 +76,7 @@
 % - Keep it simple, no one is interested in your street address.
 
 \date % (optional, should be abbreviation of conference name)
-{Fall 2010}
+{Spring 2012}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -468,7 +468,7 @@
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
-            & \pair{\B{Light Grenade}}{dumb stun} \\
+            & \pair{\B{Mind Control}}{go to jail} \\
   \hline
   \end{tabular}
 
@@ -495,7 +495,7 @@
     \pair{Disgusting}{Doorknob} & Yukko & Can't open door \\
     \hline
     \end{tabular}}
-  \item Jailor
+  \item Jailer
     \begin{itemize}
     \item Fedora
     \item Truth Serum
@@ -512,7 +512,7 @@
   \item Teams
     \begin{itemize}
     \item Red/yellow armbands
-    \item Judges: Blue armbands/berets
+    \item Judges: Blue/silver armbands
     \end{itemize}
   \item Territory
     \begin{itemize}
@@ -691,7 +691,7 @@
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
-            & \pair{\B{Light Grenade}}{dumb stun} \\
+            & \pair{\B{Mind Control}}{go to jail} \\
   \hline
   \end{tabular}
   \pause
@@ -1025,7 +1025,7 @@
    \end{tikzpicture}
    }
 
-  \begin{itemize}
+  \begin{itemize} 
   \item \G{Green Potion}
   \item Has cooldown
   \item Bonk \textbf{self} on head
@@ -1033,7 +1033,7 @@
   \item Either:
     \begin{itemize}
     \item Freed from jail (no backs)
-    \item Unstun
+    \item Unstun (must be sitting)
     \end{itemize}
   \end{itemize}
    \begin{tikzpicture}[x=0.5cm, y=0.5cm]
@@ -1045,28 +1045,36 @@
 }
 
 {
-\doublebackground{Light Grenade}{\sep Stuff} {
+\doublebackground{Potion of Mind Control}{\sep Stuff} {
+% This section defines pictures for the Light Grenade. Needs change.
    \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
-      \drawfloor{width=9}
-      \person{x=2.6cm, color=epyellow, front arm=-30}
-      \person{x=-0.2cm,color=epred,
+      \drawfloor{x=-2cm, width=9, color=epred}
+      \person{x=0.6cm, color=epyellow, front arm=-30}
+      \person{x=-2.2cm,color=epred,
               front arm=60, front potion=stuffblue}
 %
-      \drawfloor{x=6cm,width=9}
-      \person{name=y2, x=8.2cm, color=epyellow, sitting,
-              front arm=-20, front potion=stuffblue}
-      \person{x=5.8cm,color=epred}
+      \drawfloor{x=3.5cm,width=5, color=epred}
+      \person{name=y2, x=3.7cm, color=epred, sitting}
       %Glyph of jail
-   \end{tikzpicture}
+      \drawjail{xshift=6cm}{epred}
+      \drawfloor{x=6.5cm,width=5, color=epred}
+      \person{x=6.9cm,color=epyellow, front arm=-10, front potion=stuffblue}
+%
+		\begin{scope}[inner sep=0,outer sep=0, line width = 2pt,xshift=3cm,yshift=-0.5cm]
+			\useasboundingbox (0, 0);
+			\draw[line width=4pt] (-8, 7) -- (-8.3,6.0) -- (-7.1,7);
+			\node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (-5.5, 8) {\large OBEY};
+			\fill[white] (-8, 7) -- (-8.3,6) -- (-7.1,7);
+		\end{scope}
+	 \end{tikzpicture}
    }
 
   \begin{itemize}
   \item \B{Blue potion}
-  \item Stunned if
-    \begin{itemize}
-    \item Pick up in enemy territory
-    \item Receive from any player anywhere
-    \end{itemize}
+  \item Only useable by captor
+  \item Keyword: ``Obey"
+  \item Captive takes potion, goes to jail alone
+  \item Captor stunned for \textbf{10 seconds}
   \end{itemize}
 \end{frame}
 }
@@ -1130,7 +1138,7 @@
 \begin{frame}{After the Game}{The Boring Part}
   \begin{itemize}
      \item Collect all the stuff
-     \item Come back to 7500
+     \item Come back to DH2210
      \subitem{With stuff}
    \end{itemize}
 \end{frame}
@@ -1155,7 +1163,7 @@
   \item If you're hurt, get help immediately
   \begin{itemize}
     \item Not at 4:00 in the morning
-    \item Judge's Room, between Wean/Doherty fifth/A
+    \item Judge's Room, Wean 8427
   \end{itemize}
   \end{itemize}
 \end{frame}
@@ -1180,7 +1188,7 @@
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
-            & \pair{\B{Light Grenade}}{dumb stun} \\
+            & \pair{\B{Mind Control}}{go to jail} \\
   \hline
   \end{tabular}
 \end{frame}
@@ -1200,7 +1208,7 @@
     \pair{Disgusting}{Doorknob} & Yukko & Can't open door \\
     \hline
     \end{tabular}}
-  \item Jailor
+  \item Jailer
     \begin{itemize}
     \item Fedora
     \item Truth Serum
@@ -1216,7 +1224,7 @@
     \subitem{(For one minute after dropping)}
   \item Drop \R{sacrificial} things
   \item All times are \textbf{one minute}
-    \subitem{Except for Ninja Potion: \textbf{10 seconds}}
+    \subitem{Except for Ninja Potion and Mind Control Potion: \textbf{10 seconds}}
   \item Don't be a jackass
   \end{itemize}
 \end{frame}
@@ -1224,7 +1232,7 @@
 \begin{frame}{A Brief Message}{From Our Sponsors}
   \begin{itemize}
   \item KGB
-  \item Meetings 4:30, MM A14
+  \item Meetings Mondays at 4:30, MM 103 (Breed Hall)
   \end{itemize}
    \begin{tikzpicture}[x=0.5cm, y=0.5cm]
       \useasboundingbox (0, 0);
@@ -1251,7 +1259,7 @@
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
-            & \pair{\B{Light Grenade}}{dumb stun} \\
+            & \pair{\B{Mind Control}}{go to jail} \\
   \hline
   \end{tabular}
   \\[12pt]
