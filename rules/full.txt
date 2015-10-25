@@ -128,7 +128,7 @@ point, the enemy becomes a captive.
 captives of this action ("Gotcha" is a good choice).
 * A player, when captured, must immediately drop any flags they are carrying at 
 the spot where they were captured.
-* A captive or prisoner must give up any non-concealable items upon
+*[captive_forfeit] A captive or prisoner must give up any non-concealable items upon
 request of the captor or a teammate of the captor. Concealable items need not
 be given up unless the enemy asking for them knows that the player has the
 item.
@@ -202,7 +202,7 @@ cooldown may not be activated again for one minute after its use. This
 requirement may be suspended by the singing of a number of verses from
 a song determined before the game begins; the item is then usable after
 singing that song.
-* Concealment: Potions may be concealed, meaning they need not
+*[concealment] Concealment: Potions may be concealed, meaning they need not
 be visible. All other game items must be visible at all times. A
 captive is not required to give up a concealed item unless their captor
 asks for it specifically and knows that they have the item.
@@ -224,7 +224,7 @@ time the wand bearer shouts the key word.
 activate them.  This phrase must be said entirely in the territory where the
 activation occurs, and the action occurs upon completion of the phrase.
 * Knowledge: knowledge of an opponent's concealable items, as referenced in 
-rules I.C.3 and I.F.2, means that they have not had a chance to dispose of 
+rules [[captive_forfeit]] and [[concealment]], means that they have not had a chance to dispose of 
 that item since the last time you saw it in their possession.
 
 
@@ -246,9 +246,9 @@ gives up the item or drops the flag.
 :* Each flag will be assigned a point value at the beginning of the game by the
 head judge.
 :** Judges may or may not inform the players of these values on a per-game basis.
-:* The winner of the game is the team with the most points. The point values of
+:*[most_points_wins] The winner of the game is the team with the most points. The point values of
 each flag must be set such that the team with the most flags has the most points.
-:** If the point system is set differently than specified in 1.G.6, the players
+:** If the point system is set differently than specified in [[most_points_wins]], the players
 must be informed of this fact before the set up of the game in which this takes place.
 * A player who brings a flag to the judges room earns for their
 team the number of points associated with the flag. The flag is then
