@@ -98,7 +98,7 @@ interrogation victim, or stunned.
 * A normal player is in the default state described in these rules.
 * An ethereal player may not use, drop, or pick up magic items,
 is not affected by magic items, may not capture, and may not be
-captured. A player (:must:) use jazz hands to signal ethereality.
+captured. A player must use jazz hands to signal ethereality.
 
 * A captive is a player who has been captured (see [[capture]]).
 Captives may not move or touch enemy flags and may not use or drop
@@ -111,8 +111,8 @@ but are otherwise normal players.
 * An interrogation victim is a prisoner who has been given truth serum
 by the jailer (see [[capture]]).  They may not use magic items, but otherwise act
 identically to a prisoner except where specified.
-* A stunned player must immediately sit on the floor (:in the territory in which they were
-stunned:) until the stun wears off. The time they are stunned is measured from 
+* A stunned player must immediately sit on the floor in the territory in which they were
+stunned until the stun wears off. The time they are stunned is measured from
 when they sit down, not when the stunning effect occurred. If they are captured
 while stunned, they become unstunned. A player may not be stunned again while
 stunned. Stunned players may not capture.
@@ -193,7 +193,7 @@ fifteen minutes. This time should be used for the placement of flags
 and glyphs, and distribution of magic items. No player may enter enemy
 territory during this period. Magic items have no effect during this
 time.
-* The game (:begins at the end of the set up period and:) ends after one
+* The game begins at the end of the set up period and ends after one
 hour, or when there remains only one team with uncaptured flags.
 
 !!{terms} Additional Terms
@@ -208,7 +208,7 @@ captive is not required to give up a concealed item unless their captor
 asks for it specifically and knows that they have the item.
 :** Potions cannot be used while concealed.
 * Dispelling: A dispelled item has no magical effects.
-:* Field of View: The field of view is the extent of the observable world that
+* Field of View: The field of view is the extent of the observable world that
 is visible to the player at any given moment.
 * Line of Sight: A player is within line of sight of an item or event
 if they can rotate themself to bring it into their field of view.
@@ -262,7 +262,7 @@ judges' room, which is Wean Hall 8427 unless otherwise specified.
 * An assistant head judge should reside at each team's jail.
 * Each team should also have at least 1 roaming judge. (:The total number of
 roaming judges is up to the head judge, and based on the number of players.:)
-:** Roaming judges’ responsibility is to resolve conflicts or perform other
+** Roaming judges’ responsibility is to resolve conflicts or perform other
 duties required of them.
 :*Judges should attempt to resolve disputes fairly and find outcomes agreeable
 to both sides. In all cases, the judge's decision is final.
@@ -273,7 +273,7 @@ to both sides. In all cases, the judge's decision is final.
 !!{glyphs} General
 * Glyphs are large sheets of paper or poster-board marked with a spell.
 * Each glyph is owned by a particular team, indicated by the coloring of the glyph.
-* A glyph must be taped to a wall in the (:owning:) team's territory (:or side
+* A glyph must be taped to a wall in the owning team's territory (:or side
  of a door that would be in the owning team's territory if it were closed:).
 :** Once placed, all glyphs are considered part of the owning team’s territory.
 * A glyph affects all normal players on opposing teams in its owning team's
@@ -293,9 +293,9 @@ to both sides. In all cases, the judge's decision is final.
 
 !! Glyph of the Disgusting Doorknob 
 * The Glyph of the Disgusting Doorknob is indicated by the word "Yukko".
-* (:If a Glyph of the Disgusting Doorknob is on a door, a player may not
+* If a Glyph of the Disgusting Doorknob is on a door, a player may not
 open the door or prevent it from closing by interacting with the side of
-the door the Glyph is on.:) If the Glyph is mounted on one of a set of doors,
+the door the Glyph is on. If the Glyph is mounted on one of a set of doors,
 all doors are affected.
 :** The Glyph of Disgusting Doorknob affects players in neutral territory.
 * The counting of exits for purposes of flag placement is unaffected by
@@ -406,8 +406,8 @@ the user are stunned for one minute.
 
 !! Goombah's Belt of Humiliating Protection 
 * Goombah's Belt of Humiliating Protection is green.
-* This belt is (:activated by starting to skip and loudly sing "Yankee Doodle".
-While singing and skipping continues, the belt is in use, and:) the wearer is
+* This belt is activated by starting to skip and loudly sing "Yankee Doodle".
+While singing and skipping continues, the belt is in use, and the wearer is
 immune to capture and stun.
 * Any number of teammates may share the protection of this belt
 by holding hands with the wearer, either directly or through a chain of
