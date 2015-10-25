@@ -69,15 +69,15 @@ states that a player wearing a Doc Ock's Belt may capture multiple times.
 the game. Any such rules or stuff changes must (:be clearly explained before
 the start of the game in which those changes are to be introduced.:)
 
+:* Definitions and rules specific to instances of the game played at
+Carnegie Mellon University are presented in [[cmu_rules]].
+
 !!{teams_territories} Teams and Territories
 * The game consists of two teams, red and yellow. Team membership is 
 indicated by (:colored bands, worn on the upper arm or head,:) which must be
 visible at all times.
-* Each team has a home territory. One team's is Wean, the other's is Doherty.
-The teams should swap territories after each game. (:The territory is defined
-as the space inside the building, with the doors closed, or as defined by
-the judges in the case of ambiguity. Where there is a chamber between two
-sets of doors, the chamber is included in the building.:)
+* Each team has a distinct home territory.
+** The teams should swap territories after each game.
 * Certain areas such as labs, clusters, and any normally
 inaccessible or otherwise restricted areas are forbidden. No player may
 enter these areas at any time during the game.
@@ -143,9 +143,9 @@ prisoner.
 
 !![jail] Jail
 * Each team has a jail, designated by the Glyph of Jail.
-** Whenever possible, the Glyph of Jail in Doherty will be placed on floor A, 
-near the staircase closest to the main lobby, and the Glyph of Jail in Wean 
-will be placed on floor 6, near room 6220 at the end of the 6200 corridor.
+:** Whenever possible, the Glyph of Jail for each team shall be placed in a
+well-known conspicuous location, as far from the opposing team's territory as
+feasible.
 * One player on each team may take on the role of jailer by
 wearing the team's Jailer Fedora. The jailer is a normal player except
 as described in the remainder of this section. The jailer may at any
@@ -258,7 +258,10 @@ out of play for the remainder of the game.
 * Judges are indicated by blue or silver headbands, and are responsible for
 keeping the game running smoothly.
 * The head judge is the final arbiter and scorekeeper, and should remain in the
-judges' room, which is Wean Hall 8427 unless otherwise specified.
+judges' room.
+:** The judges' room shall be placed in a well-known central location,
+approximately equidistant from each team's territories, shall be considered
+neutral territory, and should be accessible to both teams via neutral territory.
 * An assistant head judge should reside at each team's jail.
 * Each team should also have at least 1 roaming judge. (:The total number of
 roaming judges is up to the head judge, and based on the number of players.:)
@@ -453,5 +456,19 @@ may not conceal, obfuscate, or lie about.
 are a captive under its control.
 * You may not imitate the activation or use of an item without the intent of
 using it.
+
+![cmu_rules] CMU-Specific Definitions and Rules
+:* One team's home territory is Wean Hall, the other's is Doherty Hall.
+:** Each team's territory is defined as the space inside the corresponding
+building, with the doors closed, or as defined by the judges in the case of
+ambiguity. Where there is a chamber between two sets of doors, the chamber is
+included in the building.
+:* Whenever possible, the Glyph of Jail in Doherty Hall will be placed on
+floor A, near the staircase closest to the main lobby, and the Glyph of Jail
+in Wean Hall will be placed on floor 6, near room 6220 at the end of the
+6200 corridor.
+:* The judges' room shall be in Wean Hall 8427 unless otherwise specified.
+:** Neutral territory shall extend into a small section of Wean floor 8
+to allow both teams equal access the judges' room.
 
 @ Respect: Above all, don't be a jackass.
