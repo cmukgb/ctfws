@@ -417,16 +417,26 @@ singing along.
 ** In particular, the Goombah's belt is dispelled.
 * This belt does not function in elevators.
 
-!! Doc Ock's Belt of Many Arms 
-* Doc Ock's Belt of Many Arms is blue.
-*[doc_ock_may_capture] The wearer may have up to four captives, as long as they
-are within an arm's length of each previous captive at the time of the next
-enemy's capture.
-** Once any captures have been made, they must still lead the
-captives back to jail as usual, but may still capture on the
-way to jail according to ([[doc_ock_may_capture]]).
-* If the belt is dispelled, all of its wearer's captives except the first are
-freed. If there is a tie, the captor may choose which one to keep.
+!! [BLUE BELT NAME]
+:* [NAME] is blue. It should have a timer on it.
+:* Only captors may use the [NAME]. To use this belt, a captor must hand the
+belt to their captive, use the key word "I’ll be back," and start the timer.
+:* A captive who is handed this belt by their captor becomes a captive of the
+belt until the previous captor returns or one minute elapses on the timer,
+whichever comes first. They must sit down and place the belt visibly in front
+of them.
+:** A player affected by the [NAME] is still a captive. They may not be
+stunned, and they ignore opponents' glyphs.
+:** If the [NAME] is dispelled while someone is a captive of it, the captive
+under its control is freed and the belt reverts to being stuff.
+:* A captor who uses the [NAME] is allowed to get a second captive. They should
+then attempt to return to the belt. If they return within a minute, then they
+are to put the belt back on and lead both captives directly to jail.
+:* If one minute passes without the original captor returning, then the captive
+of the belt is free and gains possession of the belt. (They may drop it if they
+so choose.)
+:* If [NAME] is dispelled while the captor is leading two people to jail, then
+the one who was captured last is freed. The other prisoner remains a captive.
 
 ! Sportsmanship 
 
