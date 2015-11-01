@@ -61,9 +61,9 @@
 * When rules in this document conflict, the later rule takes
 precedence.
 
-** E.g. ([[may_not_capture]]) states that a captor may not capture, while
-([[doc_ock_may_capture]])
-states that a player wearing a Doc Ock's Belt may capture multiple times.
+** E.g. ([[may_not_capture]]) states that a captor may not capture, (:while
+([[schwarz_ock_may_capture]])
+states that a player wearing Schwarzengger's Belt of Double Termination may capture multiple times.:)
 
 * The judges may choose to change the rules or add or remove stuff into
 the game. Any such rules or stuff changes must (:be clearly explained before
@@ -417,26 +417,36 @@ singing along.
 ** In particular, the Goombah's belt is dispelled.
 * This belt does not function in elevators.
 
-!! [BLUE BELT NAME]
-:* [NAME] is blue. It should have a timer on it.
-:* Only captors may use the [NAME]. To use this belt, a captor must hand the
-belt to their captive, use the key word "I’ll be back," and start the timer.
+!! Schwarzenegger's Belt of Double Termination
+:* Schwarzenegger's Belt of Double Termination is blue. It shall have a timer
+on it.
+:* Only captors may use Schwarzenegger's Belt. To activate this belt the wearer
+must hand the belt to their captive, use the key phrase "I'LL BE BACH!!" and
+start the timer.
 :* A captive who is handed this belt by their captor becomes a captive of the
-belt until the previous captor returns or one minute elapses on the timer,
-whichever comes first. They must sit down and place the belt visibly in front
-of them.
-:** A player affected by the [NAME] is still a captive. They may not be
-stunned, and they ignore opponents' glyphs.
-:** If the [NAME] is dispelled while someone is a captive of it, the captive
-under its control is freed and the belt reverts to being stuff.
-:* A captor who uses the [NAME] is allowed to get a second captive. They should
-then attempt to return to the belt. If they return within a minute, then they
-are to put the belt back on and lead both captives directly to jail.
-:* If one minute passes without the original captor returning, then the captive
-of the belt is free and gains possession of the belt. (They may drop it if they
-so choose.)
-:* If [NAME] is dispelled while the captor is leading two people to jail, then
-the one who was captured last is freed. The other prisoner remains a captive.
+belt. They must sit down and place the belt visibly in front of them. A player
+affected by Schwarzenegger's Belt is still a captive. They may not be stunned,
+and they ignore opponents' glyphs.
+:** If one minute passes without the original captor returning, then the
+captive of the belt is free and becomes a normal player. The belt then reverts
+to being normal stuff.
+:** If the original captor returns before one minute passes, the captive of the
+belt becomes the captive of the original captor again. The belt then reverts to
+being normal stuff. The original captor cannot use the belt on the same captive
+more than once, per instance of capture.
+:** If Schwarzenegger's Belt is dispelled while someone is a captive of it, the
+captive under its control is freed and becomes a normal player. The belt then
+reverts to being normal stuff.
+:* [schwarz_may_capture] A captor who activates Schwarzenegger's Belt may
+attempt to capture a second captive, and is a normal player during that time.
+If they succeed in capturing a second captive, they must then return to where
+the belt was activated. If the original captive is still held by the belt when
+they return, they must then put the belt back on and lead both captives
+directly to jail; otherwise, they must lead the second captive directly to
+jail.
+:* If Schwarzenegger's Belt is dispelled while the captor is leading two
+captives to jail, then the second captive is freed. The original captive
+remains a captive, and must be led directly to jail.
 
 ! Sportsmanship 
 
