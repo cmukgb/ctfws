@@ -81,7 +81,7 @@ official rules govern.</h3>
 <?php
 if (!$view_print)
 {
-?>	<a href="ctfws_rules_useful.php?p=1">Printable Version</a>
+?>	<a href="useful.php?p=1">Printable Version</a>
 <?php
 }
 ?>
@@ -98,31 +98,31 @@ defenders. However, the task is made much more interesting by the
 addition of stuff: wands, belts, and potions that affect the game in
 exciting ways.
 <h2> Base Rules </h2>Each player is on the yellow or the red team.
-Team membership is indicated by appropriately colored armbands, which
-must be worn visibly at all times.<br>
+Team membership is indicated by appropriately colored bands, which
+must be worn as armbands or headbands at all times.<br>
 Each team has a home territory, either Wean or Doherty. All other
 spaces (outside, Newell Simon, etc.) are neutral. Certain areas (labs,
 clusters, any normally inaccessible or restricted areas) are forbidden
 territory: no player may enter these at any time during the game.<br>
-A player is in a team's territory if any part of his body is in the
+A player is in a team's territory if any part of their body is in the
 team's territory. If he is in neither team's territory, he is in
 neutral territory, and is not affected by Stuff. (The team territories
 should be at least ten feet apart, so no player may be in both territories
 simultaneously.)<br>
 If you touch an enemy when both of you are in your home territory, you
-may capture her. (Note that this is optional; make it clear whether or
+may capture them. (Note that this is optional; make it clear whether or
 not you are capturing). You may then request any non-concealable items
-she is carrying, and she must give them to you. Further, if you know
-that she has concealable items (e.g., you just saw her use one) you may
-ask for those. If, however, you do not know that she has a concealable
-item, she need not give it up.  She must also immediately
-drop any flags she was carrying.<br>
+they are carrying, and they must give them to you. Further, if you know
+that they have concealable items (e.g., you just saw them use one) you may
+ask for those. If, however, you do not know that they have a concealable
+item, they need not give it up.  They must also immediately
+drop any flags they were carrying.<br>
 You must then lead your captive directly to your team's jail at
-reasonable speed. She may not use magic items (except for the Ninja
-Potion) or move flags on her way to jail. You may not make any more
-captures until she has entered the jail, either by touching the Glyph
-of Jail (see below) directly or through a chain of other prisoners (at
-this point, she may again use magic items). If you are stunned before
+reasonable speed. They may not use magic items (except for the Ninja
+Potion) or move flags on their way to jail. You may not make any more
+captures until they have entered the jail by touching the Glyph
+of Jail (see below). At
+this point, they may again use magic items). If you are stunned before
 reaching jail, your prisoner is freed.<br>
 
 <h3>Jail</h3>
@@ -144,25 +144,25 @@ prisoners are released from jail. They must return to their home
 territories at reasonable speed, by the most direct route. They are
 ethereal (may not use, drop, or pick up magic items, are not affected by
 magic items, may not capture, and may not be captured) until they
-return to their home territory. They may use jazz hands to signal that
+return to their home territory. They must use jazz hands to signal that
 they are ethereal.<br>
-If you touch a prisoner in the other team's jail, and freeing him does
-not break the chain leading back to the Glyph of Jail, he is freed. You
+If you touch a prisoner in the other team's jail, and freeing them does
+not break the chain leading back to the Glyph of Jail, they are freed. You
 both become ethereal, and must return to your home territory as on a
-jailbreak.<br>
+jailbreak (etherial, with jazz hands).<br>
 The jailer (if one exists) also has a supply of Truth Serum. He may
 poke a prisoner in the shoulder with a pinky, making the prisoner an
 interrogation victim, and freeing any previous victim. The victim is
 now under the control of the jailer, and may not use magic items until
-freed from interrogation. The jailer may ask her up to six yes/no
-questions, and the victim may lie no more than once. She may answer "I
-don't know" if she really doesn't know, but then the question doesn't
+freed from interrogation. The jailer may ask the prisoner up to six yes/no
+questions, and the victim may lie no more than once. They may answer "I
+don't know" if they really don't know, but then the question doesn't
 count against the six.<br>
 The questioning is finished when the victim answers the sixth question,
-if the jailer decides he is done, if the victim is freed, at jailbreak,
+if the jailer decides they are done, if the victim is freed, at jailbreak,
 if there is no jailer, or if the jailer leaves line of sight of the
 victim. At this point, the victim becomes ethereal and must return to
-her home territory as after a jailbreak.<br>
+their home territory as after a jailbreak (etherial, with jaz hands).<br>
 
 <h3>Initial Setup and Game Completion</h3>
 
@@ -181,34 +181,37 @@ total first.<br>
 
 <ul>
 <li>Cooldown: This is a property of certain items. An item with cooldown may not be
-used again for one minute after its use. This requirement may be suspended by
-the singing of a number of verses from a song determined before the game
-begins; the item is then usable after singing that song.</li>
+used again for one minute after its use. </li>
 
 <li>Concealment: Potions may be concealed, meaning they need not be visible. All
 other game items must be visible at all times. A captive is not required to
-give up a concealed item unless his captor asks for it specifically and knows
-that she has the item.</li>
+give up a concealed item unless their captor asks for it specifically and knows
+that she has the item. Potions cannot be used while concealed. </li>
 
-<li>Dispelling: A dispelled item may not be used for its magical effects.</li>
+<li>Dispelling: A dispelled item may not be used for its magical effects. Ussually items are dispelled for one minute. </li>
 
-<li>Line of Sight: A player is within line of sight of an item or event if he can
-rotate himself to bring it into his field of view.</li>
+<li> Feild of Veiw: The field of view is the extent of the observable world that is visible to the player at any given moment. </li>
+
+<li>Line of Sight: A player is within line of sight of an item or event if they can
+rotate themself to bring it into their field of view.</li>
 
 <li>Sacrificial: Certain items are sacrificial. These items may only be used in
 enemy territory, must be dropped upon use, and may not be picked up or moved
 when in enemy territory.</li>
 
-<li>See: A player sees an item or glyph if it passes within his field of view and
-he can recognize it.</li>
+<li>See: A player sees an item or glyph if it passes within their field of view and
+they can recognize it.</li>
 
-<li>Stun: A stunned player must sit on the floor until the stun wears off. If he is
-captured while stunned, he becomes unstunned. A player may not be stunned again
+<li>Stun: A stunned player must sit on the floor in the territory in which they were stunned until the stun wears off. If they are
+captured while stunned, they become unstunned. A player may not be stunned again
 while stunned.  Stunned players may not capture.</li>
 
 <li>Key Words/Phrases: Some potions have a key word or phrase used to activate
 them.  This phrase must be said entirely in the territory where the use occurs,
-and the action occurs upon completion of the phrase.</li>
+and the action occurs upon completion of the phrase. <b>You cannot use a key 
+phrase without the intention of activating an item. </b> </li>
+
+
 <li>Knowledge: Knowing somebody had a potion is not the same as knowing they have it now. If they could have gotten rid of it, you don't know they have it.
 </ul>
 
@@ -229,7 +232,7 @@ No flag may ever exist in an area with fewer than two exits, unless it is being
 carried. If a flag is dropped in an area with only one exit, a judge must move
 it the shortest possible distance to a valid location.<br>
 
-Any magic items a player is carrying are dispelled if he is
+Any magic items a player is carrying are dispelled if they are
 carrying a flag, and remain dispelled for one minute after the player
 gives up the item or drops the flag.<br>
 
@@ -237,11 +240,11 @@ gives up the item or drops the flag.<br>
 Judges wear blue headbands, and are responsible for keeping the game
 running smoothly. The head judge is the final arbiter and scorekeeper,
 and should remain in the judges' room, Wean Hall 8427. An assistant
-head judge shall reside at each team's jail, and there should be at
+head judge shall reside at each team's jail, and there are ussually at
 least 2 roaming judges per team whose job is to resolve conflicts or
 perform other duties required of them.<br>
 Judges should attempt to resolve disputes fairly and find outcomes
-agreeable to both sides. However, if this is impossible, the judge's
+agreeable to both sides. In all cases, the judge's
 decision is final.<br>
 
 
@@ -289,7 +292,7 @@ to neutral space.<br>
 
 Potions are <font color="red">small pieces of foam wrapped in colored tape</font> which are concealable: you may hide them, and if
 captured, you do not need to give them up unless your captor knows you have
-them.  They are distinguished by color.<br>
+them.  They are not useable while concealed. They are distinguished by color.<br>
 
 <h3>Ninja Potion of Magic Smoke (Red, Sacrificial)</h3>
 The Ninja Potion of Magic Smoke is sacrificial, so may only be used in
@@ -302,12 +305,10 @@ territories; if you use this potion near the border between
 territories, enemy players in your home territory who are within line
 of sight are still stunned. Players in neutral territory, of course,
 are immune to stuff, so are unaffected.)<br>
-Yelling this phrase when you do not use the potion is a Bad Idea: it is
-unclear to players far away from you that you are not using it; thus, <b>do not yell "Poof, I am a Ninja!" unless you are actually using the Ninja Potion</b>.<br>
 
 <h3>Potion of Wait... There's a Key at the Bottom of This (Green, Cooldown)</h3>
 The Potion of Wait... There's a Key at the Bottom of This has cooldown,
-so you must wait a minute or sing the cooldown song before reusing it.
+so you must wait a minute before reusing it.
 If you are stunned or a prisoner, you may use this potion by bonking
 yourself on the head, and using one of the keywords "Lolt", "Jube", or
 "Key". You are then free; you are unstunned or free from jail. If freed
@@ -317,7 +318,7 @@ known as "Jolt" and "Lube", which is where the unusual keywords come
 from.)<br>
 
 <h3>Potion of Mind Control (Blue)</h3>
-This potion is used by a captor, who gives it to his captive. The captive must accept it and proceed directly to jail as if escorted by the captor. The captive is still a captive, but the captor is no longer a captor. The captor is stunned for 10 seconds and then becomes a normal player again. The captive must display the potion on the way to jail so as not to be confused with free players.<br>
+This potion is used by a captor, who gives it to their captive. The captive must accept it and proceed directly to jail as if escorted by the captor. The captive is still a captive, but the captor is no longer a captor. The captor is stunned for 10 seconds and then becomes a normal player again. The captive must display the potion on the way to jail so as not to be confused with free players, and must take the most direct route to jail.<br>
 
 <h2>Wands</h2>
 Wands are two-foot lengths of foam rubber, distinguished by color. They
@@ -328,19 +329,19 @@ subject.<br>
 <h3>Wand of Vengeance (Red, "Toast", Sacrificial)</h3>
 
 This wand is sacrificial, so may only be used in enemy territory and must be
-dropped on use.  If you whap an enemy player with this wand in the enemy's home
-territory, you capture him and you must lead him back to your jail as on a
+dropped after use.  If you whap an enemy player with this wand in the enemy's home
+territory, you capture them and you must lead them back to your jail as on a
 normal capture.  However, you are both ethereal until you get into your home
 territory, at which point you become a normal captor/captive pair.  Thus, you
-may not ask for his items, may not be stunned, etc., until you reach your home
+may not ask for their items, may not be stunned, etc., until you reach your home
 territory.<br>
 
 <h3>Wand of Stun (Green, "Stun", Cooldown)</h3>
 Any player whapped with this wand is stunned for one minute.<br>
 
 <h3>Wand of Dispel (Blue, "Dispel", Cooldown)</h3>
-If a player is whapped with the wand of dispel, all magic items he is carrying
-are dispelled for one minute, or until he sings the cooldown song.  If two
+If a player is whapped with the wand of dispel, all magic items they are carrying
+are dispelled for one minute.  If two
 players simultaneously use this wand on each other, all items carried by both
 players are dispelled for one minute.<br>
 
@@ -355,7 +356,7 @@ color.<br>
 <h3>Andy Warhol's Belt of Pop Occultism (Red, Sacrificial)</h3>
 Andy Warhol's Belt of Pop Occultism is sacrificial, so may only be used in
 enemy territory, and while it must be worn to use it, it must be dropped
-immediately after use.  To use this belt, yell as loudly as possible some phrase
+immediately after use.  To use this belt, yell as loudly as possible, "Leroy Jenkins" or some phrase
 to be determined by the judges before the start of the game.  The effect is to
 stun all enemy players within line of sight of the user for one minute.<br>
 
@@ -369,13 +370,13 @@ If any player in the chain is dispelled, all items carried by all
 members of the chain are dispelled; it is as though all players were
 hit with the wand. In particular, Goombah's belt is dispelled.<br>
 
-<b>This belt does not function in elevators.</b>  If you try to use it in one, you may be captured, stunned, or stuck in the elevator until it starts moving again.<br>
+<b>This belt does not function in elevators.</b> <br>
 
 <h3>Doc Ock's Belt of Many Arms (Blue)</h3>
 If you are wearing this belt, you may have up to four captives, as long
 as you are within an
 arm's length of each previous captive when you capture a new one. If
-you have at least one captive, you must lead her back to jail as usual;
+you have at least one captive, you must lead them back to jail as usual;
 but may make more captures on the way to jail, as long as you are
 within an arm's reach of the previous captives at the time of capture.<br>
 If the belt is dispelled when you have multiple captives, all but the
