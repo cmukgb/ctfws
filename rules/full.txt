@@ -141,7 +141,7 @@ prisoner.
 * If a captor is stunned, their captive becomes a normal player.
 * Prisoners may use magic items.
 
-!![jail] Jail
+!!{jail}[jail] Jail
 * Each team has a jail, designated by the Glyph of Jail.
 ** Whenever possible, the Glyph of Jail in Doherty will be placed on floor A, 
 near the staircase closest to the main lobby, and the Glyph of Jail in Wean 
@@ -282,7 +282,7 @@ to both sides. In all cases, the judge's decision is final.
   within ten feet of a dispellable glyph, the glyph is dispelled for as long as
   the flag remains, and for one minute after.
 
-!!{jail}[glyph_of_jail] Glyph of Jail
+!![glyph_of_jail] Glyph of Jail
 * The Glyph of Jail is indicated by the word "Jail".
 * The Glyph of Jail defines the Jail, as described by section [[jail]].
 * The Glyph of Jail cannot be dispelled.
