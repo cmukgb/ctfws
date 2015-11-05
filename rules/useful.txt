@@ -68,7 +68,9 @@ else
 	<br>
 	<i>Revised 3/2008 by edanaher, csjackso, ddagradi, cmartens, jgg, csawyer, ehohenst, mglisson...</i>
 	<br>
-	<i>Revised 8/10/2008, <font color="#ff0000">12/2009</font> by edanaher</i>
+	<i>Revised 8/10/2008, 12/2009 by edanaher</i>
+	<br>
+	<i>Revised 11/4/2015, by briedel, tparenti, zhg, jlareau, cmorey, eeb, egarbade, jpdoyle, mwoolfor, sctoor</i>
 	<br>
 	<i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
@@ -372,16 +374,18 @@ hit with the wand. In particular, Goombah's belt is dispelled.<br>
 
 <b>This belt does not function in elevators.</b> <br>
 
-<h3>Doc Ock's Belt of Many Arms (Blue)</h3>
-If you are wearing this belt, you may have up to four captives, as long
-as you are within an
-arm's length of each previous captive when you capture a new one. If
-you have at least one captive, you must lead them back to jail as usual;
-but may make more captures on the way to jail, as long as you are
-within an arm's reach of the previous captives at the time of capture.<br>
-If the belt is dispelled when you have multiple captives, all but the
-first are freed. If there is a tie for first captive, the captor
-chooses which one to keep.<br>
+<h3>Arnold's Belt of Double Termination (Blue)</h3>
+
+To activate this belt, the captor hands it to a captive and says "I'LL BE BACH!!".
+The captive sits down and becomes a captive of the belt for one minute;
+if another player dispels the belt, the captive goes free.
+Meanwhile, the captor has one minute to capture another player and return to original captive.
+Before they leave, the captor must start the timer attached to the belt (which will count out the minute).
+If the captor succeeds at acquiring another captive and returning to the original one, 
+the captor then escorts both of their captives to jail; 
+however, the belt can still be dispelled, freeing only the second captive.
+If the timer expires before the captor returns, the original captive goes free.
+<br>
 
 
 <h2> Sportsmanship </h2>
