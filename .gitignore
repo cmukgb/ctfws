@@ -3,4 +3,5 @@
 *.aux
 *.log
 *.out
+archive
 rules/texfiles/rules.tex
