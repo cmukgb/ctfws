@@ -61,9 +61,9 @@
 * When rules in this document conflict, the later rule takes
 precedence.
 
-** E.g. ([[may_not_capture]]) states that a captor may not capture, while
-([[doc_ock_may_capture]])
-states that a player wearing a Doc Ock's Belt may capture multiple times.
+** E.g. ([[may_not_capture]]) states that a captor may not capture, (:while
+([[arnold_may_capture]])
+states that a player wearing Arnold's Belt of Double Termination may capture multiple times.:)
 
 * The judges may choose to change the rules or add or remove stuff into
 the game. Any such rules or stuff changes must (:be clearly explained before
@@ -98,7 +98,7 @@ interrogation victim, or stunned.
 * A normal player is in the default state described in these rules.
 * An ethereal player may not use, drop, or pick up magic items,
 is not affected by magic items, may not capture, and may not be
-captured. A player (:must:) use jazz hands to signal ethereality.
+captured. A player must use jazz hands to signal ethereality.
 
 * A captive is a player who has been captured (see [[capture]]).
 Captives may not move or touch enemy flags and may not use or drop
@@ -111,8 +111,8 @@ but are otherwise normal players.
 * An interrogation victim is a prisoner who has been given truth serum
 by the jailer (see [[capture]]).  They may not use magic items, but otherwise act
 identically to a prisoner except where specified.
-* A stunned player must immediately sit on the floor (:in the territory in which they were
-stunned:) until the stun wears off. The time they are stunned is measured from 
+* A stunned player must immediately sit on the floor in the territory in which they were
+stunned until the stun wears off. The time they are stunned is measured from
 when they sit down, not when the stunning effect occurred. If they are captured
 while stunned, they become unstunned. A player may not be stunned again while
 stunned. Stunned players may not capture.
@@ -128,7 +128,7 @@ point, the enemy becomes a captive.
 captives of this action ("Gotcha" is a good choice).
 * A player, when captured, must immediately drop any flags they are carrying at 
 the spot where they were captured.
-* A captive or prisoner must give up any non-concealable items upon
+*[captive_forfeit] A captive or prisoner must give up any non-concealable items upon
 request of the captor or a teammate of the captor. Concealable items need not
 be given up unless the enemy asking for them knows that the player has the
 item.
@@ -141,7 +141,7 @@ prisoner.
 * If a captor is stunned, their captive becomes a normal player.
 * Prisoners may use magic items.
 
-!![jail] Jail
+!!{jail}[jail] Jail
 * Each team has a jail, designated by the Glyph of Jail.
 ** Whenever possible, the Glyph of Jail in Doherty will be placed on floor A, 
 near the staircase closest to the main lobby, and the Glyph of Jail in Wean 
@@ -193,7 +193,7 @@ fifteen minutes. This time should be used for the placement of flags
 and glyphs, and distribution of magic items. No player may enter enemy
 territory during this period. Magic items have no effect during this
 time.
-* The game (:begins at the end of the set up period and:) ends after one
+* The game begins at the end of the set up period and ends after one
 hour, or when there remains only one team with uncaptured flags.
 
 !!{terms} Additional Terms
@@ -202,13 +202,13 @@ cooldown may not be activated again for one minute after its use. This
 requirement may be suspended by the singing of a number of verses from
 a song determined before the game begins; the item is then usable after
 singing that song.
-* Concealment: Potions may be concealed, meaning they need not
+*[concealment] Concealment: Potions may be concealed, meaning they need not
 be visible. All other game items must be visible at all times. A
 captive is not required to give up a concealed item unless their captor
 asks for it specifically and knows that they have the item.
 :** Potions cannot be used while concealed.
 * Dispelling: A dispelled item has no magical effects.
-:* Field of View: The field of view is the extent of the observable world that
+* Field of View: The field of view is the extent of the observable world that
 is visible to the player at any given moment.
 * Line of Sight: A player is within line of sight of an item or event
 if they can rotate themself to bring it into their field of view.
@@ -224,7 +224,7 @@ time the wand bearer shouts the key word.
 activate them.  This phrase must be said entirely in the territory where the
 activation occurs, and the action occurs upon completion of the phrase.
 * Knowledge: knowledge of an opponent's concealable items, as referenced in 
-rules I.C.3 and I.F.2, means that they have not had a chance to dispose of 
+rules [[captive_forfeit]] and [[concealment]], means that they have not had a chance to dispose of 
 that item since the last time you saw it in their possession.
 
 
@@ -246,9 +246,9 @@ gives up the item or drops the flag.
 :* Each flag will be assigned a point value at the beginning of the game by the
 head judge.
 :** Judges may or may not inform the players of these values on a per-game basis.
-:* The winner of the game is the team with the most points. The point values of
+:*[most_points_wins] The winner of the game is the team with the most points. The point values of
 each flag must be set such that the team with the most flags has the most points.
-:** If the point system is set differently than specified in 1.G.6, the players
+:** If the point system is set differently than specified in [[most_points_wins]], the players
 must be informed of this fact before the set up of the game in which this takes place.
 * A player who brings a flag to the judges room earns for their
 team the number of points associated with the flag. The flag is then
@@ -262,7 +262,7 @@ judges' room, which is Wean Hall 8427 unless otherwise specified.
 * An assistant head judge should reside at each team's jail.
 * Each team should also have at least 1 roaming judge. (:The total number of
 roaming judges is up to the head judge, and based on the number of players.:)
-:** Roaming judges’ responsibility is to resolve conflicts or perform other
+** Roaming judges’ responsibility is to resolve conflicts or perform other
 duties required of them.
 :*Judges should attempt to resolve disputes fairly and find outcomes agreeable
 to both sides. In all cases, the judge's decision is final.
@@ -273,7 +273,7 @@ to both sides. In all cases, the judge's decision is final.
 !!{glyphs} General
 * Glyphs are large sheets of paper or poster-board marked with a spell.
 * Each glyph is owned by a particular team, indicated by the coloring of the glyph.
-* A glyph must be taped to a wall in the (:owning:) team's territory (:or side
+* A glyph must be taped to a wall in the owning team's territory (:or side
  of a door that would be in the owning team's territory if it were closed:).
 :** Once placed, all glyphs are considered part of the owning team’s territory.
 * A glyph affects all normal players on opposing teams in its owning team's
@@ -282,7 +282,7 @@ to both sides. In all cases, the judge's decision is final.
   within ten feet of a dispellable glyph, the glyph is dispelled for as long as
   the flag remains, and for one minute after.
 
-!!{jail}[glyph_of_jail] Glyph of Jail
+!![glyph_of_jail] Glyph of Jail
 * The Glyph of Jail is indicated by the word "Jail".
 * The Glyph of Jail defines the Jail, as described by section [[jail]].
 * The Glyph of Jail cannot be dispelled.
@@ -293,9 +293,9 @@ to both sides. In all cases, the judge's decision is final.
 
 !! Glyph of the Disgusting Doorknob 
 * The Glyph of the Disgusting Doorknob is indicated by the word "Yukko".
-* (:If a Glyph of the Disgusting Doorknob is on a door, a player may not
+* If a Glyph of the Disgusting Doorknob is on a door, a player may not
 open the door or prevent it from closing by interacting with the side of
-the door the Glyph is on.:) If the Glyph is mounted on one of a set of doors,
+the door the Glyph is on. If the Glyph is mounted on one of a set of doors,
 all doors are affected.
 :** The Glyph of Disgusting Doorknob affects players in neutral territory.
 * The counting of exits for purposes of flag placement is unaffected by
@@ -406,8 +406,8 @@ the user are stunned for one minute.
 
 !! Goombah's Belt of Humiliating Protection 
 * Goombah's Belt of Humiliating Protection is green.
-* This belt is (:activated by starting to skip and loudly sing "Yankee Doodle".
-While singing and skipping continues, the belt is in use, and:) the wearer is
+* This belt is activated by starting to skip and loudly sing "Yankee Doodle".
+While singing and skipping continues, the belt is in use, and the wearer is
 immune to capture and stun.
 * Any number of teammates may share the protection of this belt
 by holding hands with the wearer, either directly or through a chain of
@@ -417,16 +417,36 @@ singing along.
 ** In particular, the Goombah's belt is dispelled.
 * This belt does not function in elevators.
 
-!! Doc Ock's Belt of Many Arms 
-* Doc Ock's Belt of Many Arms is blue.
-*[doc_ock_may_capture] The wearer may have up to four captives, as long as they
-are within an arm's length of each previous captive at the time of the next
-enemy's capture.
-** Once any captures have been made, they must still lead the
-captives back to jail as usual, but may still capture on the
-way to jail according to ([[doc_ock_may_capture]]).
-* If the belt is dispelled, all of its wearer's captives except the first are
-freed. If there is a tie, the captor may choose which one to keep.
+!! Arnold's Belt of Double Termination
+:* Arnold's Belt of Double Termination is blue. It shall have a timer
+on it.
+:* Only captors may use Arnold's Belt. To activate this belt the wearer
+must hand the belt to their captive, use the key phrase "I'LL BE BACH!!" and
+start the timer.
+:* A captive who is handed this belt by their captor becomes a captive of the
+belt. They must sit down and place the belt visibly in front of them. A player
+affected by Arnold's Belt is still a captive. They may not be stunned,
+and they ignore opponents' glyphs.
+:** If one minute passes without the original captor returning, then the
+captive of the belt is free and becomes a normal player. The belt then reverts
+to being normal stuff.
+:** If the original captor returns before one minute passes, the captive of the
+belt becomes the captive of the original captor again. The belt then reverts to
+being normal stuff. The original captor cannot use the belt on the same captive
+more than once, per instance of capture.
+:** If Arnold's Belt is dispelled while someone is a captive of it, the
+captive under its control is freed and becomes a normal player. The belt then
+reverts to being normal stuff.
+:* [arnold_may_capture] A captor who activates Arnold's Belt may
+attempt to capture a second captive, and is a normal player during that time.
+If they succeed in capturing a second captive, they must then return to where
+the belt was activated. If the original captive is still held by the belt when
+they return, they must then put the belt back on and lead both captives
+directly to jail; otherwise, they must lead the second captive directly to
+jail.
+:* If Arnold's Belt is dispelled while the captor is leading two
+captives to jail, then the second captive is freed. The original captive
+remains a captive, and must be led directly to jail.
 
 ! Sportsmanship 
 

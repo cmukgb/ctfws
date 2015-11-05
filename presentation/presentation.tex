@@ -76,7 +76,7 @@
 % - Keep it simple, no one is interested in your street address.
 
 \date % (optional, should be abbreviation of conference name)
-{Spring 2015}
+{Fall 2015}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -464,7 +464,7 @@
   \hline
      Belt & \pair{\R{Warhol}}{mass stun}
           & \pair{\G{Goombah}}{immune}
-          & \pair{\B{Doc Ock}}{lots of captives} \\
+          & \pair{\B{Arnold}}{two captives} \\
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
@@ -687,7 +687,7 @@
   \hline
      Belt & \pair{\R{Warhol}}{mass stun}
           & \pair{\G{Goombah}}{immune}
-          & \pair{\B{Doc Ock}}{lots of captives} \\
+          & \pair{\B{Arnold}}{two captives} \\
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
@@ -927,35 +927,67 @@
 }
 
 {
-\doublebackground{Doc Ock's Belt}{of Many Arms \sep Stuff} {
+\doublebackground{Arnold's Belt}{of Double Termination \sep Stuff} {
+% First of two slides used to describe this belt
    \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
-      \drawfloor{color=epred,width=10}
-      \person{x=-0.2cm,color=epyellow}
-      \person{x=3.2cm,color=epyellow}
-      \person{x=1.6cm,color=epred,left arm=-60, right arm = 50, belt=stuffblue}
+      \drawfloor{color=epred,width=9}
+      \person{x=0.4cm, y=0.6cm, color=epyellow, sitting}
+      \person{x=2.6cm,color=epred, left arm=-60, belt=stuffblue}
 %
-      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt]
+      \begin{scope}[inner sep=0,outer sep=0, line width = 2pt,yshift=-0.6cm]
          \useasboundingbox (0, 0);
          \draw[line width=4pt] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
-         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large Gotcha};
+         \node[anchor=center,circle,draw=black,ellipse,minimum height=1.5cm,fill=white] (bubble) at (2.5, 8) {\large I'LL BE BACH!!};
          \fill[white] (1.2, 7) -- (2.2,6.0) -- (2.1,7);
       \end{scope}
 %
-      \drawjail{xshift=5.5cm}{epred}
-      \drawfloor{x=6.8cm, color=epred,width=10}
-      \person{x=7.0cm,y=0, color=epyellow, front arm=-50}
-      \person{x=8.2cm,y=0, color=epyellow, front arm=-15}
-      \person{x=9.8cm,color=epred, belt=stuffblue}
-      \motionlines{xshift=10.6cm,yshift=0.5cm}
+      \drawfloor{x=6cm, width=10,color=epred}
+      \person{x=6.4cm, y=0.6cm, color=epyellow, sitting}
+      \drawbelt{xshift=6.3cm,yshift=-3.1cm}{stuffblue}
+      \person{x=8.8cm, color=epred, left leg=-30, right leg=20, front arm=70}
    \end{tikzpicture}
    }
 
   \begin{itemize}
   \item \B{Blue Belt}
-  \item Up to four captives
-    \subitem{Within arm's reach}
-  \item Still escort to jail
-  \item If dispelled, free all but first
+  \item Captor hands belt to captive and says "I'LL BE BACH!!"
+  \item Captive sits down and is a captive of the belt
+    \subitem{(for one minute)}
+    \subitem{If dispelled, captive goes free}
+  \end{itemize}
+
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm]
+      \useasboundingbox (0, 0);
+      \node at (14.0, 9.0) [rotate=-30] {\flavortext{Can you help me?}};
+   \end{tikzpicture}
+
+\end{frame}
+}
+
+{
+\doublebackground{Arnold's Belt}{of Double Termination \sep Stuff} {
+% Second of two slides
+   \begin{tikzpicture}[x=0.5cm, y=0.5cm,scale=0.8]
+      \drawfloor{color=epred,width=13}
+      \person{x=0.4cm, y=0.6cm, color=epyellow, sitting}
+      \drawbelt{xshift=0.3cm,yshift=-3.1cm}{stuffblue}
+      \person{x=4.6cm, color=epyellow}
+      \person{x=2.8cm, color=epred, left leg=-20, right leg=20, front arm=60, back arm=-20}
+%
+      \drawjail{xshift=6.5cm}{epred}
+      \drawfloor{x=7.8cm, color=epred,width=10}
+      \person{x=8.0cm,y=0, color=epyellow, front arm=-50}
+      \person{x=9.2cm,y=0, color=epyellow, front arm=-15}
+      \person{x=10.8cm,color=epred, belt=stuffblue}
+      \motionlines{xshift=11.6cm,yshift=0.5cm}
+   \end{tikzpicture}
+   }
+
+  \begin{itemize}
+  \item Captor has one minute to get another captive and return to original captive
+    \subitem{If successful, they escort both captives to jail}
+    \subitem{Belt can still be dispelled, freeing the second captive}
+    \subitem{If the timer expires, original captive goes free}
   \end{itemize}
 
    \begin{tikzpicture}[x=0.5cm, y=0.5cm]
@@ -1184,7 +1216,7 @@
   \hline
      Belt & \pair{\R{Warhol}}{mass stun}
           & \pair{\G{Goombah}}{immune}
-          & \pair{\B{Doc Ock}}{lots of captives} \\
+          & \pair{\B{Arnold}}{two captives} \\
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}
@@ -1256,7 +1288,7 @@
   \hline
      Belt & \pair{\R{Warhol}}{mass stun}
           & \pair{\G{Goombah}}{immune}
-          & \pair{\B{Doc Ock}}{lots of captives} \\
+          & \pair{\B{Arnold}}{two captives} \\
   \hline
      Potion & \pair{\R{Ninja}}{mass stun}
             & \pair{\G{Key}}{free}

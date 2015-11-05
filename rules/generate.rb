@@ -342,17 +342,19 @@ else
    <br>
    <i>Revised 3/2008 by edanaher, csjackso, ddagradi, cmartens, jgg, csawyer, ehohenst, mglisson...</i>
    <br>
-   <i>Revised 8/10/2008, 2/8/2009, <font color="#ff0000">11/5/2009</font> by edanaher</i>
+   <i>Revised 8/10/2008, 2/8/2009, 11/5/2009 by edanaher</i>
    <br>
    <i>Revised 2/20/2012 by tbroman, kharring, mjsulliv, eforney, aleibowi…</i>
    <br>
    <i>Revised 9/21/2014 by mwoolfor, jlareau, sguertin, egarbade, afrieder, ssharera, cmorey, bwachowi, jnemes...</i>
    <br>
+   <i>Revised 11/4/2015, by briedel, egarbade, tparenti, mwoolfor, cmorey, eeb, jlareau, jpdoyle, sctoor</i>
+   <br>
    <i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
    <br>
    <br>
-<h3>These are the <span class="change">preliminary</span> rules for the Fall 2014 game of Capture the Flag with Stuff.</h3>
+<h3>These are the <span class="change">preliminary</span> rules for the Fall 2015 game of Capture the Flag with Stuff.</h3>
    <br>
 <?php
 if (!$view_print)
