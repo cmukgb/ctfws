@@ -439,7 +439,7 @@ captive under its control is freed and becomes a normal player. The belt then
 reverts to being normal stuff.
 :* [arnold_may_capture] A captor who activates Arnold's Belt may
 attempt to capture a second captive, and is a normal player during that time.
-If they succeed in capturing a second captive, they must then return to where
+If they succeed in capturing a second captive, they must then return directly to where
 the belt was activated. If the original captive is still held by the belt when
 they return, they must then put the belt back on and lead both captives
 directly to jail; otherwise, they must lead the second captive directly to
