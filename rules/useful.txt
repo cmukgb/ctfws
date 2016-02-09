@@ -151,7 +151,7 @@ they are ethereal.<br>
 If you touch a prisoner in the other team's jail, and freeing them does
 not break the chain leading back to the Glyph of Jail, they are freed. You
 both become ethereal, and must return to your home territory as on a
-jailbreak (etherial, with jazz hands).<br>
+jailbreak (ethereal, with jazz hands).<br>
 The jailer (if one exists) also has a supply of Truth Serum. He may
 poke a prisoner in the shoulder with a pinky, making the prisoner an
 interrogation victim, and freeing any previous victim. The victim is
@@ -164,7 +164,7 @@ The questioning is finished when the victim answers the sixth question,
 if the jailer decides they are done, if the victim is freed, at jailbreak,
 if there is no jailer, or if the jailer leaves line of sight of the
 victim. At this point, the victim becomes ethereal and must return to
-their home territory as after a jailbreak (etherial, with jaz hands).<br>
+their home territory as after a jailbreak (ethereal, with jazz hands).<br>
 
 <h3>Initial Setup and Game Completion</h3>
 
@@ -190,9 +190,9 @@ other game items must be visible at all times. A captive is not required to
 give up a concealed item unless their captor asks for it specifically and knows
 that she has the item. Potions cannot be used while concealed. </li>
 
-<li>Dispelling: A dispelled item may not be used for its magical effects. Ussually items are dispelled for one minute. </li>
+<li>Dispelling: A dispelled item may not be used for its magical effects. Usually items are dispelled for one minute. </li>
 
-<li> Feild of Veiw: The field of view is the extent of the observable world that is visible to the player at any given moment. </li>
+<li> Field of View: The field of view is the extent of the observable world that is visible to the player at any given moment. </li>
 
 <li>Line of Sight: A player is within line of sight of an item or event if they can
 rotate themself to bring it into their field of view.</li>
@@ -242,7 +242,7 @@ gives up the item or drops the flag.<br>
 Judges wear blue headbands, and are responsible for keeping the game
 running smoothly. The head judge is the final arbiter and scorekeeper,
 and should remain in the judges' room, Wean Hall 8427. An assistant
-head judge shall reside at each team's jail, and there are ussually at
+head judge shall reside at each team's jail, and there are usually at
 least 2 roaming judges per team whose job is to resolve conflicts or
 perform other duties required of them.<br>
 Judges should attempt to resolve disputes fairly and find outcomes
@@ -294,7 +294,7 @@ to neutral space.<br>
 
 Potions are <font color="red">small pieces of foam wrapped in colored tape</font> which are concealable: you may hide them, and if
 captured, you do not need to give them up unless your captor knows you have
-them.  They are not useable while concealed. They are distinguished by color.<br>
+them.  They are not usable while concealed. They are distinguished by color.<br>
 
 <h3>Ninja Potion of Magic Smoke (Red, Sacrificial)</h3>
 The Ninja Potion of Magic Smoke is sacrificial, so may only be used in
