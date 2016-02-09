@@ -170,8 +170,8 @@ re-enter their home territories.
 * A player in a normal state not carrying a flag may touch a prisoner
 in another team's jail. As long as freeing the prisoner does not break a
 chain leading back to the jail, the prisoner is freed. Both players are
-ethereal and must return to their home territories by the most direct
-route; they need not remain together.
+ethereal (:and must return to their home territory as after a jailbreak (see [[jailbreak]]):);
+they need not remain together.
 * The jailer has a supply of Truth Serum, which they may use by
 poking a prisoner in the shoulder with a pinky finger. The prisoner
 then becomes an interrogation victim.
