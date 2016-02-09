@@ -348,13 +348,13 @@ else
    <br>
    <i>Revised 9/21/2014 by mwoolfor, jlareau, sguertin, egarbade, afrieder, ssharera, cmorey, bwachowi, jnemes...</i>
    <br>
-   <i>Revised 11/4/2015, by briedel, egarbade, tparenti, mwoolfor, cmorey, eeb, jlareau, jpdoyle, sctoor</i>
+   <i>Revised 11/4/2015, 2/8/2016, by briedel, egarbade, tparenti, mwoolfor, cmorey, eeb, jlareau, jpdoyle, sctoor</i>
    <br>
    <i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
    <br>
    <br>
-<h3>These are the <span class="change">preliminary</span> rules for the Fall 2015 game of Capture the Flag with Stuff.</h3>
+<h3>These are the <span class="change">preliminary</span> rules for the Spring 2016 game of Capture the Flag with Stuff.</h3>
    <br>
 <?php
 if (!$view_print)

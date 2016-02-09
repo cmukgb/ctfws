@@ -70,7 +70,7 @@ else
 	<br>
 	<i>Revised 8/10/2008, 12/2009 by edanaher</i>
 	<br>
-	<i>Revised 11/4/2015, by briedel, tparenti, zhg, jlareau, cmorey, eeb, egarbade, jpdoyle, mwoolfor, sctoor</i>
+	<i>Revised 11/4/2015, 2/8/2016, by briedel, tparenti, zhg, jlareau, cmorey, eeb, egarbade, jpdoyle, mwoolfor, sctoor</i>
 	<br>
 	<i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
