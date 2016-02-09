@@ -380,11 +380,10 @@ To activate this belt, the captor hands it to a captive and says "I'LL BE BACH!!
 The captive sits down and becomes a captive of the belt for one minute;
 if another player dispels the belt, the captive goes free.
 Meanwhile, the captor has one minute to capture another player and return to original captive.
-Before they leave, the captor must start the timer attached to the belt (which will count out the minute).
 If the captor succeeds at acquiring another captive and returning to the original one, 
 the captor then escorts both of their captives to jail; 
 however, the belt can still be dispelled, freeing only the second captive.
-If the timer expires before the captor returns, the original captive goes free.
+If one minute elapses before the captor returns, the original captive goes free.
 <br>
 
 

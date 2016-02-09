@@ -418,11 +418,9 @@ singing along.
 * This belt does not function in elevators.
 
 !! Arnold's Belt of Double Termination
-:* Arnold's Belt of Double Termination is blue. It shall have a timer
-on it.
+:* Arnold's Belt of Double Termination is blue.
 :* Only captors who have exactly one captive may use Arnold's Belt. To activate this belt the wearer
-must hand the belt to their captive, use the key phrase "I'LL BE BACH!!" and
-start the timer.
+must hand the belt to their captive, use the key phrase "I'LL BE BACH!!".
 :* A captive who is handed this belt by their captor becomes a captive of the
 belt. They must sit down and place the belt visibly in front of them. A player
 affected by Arnold's Belt is still a captive. They may not be stunned,
