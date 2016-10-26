@@ -223,7 +223,7 @@ def write_html(file, sections)
             else
                subrulec += 1
                r = check_label(r, labels, sectionc, subsectionc, rulec, subrulec)
-               lines += ["<p> " + highstart + roman(sectionc) + "." + letter(subsectionc) + "." + number(rulec) + "." + letterl(subrulec) + ". " + r.chomp + highend + " </p>"]
+               lines += ["<p class=\"subrulec1\"> " + highstart + roman(sectionc) + "." + letter(subsectionc) + "." + number(rulec) + "." + letterl(subrulec) + ". " + r.chomp + highend + " </p>"]
             end
 
          }
@@ -286,6 +286,10 @@ p
    margin-top: 1pt;
    margin-bottom: 2pt;
    margin-left: 3.5em;
+}
+p.subrulec1
+{
+   margin-left: 7em;
 }
 
 h2, .h2
