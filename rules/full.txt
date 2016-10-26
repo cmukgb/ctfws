@@ -350,7 +350,7 @@ themself and return to a normal state.
 :* A player may capture two people simultaneously with one invocation
   of the potion's ability. They must be simultaneously tagged when the
   player says "obey". Both enemies become the player's captive.
-* (:Captive(s):) who is handed this potion must proceed directly to jail as if
+* (:Captive(s):) who (:are:) handed this potion must proceed directly to jail as if
   escorted by the captor, clearly displaying the potion to any members of the
   captor's team they encounter.
 ** (:Player(s):) controlled by the Potion of Mind Control (:are:) still
@@ -442,7 +442,7 @@ singing along.
     their route only in the manner described below in
     [[arnold_mechanic]].
 :*[arnold_mechanic] While wearing Doc Arnold's belt, a captor with at
-    most two captives may use the key phrase "I'LL BE BACH." If they each
+    most two captives may use the key phrase "I'LL BE BACH." If they do, each
     captive of that captor must remain stationary for as long as the
     captor remains within their line of sight, and for a period of 10
     seconds thereafter. If the captor wearing the belt is outside of a
