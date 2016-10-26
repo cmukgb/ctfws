@@ -7,7 +7,7 @@
 %%
 %% ! name
 %%    Major section "name".
-%% 
+%%
 %% !!{image} name
 %%    Subsection "name".  "image" is optional; if given, the file image.eps
 %%    will be used as the tab image for this subsection.
@@ -19,7 +19,7 @@
 %% ** Subrule ...
 %%    A subrule; identical to a rule except for numbering purposes.
 %%
-%% [label] 
+%% [label]
 %%    After !, !!, *, or **, indicates the label of the section or rule for
 %%    references.
 %%
@@ -59,25 +59,25 @@
 \subsection = -1
 !!{meta} Meta
 * When rules in this document conflict, the later rule takes
-precedence.
+  precedence.
 
-** E.g. ([[may_not_capture]]) states that a captor may not capture, (:while
-([[arnold_may_capture]])
-states that a player wearing Arnold's Belt of Double Termination may capture multiple times.:)
+** E.g. [[may_not_capture]] states that a captor may not capture, while
+[[arnold_may_capture]] states that a player wearing Doc Arnold's Belt
+of Many Places at Once may capture multiple times.
 
 * The judges may choose to change the rules or add or remove stuff into
-the game. Any such rules or stuff changes must (:be clearly explained before
-the start of the game in which those changes are to be introduced.:)
+the game. Any such rules or stuff changes must be clearly explained before
+the start of the game in which those changes are to be introduced.
 
 !!{teams_territories} Teams and Territories
-* The game consists of two teams, red and yellow. Team membership is 
-indicated by (:colored bands, worn on the upper arm or head,:) which must be
+* The game consists of two teams, red and yellow. Team membership is
+indicated by colored bands, worn on the upper arm or head, which must be
 visible at all times.
 * Each team has a home territory. One team's is Wean, the other's is Doherty.
-The teams should swap territories after each game. (:The territory is defined
+The teams should swap territories after each game. The territory is defined
 as the space inside the building, with the doors closed, or as defined by
 the judges in the case of ambiguity. Where there is a chamber between two
-sets of doors, the chamber is included in the building.:)
+sets of doors, the chamber is included in the building.
 * Certain areas such as labs, clusters, and any normally
 inaccessible or otherwise restricted areas are forbidden. No player may
 enter these areas at any time during the game.
@@ -120,13 +120,13 @@ stunned. Stunned players may not capture.
 ** If John Mackey changes a player's major during the game, the player is
 stunned for one minute.
 
-!!{capture}[capture] Capture and Imprisonment 
+!!{capture}[capture] Capture and Imprisonment
 * If a player touches an enemy when both are in the first
 player's home territory, they may choose to capture the enemy. At this
 point, the enemy becomes a captive.
 ** As capture is optional, captors are encouraged to notify their
 captives of this action ("Gotcha" is a good choice).
-* A player, when captured, must immediately drop any flags they are carrying at 
+* A player, when captured, must immediately drop any flags they are carrying at
 the spot where they were captured.
 *[captive_forfeit] A captive or prisoner must give up any non-concealable items upon
 request of the captor or a teammate of the captor. Concealable items need not
@@ -143,8 +143,8 @@ prisoner.
 
 !!{jail}[jail] Jail
 * Each team has a jail, designated by the Glyph of Jail.
-** Whenever possible, the Glyph of Jail in Doherty will be placed on floor A, 
-near the staircase closest to the main lobby, and the Glyph of Jail in Wean 
+** Whenever possible, the Glyph of Jail in Doherty will be placed on floor A,
+near the staircase closest to the main lobby, and the Glyph of Jail in Wean
 will be placed on floor 6, near room 6220 at the end of the 6200 corridor.
 * One player on each team may take on the role of jailer by
 wearing the team's Jailer Fedora. The jailer is a normal player except
@@ -152,7 +152,7 @@ as described in the remainder of this section. The jailer may at any
 time transfer the fedora to a teammate, who becomes jailer, or
 remove it, leaving no jailer.
 ** In particular, if the jailer is captured or stunned, the jail
-remains functional; prisoners are not released (although any interrogation 
+remains functional; prisoners are not released (although any interrogation
 in progress is ended).
 * A player may not move the opposing team's fedora except to drop
 it.
@@ -160,7 +160,7 @@ it.
 touching the Glyph of Jail either directly or through a chain of other
 prisoners.
 * If there is a jailer, they may relax the requirement to form chains.
-** Typically, the jail is at the end of a hall, and prisoners are allowed to 
+** Typically, the jail is at the end of a hall, and prisoners are allowed to
 sit around in the vicinity of the jail.
 *[jailbreak] Every fifteen minutes, starting from the beginning of play,
 all prisoners are released from all jails. Released prisoners must
@@ -170,7 +170,7 @@ re-enter their home territories.
 * A player in a normal state not carrying a flag may touch a prisoner
 in another team's jail. As long as freeing the prisoner does not break a
 chain leading back to the jail, the prisoner is freed. Both players are
-ethereal (:and must return to their home territory as after a jailbreak (see [[jailbreak]]):);
+ethereal and must return to their home territory as after a jailbreak (see [[jailbreak]]);
 they need not remain together.
 * The jailer has a supply of Truth Serum, which they may use by
 poking a prisoner in the shoulder with a pinky finger. The prisoner
@@ -206,7 +206,7 @@ singing that song.
 be visible. All other game items must be visible at all times. A
 captive is not required to give up a concealed item unless their captor
 asks for it specifically and knows that they have the item.
-:** Potions cannot be used while concealed.
+** Potions cannot be used while concealed.
 * Dispelling: A dispelled item has no magical effects.
 * Field of View: The field of view is the extent of the observable world that
 is visible to the player at any given moment.
@@ -214,7 +214,7 @@ is visible to the player at any given moment.
 if they can rotate themself to bring it into their field of view.
 * See: A player sees an item or event if it passes within their field of
 view and they can recognize it.
-* Sacrificial: Certain items are sacrificial. These items may
+* Sacrificial: (:Red items are sacrificial.:) These items may
 only be activated in enemy territory, must be dropped upon use, and may not
 be picked up or moved when in enemy territory.
 * Whap: A player is whapped by a wand if it hits them at approximately the same
@@ -223,8 +223,8 @@ time the wand bearer shouts the key word.
 * Key Words/Phrases: Some items have a key word or phrase used to
 activate them.  This phrase must be said entirely in the territory where the
 activation occurs, and the action occurs upon completion of the phrase.
-* Knowledge: knowledge of an opponent's concealable items, as referenced in 
-rules [[captive_forfeit]] and [[concealment]], means that they have not had a chance to dispose of 
+* Knowledge: knowledge of an opponent's concealable items, as referenced in
+rules [[captive_forfeit]] and [[concealment]], means that they have not had a chance to dispose of
 that item since the last time you saw it in their possession.
 
 
@@ -243,12 +243,12 @@ valid location.
 * Any magic items a player is carrying are dispelled if they are
 carrying a flag, and remain dispelled for one minute after the player
 gives up the item or drops the flag.
-:* Each flag will be assigned a point value at the beginning of the game by the
+* Each flag will be assigned a point value at the beginning of the game by the
 head judge.
-:** Judges may or may not inform the players of these values on a per-game basis.
-:*[most_points_wins] The winner of the game is the team with the most points. The point values of
+** Judges may or may not inform the players of these values on a per-game basis.
+*[most_points_wins] The winner of the game is the team with the most points. The point values of
 each flag must be set such that the team with the most flags has the most points.
-:** If the point system is set differently than specified in [[most_points_wins]], the players
+** If the point system is set differently than specified in [[most_points_wins]], the players
 must be informed of this fact before the set up of the game in which this takes place.
 * A player who brings a flag to the judges room earns for their
 team the number of points associated with the flag. The flag is then
@@ -260,11 +260,11 @@ keeping the game running smoothly.
 * The head judge is the final arbiter and scorekeeper, and should remain in the
 judges' room, which is Wean Hall 8427 unless otherwise specified.
 * An assistant head judge should reside at each team's jail.
-* Each team should also have at least 1 roaming judge. (:The total number of
-roaming judges is up to the head judge, and based on the number of players.:)
+* Each team should also have at least 1 roaming judge. The total number of
+roaming judges is up to the head judge, and based on the number of players.
 ** Roaming judges’ responsibility is to resolve conflicts or perform other
 duties required of them.
-:*Judges should attempt to resolve disputes fairly and find outcomes agreeable
+*Judges should attempt to resolve disputes fairly and find outcomes agreeable
 to both sides. In all cases, the judge's decision is final.
 
 
@@ -273,9 +273,9 @@ to both sides. In all cases, the judge's decision is final.
 !!{glyphs} General
 * Glyphs are large sheets of paper or poster-board marked with a spell.
 * Each glyph is owned by a particular team, indicated by the coloring of the glyph.
-* A glyph must be taped to a wall in the owning team's territory (:or side
- of a door that would be in the owning team's territory if it were closed:).
-:** Once placed, all glyphs are considered part of the owning team’s territory.
+* A glyph must be taped to a wall in the owning team's territory or side
+ of a door that would be in the owning team's territory if it were closed.
+** Once placed, all glyphs are considered part of the owning team’s territory.
 * A glyph affects all normal players on opposing teams in its owning team's
   territory.
 * A glyph may not be placed within ten feet of a flag.  If a flag is dropped
@@ -287,41 +287,46 @@ to both sides. In all cases, the judge's decision is final.
 * The Glyph of Jail defines the Jail, as described by section [[jail]].
 * The Glyph of Jail cannot be dispelled.
 
-!! Glyph of Entrancement 
+!! Glyph of Entrancement
 * The Glyph of Entrancement is indicated by the word "Gotcha".
 * A player who sees the Glyph of Entrancement is stunned for one minute.
 
-!! Glyph of the Disgusting Doorknob 
+!! Glyph of the Disgusting Doorknob
 * The Glyph of the Disgusting Doorknob is indicated by the word "Yukko".
 * If a Glyph of the Disgusting Doorknob is on a door, a player may not
 open the door or prevent it from closing by interacting with the side of
 the door the Glyph is on. If the Glyph is mounted on one of a set of doors,
 all doors are affected.
-:** The Glyph of Disgusting Doorknob affects players in neutral territory.
+** The Glyph of Disgusting Doorknob affects players in neutral territory.
 * The counting of exits for purposes of flag placement is unaffected by
 this glyph.
 * If a Glyph of the Disgusting Doorknob is mounted next to the
 buttons controlling an elevator, no affected player may push any of the
 buttons or prevent the elevator doors from closing.
-:* Any player must be able to exit to neutral territory without opening any
-door from a side affected by a Glyph of the Disgusting Doorknob or activating 
+* Any player must be able to exit to neutral territory without opening any
+door from a side affected by a Glyph of the Disgusting Doorknob or activating
 any stuff. No player can be completely trapped by this glyph.
 
-!! Glyph of Alarm 
+!! Glyph of Alarm
 * The Glyph of Alarm is indicated by the word "Alarm".
 * A player who sees the Glyph of Alarm must shout or sing
 "Alarm" or another phrase as loudly as possible for one minute or
 until they are captured or returns to neutral space.
 
+:!![glyph_of_recharge] Glyph of Recharge
+:* The Glyph of Recharge is indicated by the word "Recharge".
+:* A player may recharge a white colored magical item (see [[white]]) by holding it
+  to a Glyph of Recharge for a period of 10 seconds.
+:** A player may use any Glyph of Recharge in either territory.
 
-! Potions
+![potions] Potions
 
 !!{potions} General
 * Potions are small pieces of foam wrapped in colored tape.
 * Potions are concealable.
 
-!![ninja] Ninja Potion of Magic Smoke 
-* The Ninja Potion of Magic Smoke is red and sacrificial.
+!![ninja] Ninja Potion of Magic Smoke
+* The Ninja Potion of Magic Smoke is red, (:and thus:) sacrificial.
 * To activate this item a captive throws this potion onto the ground and yells
 as loudly as possible "Poof, I am a Ninja!". All enemy players who hear this
 and are within line of sight of the user are stunned for ten seconds.
@@ -333,31 +338,39 @@ immune to all stuff.
 * The Potion of Wait... There's a Key at the Bottom of This is green and has cooldown.
 * To activate this potion, a player must bonk themself on the head
 with this potion and use one of the key words "Lolt", "Jube", or "Key".
-* A stunned player, once they are sitting, may use this potion to unstun 
+* A stunned player, once they are sitting, may use this potion to unstun
 themself and return to a normal state.
 * A prisoner may use this potion to free themself from jail and return to a normal state.
 
 !! Potion of Mind Control
 * The Potion of Mind Control is blue.
-* Only captors may use the Potion of Mind Control. To use this potion, a 
-captor must hand the potion to their captive and use the key word "obey."
-* A captive who is handed this potion must proceed directly to jail as if 
-escorted by the captor, clearly displaying the potion to any members of the 
-captor's team they encounter.
-** A player controlled by the Potion of Mind Control is still a captive. They 
-may not be stunned, and they ignore opponents' glyphs.
-** No player may take the Potion of Mind Control from a captive being 
-controlled by it, even if they know they have it.
-** If the Potion of Mind Control is dispelled, the captive under its control 
-is freed.
-* A captor who uses the Potion of Mind Control is then stunned for 10 seconds.
-After that, they are again a normal player. They do not have to escort the 
-captive to jail.
-* The captive may not proceed to jail by a route that is less than direct, in 
-an effort to explore for flags or for any other reason.
+* (:To use this potion, a player must capture an enemy player while
+  using the key word "obey". The enemy becomes the player's captive,
+  and must be handed this potion immediately.
+:* A player may capture two people simultaneously with one invocation
+  of the potion's ability. They must be simultaneously tagged when the
+  player says "obey". Both enemies become the player's captive.
+* (:Captive(s):) who is handed this potion must proceed directly to jail as if
+  escorted by the captor, clearly displaying the potion to any members of the
+  captor's team they encounter.
+** (:Player(s):) controlled by the Potion of Mind Control (:are:) still
+  (:captive(s):). They may not be stunned, and they ignore opponents' glyphs.
+** No player may take the Potion of Mind Control from (:captive(s):) being
+  controlled by it, even if they know they have it.
+** If the Potion of Mind Control is dispelled, the (:captive(s):) under its control
+  (:are:) freed.
+* A captor who uses the Potion of Mind Control (:becomes:) a normal
+  player (:after handing off the potion:). They do not have to escort the
+  (:captive(s):) to jail.
+* The (:captive(s):) may not proceed to jail by a route that is less
+  than direct, in an effort to explore for flags or for any other
+  reason.
+** If two players were captured, they are controlled by the same
+  potion and must stay together.
+:* This potion may be activated while concealed.
 
 
-! Wands
+![wands] Wands
 
 !!{wands} General
 * Wands are eighteen-inch lengths of foam rubber.
@@ -365,8 +378,9 @@ an effort to explore for flags or for any other reason.
 the key word.
 * Each use of the key word invokes at most one wand on one subject.
 
-!! Wand of Vengeance 
-* The Wand of Vengeance has key word "Toast", and is red and sacrificial.
+!![vengeance] Wand of Vengeance
+* The Wand of Vengeance has key word "Toast", and is red, (:and
+thus:) sacrificial.
 * A normal player may whap an enemy in the enemy's home territory.
 The user captures the enemy, and both players become ethereal.  The user
 must lead the enemy back to their jail as directly as possible at reasonable
@@ -374,11 +388,11 @@ speed.
 * Upon entry into the user's home territory, the user becomes a captor and the
 enemy becomes a captive.
 
-!! Wand of Stun 
+!! Wand of Stun
 * The Wand of Stun has key word "Stun", and is green and has cooldown.
 * Any player whapped with this wand is stunned for one minute.
 
-!! Wand of Dispel 
+!! Wand of Dispel
 * The Wand of Dispel has key word "Dispel", and is blue and has cooldown.
 * If a player is whapped with the wand of dispel, all magic items they are
 carrying are dispelled for one minute.
@@ -388,23 +402,23 @@ all items carried by both players are dispelled for one minute.
 one minute.
 
 
-! Belts
+![belts] Belts
 
-!!{belts} General 
+!!{belts} General
 * A belt is a long sash of cloth or felt.
 * To be used, a belt must be tied around a player's waist.
 * A belt can be worn by at most one player.
 * A player can wear at most one belt.
 
-!! Andy Warhol's Belt of Pop Occultism 
-* Andy Warhol's Belt of Pop Occultism is red and sacrificial.
+!! Andy Warhol's Belt of Pop Occultism
+* Andy Warhol's Belt of Pop Occultism is red, (:and thus:) sacrificial.
 * To activate this belt, the wearer must yell as loudly as
 possible some phrase to be determined by the judges before the start of
 the game. Upon activation, all enemy players within line of sight of
 the user are stunned for one minute.
 ** Since the belt is sacrificial, the user must also drop the belt.
 
-!! Goombah's Belt of Humiliating Protection 
+!! Goombah's Belt of Humiliating Protection
 * Goombah's Belt of Humiliating Protection is green.
 * This belt is activated by starting to skip and loudly sing "Yankee Doodle".
 While singing and skipping continues, the belt is in use, and the wearer is
@@ -417,38 +431,64 @@ singing along.
 ** In particular, the Goombah's belt is dispelled.
 * This belt does not function in elevators.
 
-!! Arnold's Belt of Double Termination
-:* Arnold's Belt of Double Termination is blue.
-:* Only captors who have exactly one captive may use Arnold's Belt. To activate this belt the wearer
-must hand the belt to their captive, use the key phrase "I'LL BE BACH!!".
-:* A captive who is handed this belt by their captor becomes a captive of the
-belt. They must sit down and place the belt visibly in front of them. A player
-affected by Arnold's Belt is still a captive. They may not be stunned,
-and they ignore opponents' glyphs.
-:** If one minute passes without the original captor returning, then the
-captive of the belt is free and becomes a normal player. The belt then reverts
-to being normal stuff.
-:** If the original captor returns before one minute passes, the captive of the
-belt becomes the captive of the original captor again. The belt then reverts to
-being normal stuff. The original captor cannot use the belt on the same captive
-more than once, per instance of capture.
-:** If Arnold's Belt is dispelled while someone is a captive of it, the
-captive under its control is freed and becomes a normal player. The belt then
-reverts to being normal stuff.
-:* [arnold_may_capture] A captor who activates Arnold's Belt may
-attempt to capture a second captive, and is a normal player during that time.
-If they succeed in capturing a second captive, they must then return directly to where
-the belt was activated. If the original captive is still held by the belt when
-they return, they must then put the belt back on and lead both captives
-directly to jail; otherwise, they must lead the second captive directly to
-jail.
-:* If Arnold's Belt is dispelled while the captor is leading two
-captives to jail, then the second captive is freed. The original captive
-remains a captive, and must be led directly to jail.
+!! Doc Arnold's Belt of Many Places at Once
 
-! Sportsmanship 
+:* Doc Arnold's Belt is blue.
+:*[arnold_may_capture] A player wearing Doc Arnold's Belt may have up
+    to three captives at once. They may attempt to capture further
+    captives beyond their first.
+:* Once any captures have been made, the player must lead the captives
+    directly to jail as normal. On their way, the player may deviate from
+    their route only in the manner described below in
+    [[arnold_mechanic]].
+:*[arnold_mechanic] While wearing Doc Arnold's belt, a captor with at
+    most two captives may use the key phrase "I'LL BE BACH." If they each
+    captive of that captor must remain stationary for as long as the
+    captor remains within their line of sight, and for a period of 10
+    seconds thereafter. If the captor wearing the belt is outside of a
+    captive's line of sight for a period of 10 seconds while using
+    this effect, that captive is freed and becomes a normal player.
+    This effect ends after one minute, or when the wearer resumes
+    taking captives directly to jail, whichever occurs first.
+:** A captor wearing Doc Arnold's belt may not use the key phrase
+    again if they have not brought a new captive back to their waiting
+    captive(s) since the last time they used the key phrase.
+:* If the belt is dispelled, all of its wearer's captives except the
+    first are freed. If two captives were captured at the same time,
+    the captor may choose which one to keep.
 
-!!{sportsmanship} Physicality 
+! White Magic Items
+
+!![white]{white} White Magic Items
+:* A white magic item is white.
+:* A white magic item must be charged to be used.
+:** All white magic items are charged at the start of the game
+:* White magic items come in potion, wand, and belt types.
+:* Each white magic item can be used as though it were a magic item of
+  the same type of any other color, and is activated by invoking the
+  keyword and action of that item.
+:** A white potion may be activated as any potion defined in [[potions]], a
+    white wand as any wand defined in [[wands]], and a white belt as any belt
+    defined in [[belts]].
+:* A white magic item is always white. During its activation, it gains
+  the color of the magic item which was invoked, and follows all rules
+  of that magic item.
+:** In order to activate a white magic item, you must be in a valid
+    player state and location for activating that color and type of magic
+    item
+:** For example, if a white wand is used to invoke a Wand of
+    Vengeance [[vengeance]], you must be in enemy territory, and the white wand is
+    sacrificial.
+:* After the activation of a white magic item, it becomes discharged
+  and loses the color of the invoked item.
+:** If a white magic item touches the ground, it becomes discharged.
+:* In order to recharge a white magic item, a player must hold it to
+  either a Glyph of Recharge (see [[glyph_of_recharge]]) or their own
+  Glyph of Jail (see [[glyph_of_jail]]) for a period of ten seconds.
+
+! Sportsmanship
+
+!!{sportsmanship} Physicality
 * Players may not physically impede or block other players, either with their
 bodies or with objects.
 ** This includes actions like preventing elevators from
@@ -456,7 +496,7 @@ moving. Breakage of this rule is grounds to eject you from the game.
 * You may not change official timekeeping watches.
 * You may not fabricate or replicate game items.
 
-!! Lies 
+!! Lies
 * Although lies and deceit are part of the game, there are several things you
 may not conceal, obfuscate, or lie about.
 * You may not lie about whether you're in the game.

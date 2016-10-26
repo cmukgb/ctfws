@@ -5,3 +5,5 @@
 *.out
 archive
 rules/texfiles/rules.tex
+.*.sw*
+build/
