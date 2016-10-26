@@ -313,7 +313,7 @@ any stuff. No player can be completely trapped by this glyph.
 "Alarm" or another phrase as loudly as possible for one minute or
 until they are captured or returns to neutral space.
 
-:!![glyph_of_recharge] Glyph of Recharge
+!![glyph_of_recharge] Glyph of Recharge
 :* The Glyph of Recharge is indicated by the word "Recharge".
 :* A player may recharge a white colored magical item (see [[white]]) by holding it
   to a Glyph of Recharge for a period of 10 seconds.
