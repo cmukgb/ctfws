@@ -331,13 +331,33 @@ else
    <br>
    <i>A somewhat psychotic variation on a classic game</i>
    <br>
-   <i>Originally by Andrew Plotkin, with contributions from many, many,
-      others</i>
+   <i>By Andrew Plotkin</i>
    <br>
-   <i>Classic rules may be found <a href="ctfws_old.php">here</a>, and the
-      change history of these rules lives in a GitHub repository
-      <a href="https://github.com/cmukgb/ctfws">here</a></i></center>
+   <i>Revised 2/7/2001 by Sean "Teki" Dobbs</i>
+   <br>
+   <i>Revised 11/14/2002 by David "dkitchin" Kitchin</i>
+   <br>
+   <i>Revised 3/10/2003, 11/7/2003, 3/25/2004, 11/19/2004, 3/24/2005, 3/30/2006
+      by Benjamin "Hey You" Gilbert</i>
+   <br>
+   <i>Revised 3/2008 by edanaher, csjackso, ddagradi, cmartens, jgg, csawyer, ehohenst, mglisson...</i>
+   <br>
+   <i>Revised 8/10/2008, 2/8/2009, 11/5/2009 by edanaher</i>
+   <br>
+   <i>Revised 2/20/2012 by tbroman, kharring, mjsulliv, eforney, aleibowi…</i>
+   <br>
+   <i>Revised 9/21/2014 by mwoolfor, jlareau, sguertin, egarbade, afrieder, ssharera, cmorey, bwachowi, jnemes...</i>
+   <br>
+   <i>Revised 11/4/2015, 2/8/2016 by briedel, egarbade, tparenti, mwoolfor, cmorey, eeb, jlareau, jpdoyle, sctoor</i>
+   <i>Revised 9/29/2016 by ssharera, briedel, egarbade, tparenti, mjmurphy, hfernand, jpdoyle, sctoor</i>
+   <br>
+   <i>Classic rules may be found <a href="ctfws_old.php">here</a>, and a
+      partial change history of these rules lives
+      <a href="https://github.com/cmukgb/ctfws">on GitHub</a>.</i></center>
 
+   <br>
+   <br>
+<h3>These are the <span class="change">preliminary</span> rules for the Fall 2016 game of Capture the Flag with Stuff.</h3>
    <br>
 <?php
 if (!$view_print)
