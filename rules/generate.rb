@@ -62,7 +62,7 @@ def getargs
          $texfile = a
          state = 0;
       end
-         
+
    }
    $infile = $infiledefault if !$infile
 end
@@ -74,7 +74,7 @@ end
 
 def show_array(arr)
    if arr.class == Array then
-      inner = arr.collect {|x| show_array(x) + ", "}.inject("") {|x, y| x.to_s+y.to_s} 
+      inner = arr.collect {|x| show_array(x) + ", "}.inject("") {|x, y| x.to_s+y.to_s}
       inner = inner[0, inner.length - 2] if inner.length > 2
       "[" + inner + "]"
    else
@@ -82,7 +82,7 @@ def show_array(arr)
    end
 end
 
-def read_file(f) 
+def read_file(f)
    lines = File.readlines(f)
    file = []
 
@@ -366,7 +366,7 @@ else
 <?php
 if (!$view_print)
 {
-?> <a href="ctfws_rules_full.php?p=1">Printable Version</a>
+?> <a href="full.php?p=1">Printable Version</a>
 <?php
 }
 ?>
