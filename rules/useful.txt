@@ -63,35 +63,12 @@ else
 ?>
 
 <div class="background_dark" align="center">
-	<br>
-	<i>A somewhat psychotic variation on a classic game</i>
-	<br>
-	<i>By Andrew Plotkin</i>
-	<br>
-	<i>Revised 2/7/2001 by Sean "Teki" Dobbs</i>
-	<br>
-	<i>Revised 11/14/2002 by David "dkitchin" Kitchin</i>
-	<br>
-	<i>Revised 3/10/2003, 11/7/2003, 3/25/2004, 11/19/2004, 3/24/05, 3/30/06
-		by Benjamin "Hey You" Gilbert</i>
-	<br>
-	<i>Revised 3/2008 by edanaher, csjackso, ddagradi, cmartens, jgg, csawyer, ehohenst, mglisson...</i>
-	<br>
-	<i>Revised 8/10/2008, 12/2009 by edanaher</i>
-	<br>
-	<i>Revised 11/4/2015, 2/8/2016, by briedel, tparenti, zhg, jlareau, cmorey, eeb, egarbade, jpdoyle, mwoolfor, sctoor</i>
-   	<br>
-   	<i>Revised 9/29/2016 by mjmurphy, hfernand, ssharera, briedel, egarbade, tparenti, jpdoyle, sctoor</i>
-	<br>
-	<i>Classic rules may be found <a href="ctfws_old.php">here</a></i></center>
 
-	<br>
-	<br>
+<?php include 'history.php';?>
 
 <h3>These rules are designed to be easier to read than the official rules, and
 should match them. However, in the case of discrepancy, the official rules
-govern.</h3>
-<br>
+govern.</h3><br>
 
 <?php
 if (!$view_print)
