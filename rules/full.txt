@@ -62,8 +62,8 @@
   precedence.
 
 ** E.g. [[may_not_capture]] states that a captor may not capture, while
-[[arnold_may_capture]] states that a player wearing Doc Arnold's Belt
-of Many Places at Once may capture multiple times.
+[[arnold_may_capture]] states that (:a player wearing Doc Arnold's Belt
+of Many Places at Once may capture multiple times.:)
 
 * The judges may choose to change the rules or add or remove stuff into
 the game. Any such rules or stuff changes must be clearly explained before
@@ -504,7 +504,7 @@ may not conceal, obfuscate, or lie about.
 * You may not lie about the status of the game.
 ** For example, whether the game has started or ended.
 * You may not lie about what non-concealable items you have.
-* You may not lie about cooldown or dispel status of items.
+* You may not lie about cooldown, dispel, (:or charge:) status of items.
 * You may not lie about any player's status.
 * You may not make jazz hands unless you are ethereal.
 * You may not display a Potion of Mind Control in enemy territory unless you
