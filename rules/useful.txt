@@ -103,8 +103,8 @@ exciting ways.
 Team membership is indicated by appropriately colored bands, which
 must be worn as armbands or headbands at all times.<br>
 Each team has a home territory, either Wean or Doherty. All other
-spaces (outside, Newell Simon, etc.) are neutral. Certain areas (labs,
-clusters, any normally inaccessible or restricted areas) are forbidden
+spaces excluding Scott Hall (outside, Newell Simon, etc.) are neutral. Certain areas (labs,
+clusters, Scott Hall, any normally inaccessible or restricted areas) are forbidden
 territory: no player may enter these at any time during the game.<br>
 A player is in a team's territory if any part of their body is in the
 team's territory. If he is in neither team's territory, he is in
@@ -197,7 +197,7 @@ that she has the item. Potions cannot be used while concealed. </li>
 <li>Line of Sight: A player is within line of sight of an item or event if they can
 rotate themself to bring it into their field of view.</li>
 
-<li>Sacrificial: Certain items are sacrificial. These items may only be used in
+<li>Sacrificial: Red items are sacrificial. These items may only be used in
 enemy territory, must be dropped upon use, and may not be picked up or moved
 when in enemy territory.</li>
 
@@ -210,7 +210,7 @@ while stunned.  Stunned players may not capture.</li>
 
 <li>Key Words/Phrases: Some potions have a key word or phrase used to activate
 them.  This phrase must be said entirely in the territory where the use occurs,
-and the action occurs upon completion of the phrase. <b>You cannot use a key 
+and the action occurs upon completion of the phrase. <b>You cannot use a key
 phrase without the intention of activating an item. </b> </li>
 
 
@@ -261,8 +261,13 @@ within ten feet of a glyph other than the Glyph of Jail, that glyph is
 dispelled for as long as the flag remains, and for one minute after.<br>
 
 <h3>Glyph of Jail ("Jail")</h3>
+It functions as described above under "Jail", and may not be dispelled.
+It may also be used as a Glyph of Recharge by the team it belongs to.<br>
 
-It functions as described above under "Jail", and may not be dispelled.<br>
+<h3>Glyph of Recharge ("Still Going")</h3>
+If a player has a discharged white magic item they may recharge it by
+holding it to a Glyph of Recharge (or their own Glyph of Jail) for ten
+seconds.<br>
 
 <h3>Glyph of Entrancement ("Gotcha")</h3>
 If you see an enemy Glyph of Entrancement, you are stunned for one minute.
@@ -320,7 +325,16 @@ known as "Jolt" and "Lube", which is where the unusual keywords come
 from.)<br>
 
 <h3>Potion of Mind Control (Blue)</h3>
-This potion is used by a captor, who gives it to their captive. The captive must accept it and proceed directly to jail as if escorted by the captor. The captive is still a captive, but the captor is no longer a captor. The captor is stunned for 10 seconds and then becomes a normal player again. The captive must display the potion on the way to jail so as not to be confused with free players, and must take the most direct route to jail.<br>
+This potion is activated by saying "Obey" while capturing an ememy player.
+The potion must then be handed to the captive. The captive
+must accept it and proceed directly to jail as if escorted by the captor. The
+captive is still a captive, but the captor becomes a normal player again. The captive must
+display the potion on the way to jail so as not to be confused with free
+players, and must take the most direct route to jail.<br>
+
+A player may also capture two enemy players at once when using this potion.
+Both captives are controlled by the potion and must stay together while going
+directly to jail, as above.<br>
 
 <h2>Wands</h2>
 Wands are two-foot lengths of foam rubber, distinguished by color. They
@@ -374,17 +388,29 @@ hit with the wand. In particular, Goombah's belt is dispelled.<br>
 
 <b>This belt does not function in elevators.</b> <br>
 
-<h3>Arnold's Belt of Double Termination (Blue)</h3>
+<h3>Doc Arnold's Belt of Many Places at Once (Blue)</h3>
 
-To activate this belt, the captor hands it to a captive and says "I'LL BE BACH!!".
-The captive sits down and becomes a captive of the belt for one minute;
-if another player dispels the belt, the captive goes free.
-Meanwhile, the captor has one minute to capture another player and return to original captive.
-If the captor succeeds at acquiring another captive and returning to the original one, 
-the captor then escorts both of their captives to jail; 
-however, the belt can still be dispelled, freeing only the second captive.
-If one minute elapses before the captor returns, the original captive goes free.
-<br>
+A captor wearing Doc Arnold's Belt may have up to three captives at once. They
+may capture multiple players at once. Once a capture has been made, the captor
+must escort their captive(s) to jail, but may capture new players on the way.
+On the way, they may also activate the belt (while in possesion of no more than
+two captives) with the key phrase "I'LL BE BACH." In this case, each captive
+must remain staionary, while the captor goes to find another captive. If the
+captor does not return within a minute, or leaves their captive's line of sight
+for 10 seconds, the captive(s) are freed and become normal players. If the
+captor fails to bring back a new captive they may not use the key phrase again,
+and must continue escorting their captives to jail.  If this belt is dispelled
+all captives except the original first captive are freed. <br>
+
+<h3>White Magic Items (White)</h3>
+White magic items can be used as if they were a magic item of the same type by
+invoking the keyword and action of the desired item. A white magic item must be
+charged for it to be used, and using a white magic item discharges it. If a
+white magic item touches the ground it becomes discharged. All white magic
+items can be recharged by holding them to a Glyph of Recharge (or one's own
+Glyph of Jail) for ten seconds. All restrictions (sacrificial, cooldown, etc.)
+of the chosen item apply to the white magic item upon use (e.g., a white magic
+item may only be used as a red magic item in enemy territory).<br>
 
 
 <h2> Sportsmanship </h2>
