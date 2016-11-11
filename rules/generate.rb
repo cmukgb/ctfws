@@ -353,6 +353,7 @@ else
    <i>Revised 9/21/2014 by mwoolfor, jlareau, sguertin, egarbade, afrieder, ssharera, cmorey, bwachowi, jnemes...</i>
    <br>
    <i>Revised 11/4/2015, 2/8/2016 by briedel, egarbade, tparenti, mwoolfor, cmorey, eeb, jlareau, jpdoyle, sctoor</i>
+   <br>
    <i>Revised 9/29/2016 by ssharera, briedel, egarbade, tparenti, mjmurphy, hfernand, jpdoyle, sctoor</i>
    <br>
    <i>Classic rules may be found <a href="ctfws_old.php">here</a>, and a
