@@ -1,10 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
 
+<html>
+
+<head>
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>Capture the Flag with Stuff</title>
 
 <link rel="stylesheet" type="text/css" href="basic.css">
+
 <style type="text/css">
 
 body, td {
@@ -31,7 +34,12 @@ h3, .h3
    color: #000000;
    margin-left: 0.5em;
 }
-</style></head><body>
+
+</style>
+
+</head>
+
+<body>
 
 <?php
 require("../../includes/lib.php");
@@ -53,6 +61,7 @@ else
 	template_pagetop("Capture the Flag with Stuff");
 }
 ?>
+
 <div class="background_dark" align="center">
 	<br>
 	<i>A somewhat psychotic variation on a classic game</i>
@@ -78,103 +87,109 @@ else
 
 	<br>
 	<br>
-<h3>These rules are designed to be easier to read than the official
-rules, and should match them. However, in the case of discrepancy, the
-official rules govern.</h3>
-	<br>
+
+<h3>These rules are designed to be easier to read than the official rules, and
+should match them. However, in the case of discrepancy, the official rules
+govern.</h3>
+<br>
+
 <?php
 if (!$view_print)
 {
-?>	<a href="useful.php?p=1">Printable Version</a>
+?>
+<a href="useful.php?p=1">Printable Version</a>
 <?php
 }
 ?>
 
 </div>
 
+The game is a competition between two teams, red and yellow, played in Doherty
+and Wean. One team is based in Doherty, and one in Wean. Each team has a number
+of flags hidden throughout its territory, and the other team tries to find
+these flags without being captured by the enemy defenders. However, the task is
+made much more interesting by the addition of stuff: wands, belts, and potions
+that affect the game in exciting ways.
 
-The game is a competition between two teams, red and yellow, played in
-Doherty
-and Wean. One team is based in Doherty, and one in Wean. Each team has
-a number of flags hidden throughout its territory, and the other team
-tries to find these flags without being captured by the enemy
-defenders. However, the task is made much more interesting by the
-addition of stuff: wands, belts, and potions that affect the game in
-exciting ways.
-<h2> Base Rules </h2>Each player is on the yellow or the red team.
-Team membership is indicated by appropriately colored bands, which
-must be worn as armbands or headbands at all times.<br>
-Each team has a home territory, either Wean or Doherty. All other
-spaces excluding Scott Hall (outside, Newell Simon, etc.) are neutral. Certain areas (labs,
-clusters, Scott Hall, any normally inaccessible or restricted areas) are forbidden
-territory: no player may enter these at any time during the game.<br>
-A player is in a team's territory if any part of their body is in the
-team's territory. If he is in neither team's territory, he is in
-neutral territory, and is not affected by Stuff. (The team territories
-should be at least ten feet apart, so no player may be in both territories
-simultaneously.)<br>
-If you touch an enemy when both of you are in your home territory, you
-may capture them. (Note that this is optional; make it clear whether or
-not you are capturing). You may then request any non-concealable items
-they are carrying, and they must give them to you. Further, if you know
-that they have concealable items (e.g., you just saw them use one) you may
-ask for those. If, however, you do not know that they have a concealable
-item, they need not give it up.  They must also immediately
-drop any flags they were carrying.<br>
-You must then lead your captive directly to your team's jail at
-reasonable speed. They may not use magic items (except for the Ninja
-Potion) or move flags on their way to jail. You may not make any more
-captures until they have entered the jail by touching the Glyph
-of Jail (see below). At
-this point, they may again use magic items). If you are stunned before
-reaching jail, your prisoner is freed.<br>
+<h2> Base Rules </h2>
+
+Each player is on the yellow or the red team.  Team membership is indicated by
+appropriately colored bands, which must be worn as armbands or headbands at all
+times.<br>
+
+Each team has a home territory, either Wean or Doherty. All other spaces
+excluding Scott Hall (outside, Newell Simon, etc.) are neutral. Certain areas
+(labs, clusters, Scott Hall, any normally inaccessible or restricted areas) are
+forbidden territory: no player may enter these at any time during the game.<br>
+
+A player is in a team's territory if any part of their body is in the team's
+territory. If he is in neither team's territory, he is in neutral territory,
+and is not affected by Stuff. (The team territories should be at least ten feet
+apart, so no player may be in both territories simultaneously.)<br>
+
+If you touch an enemy when both of you are in your home territory, you may
+capture them. (Note that this is optional; make it clear whether or not you are
+capturing). You may then request any non-concealable items they are carrying,
+and they must give them to you. Further, if you know that they have concealable
+items (e.g., you just saw them use one) you may ask for those. If, however, you
+do not know that they have a concealable item, they need not give it up.  They
+must also immediately drop any flags they were carrying.<br>
+
+You must then lead your captive directly to your team's jail at reasonable
+speed. They may not use magic items (except for the Ninja Potion) or move flags
+on their way to jail. You may not make any more captures until they have
+entered the jail by touching the Glyph of Jail (see below). At this point, they
+may again use magic items). If you are stunned before reaching jail, your
+prisoner is freed.<br>
 
 <h3>Jail</h3>
-The jail is designated by the Glyph of Jail (see Glyphs, below). There
-is also an associated jailer's fedora; a player on the team owning the
-jail wearing this fedora assumes the role of Jailer. This role is
-transient; at any point, the jailer may give the fedora to a teammate
-(who then becomes jailer) or remove it (leaving the team without a jailer).
-Note that the lack of a jailer does not make the jail less functional;
-prisoners are still stuck there. You may not move the opposing team's
-fedora.<br>
-The prisoners must form one or more chains, with each player touching
-the Glyph of Jail either directly or through a chain of other
-prisoners. The jailer (if one exists) may relax this requirement.
-Typically, the jail is at the end of a corridor, and the prisoners are
-allowed to sit in the vicinity of the jail.<br>
-Every fifteen minutes, starting from the beginning of play, all
-prisoners are released from jail. They must return to their home
-territories at reasonable speed, by the most direct route. They are
-ethereal (may not use, drop, or pick up magic items, are not affected by
-magic items, may not capture, and may not be captured) until they
-return to their home territory. They must use jazz hands to signal that
-they are ethereal.<br>
-If you touch a prisoner in the other team's jail, and freeing them does
-not break the chain leading back to the Glyph of Jail, they are freed. You
-both become ethereal, and must return to your home territory as on a
+
+The jail is designated by the Glyph of Jail (see Glyphs, below). There is also
+an associated jailer's fedora; a player on the team owning the jail wearing
+this fedora assumes the role of Jailer. This role is transient; at any point,
+the jailer may give the fedora to a teammate (who then becomes jailer) or
+remove it (leaving the team without a jailer).  Note that the lack of a jailer
+does not make the jail less functional; prisoners are still stuck there. You
+may not move the opposing team's fedora.<br>
+
+The prisoners must form one or more chains, with each player touching the Glyph
+of Jail either directly or through a chain of other prisoners. The jailer (if
+one exists) may relax this requirement.  Typically, the jail is at the end of a
+corridor, and the prisoners are allowed to sit in the vicinity of the jail.<br>
+
+Every fifteen minutes, starting from the beginning of play, all prisoners are
+released from jail. They must return to their home territories at reasonable
+speed, by the most direct route. They are ethereal (may not use, drop, or pick
+up magic items, are not affected by magic items, may not capture, and may not
+be captured) until they return to their home territory. They must use jazz
+hands to signal that they are ethereal.<br>
+
+If you touch a prisoner in the other team's jail, and freeing them does not
+break the chain leading back to the Glyph of Jail, they are freed. You both
+become ethereal, and must return to your home territory as on a jailbreak
+(ethereal, with jazz hands).<br>
+
+The jailer (if one exists) also has a supply of Truth Serum. He may poke a
+prisoner in the shoulder with a pinky, making the prisoner an interrogation
+victim, and freeing any previous victim. The victim is now under the control of
+the jailer, and may not use magic items until freed from interrogation. The
+jailer may ask the prisoner up to six yes/no questions, and the victim may lie
+no more than once. They may answer "I don't know" if they really don't know,
+but then the question doesn't count against the six.<br>
+
+The questioning is finished when the victim answers the sixth question, if the
+jailer decides they are done, if the victim is freed, at jailbreak, if there is
+no jailer, or if the jailer leaves line of sight of the victim. At this point,
+the victim becomes ethereal and must return to their home territory as after a
 jailbreak (ethereal, with jazz hands).<br>
-The jailer (if one exists) also has a supply of Truth Serum. He may
-poke a prisoner in the shoulder with a pinky, making the prisoner an
-interrogation victim, and freeing any previous victim. The victim is
-now under the control of the jailer, and may not use magic items until
-freed from interrogation. The jailer may ask the prisoner up to six yes/no
-questions, and the victim may lie no more than once. They may answer "I
-don't know" if they really don't know, but then the question doesn't
-count against the six.<br>
-The questioning is finished when the victim answers the sixth question,
-if the jailer decides they are done, if the victim is freed, at jailbreak,
-if there is no jailer, or if the jailer leaves line of sight of the
-victim. At this point, the victim becomes ethereal and must return to
-their home territory as after a jailbreak (ethereal, with jazz hands).<br>
 
 <h3>Initial Setup and Game Completion</h3>
 
 At the beginning of the game, there is a setup period of fifteen minutes. This
 time should be used for the placement of flags and glyphs, and distribution of
-magic items. No player may enter enemy territory during this period;
-they must remain in their own territories or neutral
-space.  Magic items have no effect during this time.<br>
+magic items. No player may enter enemy territory during this period; they must
+remain in their own territories or neutral space.  Magic items have no effect
+during this time.<br>
 
 The game ends after one hour, or when there remains only one team with
 uncaptured flags.  The winner is the team with the greatest number of points;
@@ -184,39 +199,34 @@ total first.<br>
 <h3>Additional Terms </h3>
 
 <ul>
-<li>Cooldown: This is a property of certain items. An item with cooldown may not be
-used again for one minute after its use. </li>
-
-<li>Concealment: Potions may be concealed, meaning they need not be visible. All
-other game items must be visible at all times. A captive is not required to
-give up a concealed item unless their captor asks for it specifically and knows
-that she has the item. Potions cannot be used while concealed. </li>
-
-<li>Dispelling: A dispelled item may not be used for its magical effects. Usually items are dispelled for one minute. </li>
-
-<li> Field of View: The field of view is the extent of the observable world that is visible to the player at any given moment. </li>
-
-<li>Line of Sight: A player is within line of sight of an item or event if they can
-rotate themself to bring it into their field of view.</li>
-
+<li>Cooldown: This is a property of certain items. An item with cooldown may
+  not be used again for one minute after its use. </li>
+<li>Concealment: Potions may be concealed, meaning they need not be visible.
+  All other game items must be visible at all times. A captive is not required
+  to give up a concealed item unless their captor asks for it specifically and
+  knows that she has the item. Potions cannot be used while concealed. </li>
+<li>Dispelling: A dispelled item may not be used for its magical effects.
+  Usually items are dispelled for one minute. </li>
+<li> Field of View: The field of view is the extent of the observable world
+  that is visible to the player at any given moment. </li>
+<li>Line of Sight: A player is within line of sight of an item or event if they
+  can rotate themself to bring it into their field of view.</li>
 <li>Sacrificial: Red items are sacrificial. These items may only be used in
-enemy territory, must be dropped upon use, and may not be picked up or moved
-when in enemy territory.</li>
-
-<li>See: A player sees an item or glyph if it passes within their field of view and
-they can recognize it.</li>
-
-<li>Stun: A stunned player must sit on the floor in the territory in which they were stunned until the stun wears off. If they are
-captured while stunned, they become unstunned. A player may not be stunned again
-while stunned.  Stunned players may not capture.</li>
-
+  enemy territory, must be dropped upon use, and may not be picked up or moved
+  when in enemy territory.</li>
+<li>See: A player sees an item or glyph if it passes within their field of view
+  and they can recognize it.</li>
+<li>Stun: A stunned player must sit on the floor in the territory in which they
+  were stunned until the stun wears off. If they are captured while stunned,
+  they become unstunned. A player may not be stunned again while stunned.
+  Stunned players may not capture.</li>
 <li>Key Words/Phrases: Some potions have a key word or phrase used to activate
-them.  This phrase must be said entirely in the territory where the use occurs,
-and the action occurs upon completion of the phrase. <b>You cannot use a key
-phrase without the intention of activating an item. </b> </li>
-
-
-<li>Knowledge: Knowing somebody had a potion is not the same as knowing they have it now. If they could have gotten rid of it, you don't know they have it.
+  them.  This phrase must be said entirely in the territory where the use
+  occurs, and the action occurs upon completion of the phrase. <b>You cannot
+  use a key phrase without the intention of activating an item. </b> </li>
+<li>Knowledge: Knowing somebody had a potion is not the same as knowing they
+  have it now. If they could have gotten rid of it, you don't know they have
+  it.
 </ul>
 
 <h3>Flags</h3>
@@ -236,157 +246,169 @@ No flag may ever exist in an area with fewer than two exits, unless it is being
 carried. If a flag is dropped in an area with only one exit, a judge must move
 it the shortest possible distance to a valid location.<br>
 
-Any magic items a player is carrying are dispelled if they are
-carrying a flag, and remain dispelled for one minute after the player
-gives up the item or drops the flag.<br>
+Any magic items a player is carrying are dispelled if they are carrying a flag,
+and remain dispelled for one minute after the player gives up the item or drops
+the flag.<br>
 
 <h3>Judges</h3>
-Judges wear blue headbands, and are responsible for keeping the game
-running smoothly. The head judge is the final arbiter and scorekeeper,
-and should remain in the judges' room, Wean Hall 8427. An assistant
-head judge shall reside at each team's jail, and there are usually at
-least 2 roaming judges per team whose job is to resolve conflicts or
-perform other duties required of them.<br>
-Judges should attempt to resolve disputes fairly and find outcomes
-agreeable to both sides. In all cases, the judge's
-decision is final.<br>
 
+Judges wear blue headbands, and are responsible for keeping the game running
+smoothly. The head judge is the final arbiter and scorekeeper, and should
+remain in the judges' room, Wean Hall 8427. An assistant head judge shall
+reside at each team's jail, and there are usually at least 2 roaming judges per
+team whose job is to resolve conflicts or perform other duties required of
+them.<br>
+
+Judges should attempt to resolve disputes fairly and find outcomes agreeable to
+both sides. In all cases, the judge's decision is final.<br>
 
 <h2>Glyphs </h2>
-Glyphs are large sheets of paper or posterboard marked with a spell.
-Each glyph is colored with a team's color, and belongs to that team; it
-only affects members of the opposing team. The Glyphs are distinguished
-by a word printed on them.<br>
-The glyph must be taped to a wall or door in the team's territory, and
-may not be placed within ten feet of a flag. If a flag is dropped
-within ten feet of a glyph other than the Glyph of Jail, that glyph is
-dispelled for as long as the flag remains, and for one minute after.<br>
+
+Glyphs are large sheets of paper or posterboard marked with a spell.  Each
+glyph is colored with a team's color, and belongs to that team; it only affects
+members of the opposing team. The Glyphs are distinguished by a word printed on
+them.<br>
+
+The glyph must be taped to a wall or door in the team's territory, and may not
+be placed within ten feet of a flag. If a flag is dropped within ten feet of a
+glyph other than the Glyph of Jail, that glyph is dispelled for as long as the
+flag remains, and for one minute after.<br>
 
 <h3>Glyph of Jail ("Jail")</h3>
-It functions as described above under "Jail", and may not be dispelled.
-It may also be used as a Glyph of Recharge by the team it belongs to.<br>
+
+It functions as described above under "Jail", and may not be dispelled.  It may
+also be used as a Glyph of Recharge by the team it belongs to.<br>
 
 <h3>Glyph of Recharge ("Still Going")</h3>
-If a player has a discharged white magic item they may recharge it by
-holding it to a Glyph of Recharge (or their own Glyph of Jail) for ten
-seconds.<br>
+
+If a player has a discharged white magic item they may recharge it by holding
+it to a Glyph of Recharge (or their own Glyph of Jail) for ten seconds.<br>
 
 <h3>Glyph of Entrancement ("Gotcha")</h3>
-If you see an enemy Glyph of Entrancement, you are stunned for one minute.
+
+If you see an enemy Glyph of Entrancement, you are stunned for one minute.<br>
 
 <h3>Glyph of the Disgusting Doorknob ("Yukko")</h3>
-If an enemy Glyph of the Disgusting Doorknob is on the side of a
-door facing you, you may not open the door or prevent it from
-closing. If the Glyph is mounted on one of a set of doors, all doors
-are affected.<br>
 
-If a Glyph of the Disgusting Doorknob is mounted next to the
-buttons controlling an elevator, you may not push any of the buttons or
-prevent the elevator doors from closing.<br>
+If an enemy Glyph of the Disgusting Doorknob is on the side of a door facing
+you, you may not open the door or prevent it from closing. If the Glyph is
+mounted on one of a set of doors, all doors are affected.<br>
+
+If a Glyph of the Disgusting Doorknob is mounted next to the buttons
+controlling an elevator, you may not push any of the buttons or prevent the
+elevator doors from closing.<br>
 
 Multiple Glyphs of the Disgusting Doorknob may not be used to trap enemy
 players in an area; every area must have at least one path to neutral space
 which enemy players can travel without running into this Glyph.  Note that this
 path is directed; glyphs on the other side of the door do not matter to this
-path.
-<br>
+path.<br>
 
 <h3>Glyph of Alarm ("Alarm")</h3>
+
 If you see the Glyph of Alarm, you must shout or sing "Alarm" or a similar loud
 phrase as loudly as possible for one minute or until you are captured or return
 to neutral space.<br>
 
-
 <h2>Potions </h2>
 
-Potions are <font color="red">small pieces of foam wrapped in colored tape</font> which are concealable: you may hide them, and if
-captured, you do not need to give them up unless your captor knows you have
-them.  They are not usable while concealed. They are distinguished by color.<br>
+Potions are <font color="red">small pieces of foam wrapped in colored
+  tape</font> which are concealable: you may hide them, and if captured, you do
+not need to give them up unless your captor knows you have them.  They are not
+usable while concealed. They are distinguished by color.<br>
 
 <h3>Ninja Potion of Magic Smoke (Red, Sacrificial)</h3>
-The Ninja Potion of Magic Smoke is sacrificial, so may only be used in
-enemy territory and must be dropped on use. Further, it may only be
-used by a captured player on the way to jail. He may throw this potion
-onto the ground and yell as loudly as possible "Poof, I am a Ninja!" All
-enemy players who hear this and are within line of sight of the user
-are stunned for 10 seconds. (This does include players in other
-territories; if you use this potion near the border between
-territories, enemy players in your home territory who are within line
-of sight are still stunned. Players in neutral territory, of course,
-are immune to stuff, so are unaffected.)<br>
+
+The Ninja Potion of Magic Smoke is sacrificial, so may only be used in enemy
+territory and must be dropped on use. Further, it may only be used by a
+captured player on the way to jail. He may throw this potion onto the ground
+and yell as loudly as possible "Poof, I am a Ninja!" All enemy players who hear
+this and are within line of sight of the user are stunned for 10 seconds. (This
+does include players in other territories; if you use this potion near the
+border between territories, enemy players in your home territory who are within
+line of sight are still stunned. Players in neutral territory, of course, are
+immune to stuff, so are unaffected.)<br>
 
 <h3>Potion of Wait... There's a Key at the Bottom of This (Green, Cooldown)</h3>
-The Potion of Wait... There's a Key at the Bottom of This has cooldown,
-so you must wait a minute before reusing it.
-If you are stunned or a prisoner, you may use this potion by bonking
-yourself on the head, and using one of the keywords "Lolt", "Jube", or
-"Key". You are then free; you are unstunned or free from jail. If freed
-from jail, you do <i>not</i> get "free backs": you are merely a normal player standing in the middle of the enemy jail.<br>
-(For the curious, this is the combination or the two potions formerly
-known as "Jolt" and "Lube", which is where the unusual keywords come
-from.)<br>
+The Potion of Wait... There's a Key at the Bottom of This has cooldown, so you
+must wait a minute before reusing it.  If you are stunned or a prisoner, you
+may use this potion by bonking yourself on the head, and using one of the
+keywords "Lolt", "Jube", or "Key". You are then free; you are unstunned or free
+from jail. If freed from jail, you do <i>not</i> get "free backs": you are
+merely a normal player standing in the middle of the enemy jail.<br>
+
+(For the curious, this is the combination or the two potions formerly known as
+"Jolt" and "Lube", which is where the unusual keywords come from.)<br>
 
 <h3>Potion of Mind Control (Blue)</h3>
-This potion is activated by saying "Obey" while capturing an ememy player.
-The potion must then be handed to the captive. The captive
-must accept it and proceed directly to jail as if escorted by the captor. The
-captive is still a captive, but the captor becomes a normal player again. The captive must
-display the potion on the way to jail so as not to be confused with free
-players, and must take the most direct route to jail.<br>
+
+This potion is activated by saying "Obey" while capturing an ememy player.  The
+potion must then be handed to the captive. The captive must accept it and
+proceed directly to jail as if escorted by the captor. The captive is still a
+captive, but the captor becomes a normal player again. The captive must display
+the potion on the way to jail so as not to be confused with free players, and
+must take the most direct route to jail.<br>
 
 A player may also capture two enemy players at once when using this potion.
 Both captives are controlled by the potion and must stay together while going
 directly to jail, as above.<br>
 
 <h2>Wands</h2>
-Wands are two-foot lengths of foam rubber, distinguished by color. They
-are used by whapping a person or glyph and shouting the appropriate
-keyword. Each use of the keyword invokes at most one wand on one
-subject.<br>
+
+Wands are two-foot lengths of foam rubber, distinguished by color. They are
+used by whapping a person or glyph and shouting the appropriate keyword. Each
+use of the keyword invokes at most one wand on one subject.<br>
 
 <h3>Wand of Vengeance (Red, "Toast", Sacrificial)</h3>
 
 This wand is sacrificial, so may only be used in enemy territory and must be
-dropped after use.  If you whap an enemy player with this wand in the enemy's home
-territory, you capture them and you must lead them back to your jail as on a
-normal capture.  However, you are both ethereal until you get into your home
+dropped after use.  If you whap an enemy player with this wand in the enemy's
+home territory, you capture them and you must lead them back to your jail as on
+a normal capture.  However, you are both ethereal until you get into your home
 territory, at which point you become a normal captor/captive pair.  Thus, you
-may not ask for their items, may not be stunned, etc., until you reach your home
-territory.<br>
+may not ask for their items, may not be stunned, etc., until you reach your
+home territory.<br>
 
 <h3>Wand of Stun (Green, "Stun", Cooldown)</h3>
+
 Any player whapped with this wand is stunned for one minute.<br>
 
 <h3>Wand of Dispel (Blue, "Dispel", Cooldown)</h3>
-If a player is whapped with the wand of dispel, all magic items they are carrying
-are dispelled for one minute.  If two
-players simultaneously use this wand on each other, all items carried by both
-players are dispelled for one minute.<br>
 
-The wand may also be used on a glyph <font color="red">(other than the Glyph of Jail)</font>; it is then dispelled for one minute.<br>
+If a player is whapped with the wand of dispel, all magic items they are
+carrying are dispelled for one minute.  If two players simultaneously use this
+wand on each other, all items carried by both players are dispelled for one
+minute.<br>
+
+The wand may also be used on a glyph <font color="red">(other than the Glyph of
+Jail)</font>; it is then dispelled for one minute.<br>
 
 <h2>Belts </h2>
-Belts are long sashes of cloth or felt, which must be tied around a
-player's waist to be active. A belt can be worn by at most one player,
-and a player can wear at most one belt. Belts are distinguished by
-color.<br>
+
+Belts are long sashes of cloth or felt, which must be tied around a player's
+waist to be active. A belt can be worn by at most one player, and a player can
+wear at most one belt. Belts are distinguished by color.<br>
 
 <h3>Andy Warhol's Belt of Pop Occultism (Red, Sacrificial)</h3>
+
 Andy Warhol's Belt of Pop Occultism is sacrificial, so may only be used in
 enemy territory, and while it must be worn to use it, it must be dropped
-immediately after use.  To use this belt, yell as loudly as possible, "Leroy Jenkins" or some phrase
-to be determined by the judges before the start of the game.  The effect is to
-stun all enemy players within line of sight of the user for one minute.<br>
+immediately after use.  To use this belt, yell as loudly as possible, "Leroy
+Jenkins" or some phrase to be determined by the judges before the start of the
+game.  The effect is to stun all enemy players within line of sight of the user
+for one minute.<br>
 
 <h3>Goombah's Belt of Humiliating Protection (Green)</h3>
+
 This belt is activated by skipping and loudly singing "Yankee Doodle". While
 active, the wearer is immune to capture and stun.  Any number of teammates may
 share the protection of this belt by holding hands with the wearer, either
 directly or through a chain of teammates, as long as all teammates in the chain
 are skipping and singing along.<br>
-If any player in the chain is dispelled, all items carried by all
-members of the chain are dispelled; it is as though all players were
-hit with the wand. In particular, Goombah's belt is dispelled.<br>
+
+If any player in the chain is dispelled, all items carried by all members of
+the chain are dispelled; it is as though all players were hit with the wand. In
+particular, Goombah's belt is dispelled.<br>
 
 <b>This belt does not function in elevators.</b> <br>
 
@@ -405,6 +427,7 @@ and must continue escorting their captives to jail.  If this belt is dispelled
 all captives except the original first captive are freed. <br>
 
 <h3>White Magic Items (White)</h3>
+
 White magic items can be used as if they were a magic item of the same type by
 invoking the keyword and action of the desired item. A white magic item must be
 charged for it to be used, and using a white magic item discharges it. If a
@@ -416,42 +439,46 @@ item may only be used as a red magic item in enemy territory).<br>
 
 
 <h2> Sportsmanship </h2>
-This is intended to be a friendly and fun game for all involved. This
-works much better if all players involved make an honest attempt to
-follow the rules. The following are additional rules to help make the
-game fun for all.
+
+This is intended to be a friendly and fun game for all involved. This works
+much better if all players involved make an honest attempt to follow the rules.
+The following are additional rules to help make the game fun for all.
+
 <h3> Physicality </h3>
 
 <ul>
 <li>Do not physically impede or block other players, either with your body or
-with objects.  This includes actions like preventing elevators from
-moving.  Breakage of this rule is grounds to eject you from the game.</li>
+  with objects.  This includes actions like preventing elevators from moving.
+  Breakage of this rule is grounds to eject you from the game.</li>
 <li>Do not change official timekeeping watches.</li>
 <li>Do not fabricate or replicate game items.</li>
 </ul>
 
 <h3> Lies </h3>
-Although lies and deceit are part of the game, there are several things you may not conceal, obfuscate, or lie about.
+
+Although lies and deceit are part of the game, there are several things you may
+not conceal, obfuscate, or lie about.
 <ul>
 <li>You may not lie about whether you're in the game.</li>
 <li>You may not lie about which team you're on.</li>
-<li>You may not lie about the status of the game.  (For example, whether the game has started or ended.)</li>
+<li>You may not lie about the status of the game.  (For example, whether the
+  game has started or ended.)</li>
 <li>You may not lie about what non-concealable items you have.</li>
 <li>You may not lie about cooldown or dispel status of items.</li>
 <li>You may not lie about any player's status.</li>
 <li>You may not make jazz hands unless you are ethereal.</li>
-<li>You may not display a Potion of Mind Control openly in enemy territory unless you are a captive heading to jail.
+<li>You may not display a Potion of Mind Control openly in enemy territory
+  unless you are a captive heading to jail.
 </ul>
 
-
 <?
-
 if ($view_print)
 	template_pagebottom_diet();
 else
 	template_pagebottom();
-
 ?>
 
+</body>
 
-</body></html>
+</html>
+
