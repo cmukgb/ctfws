@@ -64,7 +64,7 @@ else
 
 <div class="background_dark" align="center">
 
-<?php include 'history.php';?>
+<?php echo file_get_contents('history.html');?>
 
 <h3>These rules are designed to be easier to read than the official rules, and
 should match them. However, in the case of discrepancy, the official rules
