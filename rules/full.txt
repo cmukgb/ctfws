@@ -365,8 +365,8 @@ themself and return to a normal state.
 * The (:captive(s):) may not proceed to jail by a route that is less
   than direct, in an effort to explore for flags or for any other
   reason.
-** (:If two players were captured, they are controlled by the same
-  potion and must stay together.:)
+:** If two players were captured, they are controlled by the same
+  potion and must stay together.
 :* This potion may be activated while concealed.
 
 
