@@ -335,7 +335,7 @@ else
 
 <?php echo file_get_contents('history.html');?>
 
-<h3>These are the <span class="change">preliminary</span> rules for the Fall 2016 game of Capture the Flag with Stuff.</h3>
+<h3>These are the official rules for the Fall 2016 game of Capture the Flag with Stuff.</h3>
 <br>
 <?php
 if (!$view_print)
