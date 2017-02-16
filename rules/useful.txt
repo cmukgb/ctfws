@@ -247,10 +247,10 @@ members of the opposing team. The Glyphs are distinguished by a word printed on
 them.<br>
 
 The glyph must be taped to a wall or door in the team's territory, and may not
-be placed more than six feet off the ground or within ten feet of a flag. If a
-flag is dropped within ten feet of a glyph other than the Glyph of Jail, that
-glyph is dispelled for as long as the flag remains, and for one minute
-after.<br>
+be placed <font color="red"> more than six feet off the ground or </font>
+within ten feet of a flag. If a flag is dropped within ten feet of a glyph
+other than the Glyph of Jail, that glyph is dispelled for as long as the flag
+remains, and for one minute after.<br>
 
 <h3>Glyph of Jail ("Jail")</h3>
 
@@ -290,10 +290,10 @@ to neutral space.<br>
 
 <h2>Potions </h2>
 
-Potions are <font color="red">small pieces of foam wrapped in colored
-  tape</font> which are concealable: you may hide them, and if captured, you do
-not need to give them up unless your captor knows you have them.  They are not
-usable while concealed. They are distinguished by color.<br>
+Potions are small pieces of foam wrapped in colored tape which are concealable:
+you may hide them, and if captured, you do not need to give them up unless your
+captor knows you have them.  They are not usable while concealed. They are
+distinguished by color.<br>
 
 <h3>Ninja Potion of Magic Smoke (Red, Sacrificial)</h3>
 
@@ -358,8 +358,8 @@ carrying are dispelled for one minute.  If two players simultaneously use this
 wand on each other, all items carried by both players are dispelled for one
 minute.<br>
 
-The wand may also be used on a glyph <font color="red">(other than the Glyph of
-Jail)</font>; it is then dispelled for one minute.<br>
+The wand may also be used on a glyph (other than the Glyph of Jail); it is then
+dispelled for one minute.<br>
 
 <h2>Belts </h2>
 
