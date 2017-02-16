@@ -247,9 +247,10 @@ members of the opposing team. The Glyphs are distinguished by a word printed on
 them.<br>
 
 The glyph must be taped to a wall or door in the team's territory, and may not
-be placed within ten feet of a flag. If a flag is dropped within ten feet of a
-glyph other than the Glyph of Jail, that glyph is dispelled for as long as the
-flag remains, and for one minute after.<br>
+be placed more than six feet off the ground or within ten feet of a flag. If a
+flag is dropped within ten feet of a glyph other than the Glyph of Jail, that
+glyph is dispelled for as long as the flag remains, and for one minute
+after.<br>
 
 <h3>Glyph of Jail ("Jail")</h3>
 
