@@ -8,7 +8,7 @@
 #
 # Questions/comments can be sent to Evan Danaher, at ctfws@edanaher.net
 
-$hfudge = "0.40625in"
+$hfudge = "0.765625in"
 $vfudge = "0in"
 $infiledefault = "full.txt"
 $htmlfile = "full.php"
