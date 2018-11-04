@@ -654,5 +654,5 @@ rules = read_file($infile)
 write_html($htmlfile, rules, false)
 write_html($plainhtmlfile, rules, true)
 
-#write_tex("texfiles/rules.tex", $infile)
-#system "cd texfiles; make; cp rules.pdf ../#$pdffile; make clean"
+write_tex("texfiles/rules.tex", $infile)
+system "cd texfiles; make; cp rules.pdf ../#$pdffile; make clean"
