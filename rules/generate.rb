@@ -248,7 +248,7 @@ def write_html(file, sections, plain)
          lines.each {|l| f.puts(l.gsub(/\(:/, '<span class="change">').
                                   gsub(/:\)/, '</span>').
                                   gsub(/\[\[([a-zA-Z0-9_-]*)\]\]/) { labels[$1] }.
-                                  gsub(/\{([^}]*)\}/) { "<a name=\"" + $1 + "\"/>" } ) }
+                                  gsub(/\{([^}]*)\}/) { "<a name=\"" + $1 + "\"></a>" } ) }
          if plain then
           f.puts(PLAINHTML_FOOTER)
          else
