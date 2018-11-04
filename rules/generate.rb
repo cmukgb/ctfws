@@ -13,12 +13,14 @@ $vfudge = "0in"
 $infiledefault = "full.txt"
 $htmlfile = "full.php"
 $pdffile = "handbook.pdf"
+$plainhtmlfile = nil
 
 def usage
    puts "Usage: #$0 [-H hoffset] [-V voffset] [-w out.html] [-p out.pdf] [infile]"
    puts "  -H     horizontal offset for pages, in TeX units (e.g., 0.1in, 3pt)"
    puts "  -V     vertical offset for pages, in TeX units (e.g., 0.1in, 3pt)"
    puts "  -w     output file for web/html [default: #$htmlfile]"
+   puts "  -T     output file for html (no PHP) [no default]"
    puts "  -p     output file for pdf [default: #$pdffile]"
    puts "  infile input file [default: #$infiledefault]"
    exit
@@ -42,6 +44,8 @@ def getargs
             state = 3
          when "-p"
             state = 4
+         when "-T"
+            state = 5
          else
             if $infile != nil || a[0] == ?-
                puts "Error: multiple input files: `#$infile', `#{a}'"
@@ -60,6 +64,9 @@ def getargs
          state = 0;
       when 4
          $texfile = a
+         state = 0;
+      when 5
+         $plainhtmlfile = a
          state = 0;
       end
 
@@ -191,7 +198,7 @@ def check_label(line, labels, s, ss = nil, r = nil, sr = nil)
    return line
 end
 
-def write_html(file, sections)
+def write_html(file, sections, plain)
    labels = {}
    lines = []
    sectionc = 0
@@ -233,12 +240,20 @@ def write_html(file, sections)
    puts lines
    if file then
       File.open(file, "w") { |f|
-         f.puts(PHP_HEADER)
+         if plain then
+          f.puts(PLAINHTML_HEADER)
+         else
+          f.puts(PHP_HEADER)
+         end
          lines.each {|l| f.puts(l.gsub(/\(:/, '<span class="change">').
                                   gsub(/:\)/, '</span>').
                                   gsub(/\[\[([a-zA-Z0-9_-]*)\]\]/) { labels[$1] }.
-                                  gsub(/\{[^}]*\}/, '')) }
-         f.puts(PHP_FOOTER)
+                                  gsub(/\{([^}]*)\}/) { "<a name=\"" + $1 + "\"/>" } ) }
+         if plain then
+          f.puts(PLAINHTML_FOOTER)
+         else
+          f.puts(PHP_FOOTER)
+         end
       }
    end
 end
@@ -482,9 +497,65 @@ HTML_FOOTER = <<EOH
 		</table>
 	</body>
 </html>
+EOH
+
+PLAINHTML_HEADER = <<EOH
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
 
 
-</body></html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>Capture the Flag with Stuff</title>
+
+<style type="text/css">
+
+p
+{
+   text-indent: -2.5em;
+   margin-top: 1pt;
+   margin-bottom: 2pt;
+   margin-left: 3.5em;
+}
+
+h2, .h2
+{
+   font-size: 14pt;
+   color: #000000;
+}
+
+h3, .h3
+{
+   font-size: 11pt;
+   color: #000000;
+   margin-left: 0.5em;
+}
+</style></script></head><body>
+
+<html>
+	<head>
+		<title>Capture the Flag with Stuff</title>
+	</head>
+	<body bgcolor="#ffffff" text="#000000" link="#ff4000" alink="#ffde2a" vlink="#da3700" topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0">
+EOH
+
+# Only used for testing; the PHP footer is normally used.
+PLAINHTML_FOOTER = <<EOH
+
+								<br>
+								<hr size="2" color="#000000">
+								<div class="small">
+									<p>
+										Copyright &copy; <a href="mailto:exec@cmukgb.org">The Carnegie Mellon KGB</a>.<br>
+									</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td id="background_right" width="50%"></td>
+			</tr>
+		</table>
+	</body>
+</html>
 EOH
 
 TEX_HEADER = <<EOH
@@ -580,7 +651,8 @@ getargs()
 
 rules = read_file($infile)
 
-write_html($htmlfile, rules)
+write_html($htmlfile, rules, false)
+write_html($plainhtmlfile, rules, true)
 
-write_tex("texfiles/rules.tex", $infile)
-system "cd texfiles; make; cp rules.pdf ../#$pdffile; make clean"
+#write_tex("texfiles/rules.tex", $infile)
+#system "cd texfiles; make; cp rules.pdf ../#$pdffile; make clean"
