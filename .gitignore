@@ -1,10 +1,13 @@
 *.php
 history.html
+handbook.html
 *.pdf
 *.aux
 *.log
 *.out
 archive
 rules/texfiles/rules.tex
+rules/texfiles/*.png
+rules/texfiles/*.png.b64
 .*.sw*
 build/

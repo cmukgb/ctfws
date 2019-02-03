@@ -242,6 +242,18 @@ def write_html(file, sections, plain)
       File.open(file, "w") { |f|
          if plain then
           f.puts(PLAINHTML_HEADER)
+          f.puts("			<div id=\"rhs-nav\">")
+          sections.each { |s|
+            s[2, s.length].each { |ss|
+              if ss[0] =~ /^\{([^}]*)\}/ then
+                f.print("<a href=\"\##$1\"><img width=\"100%\" src=\"data:image/png;base64,")
+                File.open("texfiles/#$1.png.b64") { |g| f.print g.read }
+                f.print("\" /></a>\n")
+              end
+            }
+          }
+          f.puts("			</div>")
+          f.puts("			<div id=\"lhs-text\">")
          else
           f.puts(PHP_HEADER)
          end
@@ -503,8 +515,9 @@ PLAINHTML_HEADER = <<EOH
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
 
-
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>Capture the Flag with Stuff</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Capture the Flag with Stuff</title>
+<meta name="viewport" content="user-scalable=yes, initial-scale=1" />
 
 <style type="text/css">
 
@@ -528,32 +541,47 @@ h3, .h3
    color: #000000;
    margin-left: 0.5em;
 }
+
+#rhs-nav {
+  position: fixed;
+  width: 10vw;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#lhs-text {
+  position: fixed;
+  width: 90vw;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#rhs-nav::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 </style></script></head><body>
 
 <html>
-	<head>
-		<title>Capture the Flag with Stuff</title>
-	</head>
 	<body bgcolor="#ffffff" text="#000000" link="#ff4000" alink="#ffde2a" vlink="#da3700" topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0">
 EOH
 
 # Only used for testing; the PHP footer is normally used.
 PLAINHTML_FOOTER = <<EOH
 
-								<br>
-								<hr size="2" color="#000000">
-								<div class="small">
-									<p>
-										Copyright &copy; <a href="mailto:exec@cmukgb.org">The Carnegie Mellon KGB</a>.<br>
-									</p>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</td>
-				<td id="background_right" width="50%"></td>
-			</tr>
-		</table>
+			<br />
+			<hr size="2" color="#000000" />
+			<div class="small">
+				<p>
+					Copyright &copy; <a href="mailto:exec@cmukgb.org">The Carnegie Mellon KGB</a>.<br>
+				</p>
+			</div>
+		</div>
 	</body>
 </html>
 EOH
@@ -650,8 +678,9 @@ EOH
 getargs()
 
 rules = read_file($infile)
-
 write_html($htmlfile, rules, false)
+
+rules = read_file($infile)
 write_html($plainhtmlfile, rules, true)
 
 write_tex("texfiles/rules.tex", $infile)

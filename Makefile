@@ -27,3 +27,13 @@ presentation.pdf: presentation/presentation.tex
 	cd presentation && pdflatex presentation.tex
 	cp presentation/presentation.pdf .
 
+handbook.html: rules/generate.rb rules/full.txt
+handbook.html: $(patsubst %.svg,%.png.b64,$(wildcard rules/texfiles/*.svg))
+handbook.html:
+	cd rules && ruby generate.rb -T ../$@
+
+rules/texfiles/%.png : rules/texfiles/%.svg
+	convert -density 1200 $< $@
+
+%.b64 : %
+	base64 -w 0 < $< > $@
