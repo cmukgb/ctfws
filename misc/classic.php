@@ -33,8 +33,11 @@ else
 
 	<br>
 	<br>
-<h3>These are the official rules for the Spring 2006 game of Capture the Flag with Stuff.<br>
+<h3 style="font-weight: normal;">These are the official rules for the Spring 2006 game of Capture the Flag with Stuff.<br>
 Substantive changes relative to last semester's game are set in <font color="#ff0000">red</font>.</h3>
+	<br>
+<h3>These are the "classic" rules, in use at Carnegie Mellon until 2007.<br>
+If you're looking for the current rules, see <a href="http://www.cmukgb.org/ctfws/">Version Too Point Eau</a>.</h3>
 	<br>
 <?php
 if (!$view_print)
