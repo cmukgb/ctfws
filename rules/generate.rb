@@ -327,14 +327,14 @@ span.change
 </style></head><body>
 
 <?php
-require("../../includes/lib.php");
-require("../../includes/template.php");
-require("../../includes/template_diet.php");
-require("../../includes/database.php");
+require("../web_kgb_2000/includes/lib.php");
+require("../web_kgb_2000/includes/template.php");
+require("../web_kgb_2000/includes/template_diet.php");
+require("../web_kgb_2000/includes/database.php");
 
 $view_print = (isset($_GET['p']) ? ($_GET['p'] && true) : false);
 
-$TEMPLATE_TOPIMAGE = array('url' => "/images/headings/cen_ctfws.gif", 'alt' => "Capture the Flag with Stuff");
+$TEMPLATE_TOPIMAGE = array('url' => "/2000/images/headings/cen_ctfws.gif", 'alt' => "Capture the Flag with Stuff");
 if ($view_print)
 {
    template_pagetop_diet("Capture the Flag with Stuff", 'print');
@@ -364,7 +364,7 @@ if (!$view_print)
 EOH
 
 PHP_FOOTER = <<EOH
-<?
+<?php
 
 if ($view_print)
    template_pagebottom_diet();
