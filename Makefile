@@ -1,6 +1,6 @@
 DATE=$(shell date +%Y-%m)
 
-all: full.php useful.php history.html presentation.pdf
+all: full.php useful.php history.html
 	mkdir -p archive
 	mkdir -p archive/${DATE}
 	cp rules/full.txt archive/${DATE}/full.txt
@@ -8,7 +8,6 @@ all: full.php useful.php history.html presentation.pdf
 	cp useful.php archive/${DATE}/useful.php
 	cp history.html archive/${DATE}/history.html
 	cp handbook.pdf archive/${DATE}/handbook.pdf
-	cp presentation/presentation.tex archive/${DATE}/presentation.tex
 	cp presentation.pdf archive/${DATE}/presentation.pdf
 
 full.php: rules/full.txt rules/generate.rb
@@ -22,8 +21,4 @@ useful.php: rules/useful.txt
 
 history.html: rules/history.html
 	cp rules/history.html history.html
-
-presentation.pdf: presentation/presentation.tex
-	cd presentation && pdflatex presentation.tex
-	cp presentation/presentation.pdf .
 
