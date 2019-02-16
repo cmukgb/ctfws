@@ -1,6 +1,6 @@
 DATE=$(shell date +%Y-%m)
 
-all: full.php useful.php history.html
+all: full.php useful.php history.html handbook.html
 	mkdir -p archive
 	mkdir -p archive/${DATE}
 	cp rules/full.txt archive/${DATE}/full.txt
@@ -11,7 +11,7 @@ all: full.php useful.php history.html
 	cp presentation.pdf archive/${DATE}/presentation.pdf
 
 full.php: rules/full.txt rules/generate.rb
-	# Also generates the handbook
+	# Also generates the PDF handbook
 	cd rules && ruby generate.rb
 	cp rules/full.php .
 	cp rules/handbook.pdf .
@@ -25,10 +25,10 @@ history.html: rules/history.html
 handbook.html: rules/generate.rb rules/full.txt
 handbook.html: $(patsubst %.svg,%.png.b64,$(wildcard rules/texfiles/*.svg))
 handbook.html:
-	cd rules && ruby generate.rb -T ../$@
+	cd rules && ruby generate.rb -T $@
+	cp rules/handbook.html .
 
 rules/texfiles/%.png : rules/texfiles/%.svg
 	convert -density 1200 $< $@
-
 %.b64 : %
 	base64 -w 0 < $< > $@
