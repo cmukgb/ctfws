@@ -362,7 +362,7 @@ else
 
 <?php echo file_get_contents('history.html');?>
 
-<h3>These are the official rules for the Fall 2018 game of Capture the Flag with Stuff.</h3>
+<h3>These are the official rules for the Spring 2019 game of Capture the Flag with Stuff.</h3>
 <br>
 <?php
 if (!$view_print)
