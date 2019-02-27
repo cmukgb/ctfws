@@ -15,6 +15,8 @@ $htmlfile = "full.php"
 $pdffile = "handbook.pdf"
 $plainhtmlfile = nil
 
+$semester = "Spring 2019"
+
 def usage
    puts "Usage: #$0 [-H hoffset] [-V voffset] [-w out.html] [-p out.pdf] [infile]"
    puts "  -H     horizontal offset for pages, in TeX units (e.g., 0.1in, 3pt)"
@@ -254,6 +256,7 @@ def write_html(file, sections, plain)
           }
           f.puts("			</div>")
           f.puts("			<div id=\"lhs-text\">")
+          f.puts("<h3>These are the official rules for the #{$semester} game of Capture the Flag with Stuff.</h3>")
          else
           f.puts(PHP_HEADER)
          end
@@ -362,7 +365,7 @@ else
 
 <?php echo file_get_contents('history.html');?>
 
-<h3>These are the official rules for the Spring 2019 game of Capture the Flag with Stuff.</h3>
+<h3>These are the official rules for the #{$semester} game of Capture the Flag with Stuff.</h3>
 <br>
 <?php
 if (!$view_print)
@@ -669,6 +672,10 @@ TEX_HEADER = <<EOH
 \\def\\tabimagewrapper#1{\\resizebox{!}{20pt}{\\includegraphics{#1.eps}}}
 
 \\begin{document}
+\\title{Capture the Flag with Stuff}
+\\author{CMU KGB}
+\\date{Official Rules -- \\textbf{#{$semester}}}
+\\maketitle
 EOH
 
 TEX_FOOTER=<<EOH
