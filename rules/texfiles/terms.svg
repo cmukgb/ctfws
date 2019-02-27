@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -12,19 +13,12 @@
    height="64px"
    id="svg2845"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="terms.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
   <defs
-     id="defs2847">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 32 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="64 : 32 : 1"
-       inkscape:persp3d-origin="32 : 21.333333 : 1"
-       id="perspective2853" />
-  </defs>
+     id="defs2847" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -42,7 +36,8 @@
      inkscape:window-width="708"
      inkscape:window-height="741"
      inkscape:window-x="564"
-     inkscape:window-y="349" />
+     inkscape:window-y="349"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata2850">
     <rdf:RDF>
@@ -51,6 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,16 +54,13 @@
      id="layer1"
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="10.542319"
-       y="52.772305"
-       id="text2855"><tspan
-         sodipodi:role="line"
-         id="tspan2857"
-         x="10.542319"
-         y="52.772305"
-         style="font-size:64px">T</tspan></text>
+    <g
+       style="font-style:normal;font-weight:normal;font-size:40px;font-family:'Bitstream Vera Sans';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text2855">
+      <path
+         d="m 10.354819,6.1160545 39.46875,0 0,5.3125005 -16.5625,0 0,41.34375 -6.34375,0 0,-41.34375 -16.5625,0 0,-5.3125005 z"
+         style="font-size:64px"
+         id="path3356" />
+    </g>
   </g>
 </svg>
