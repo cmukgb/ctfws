@@ -95,9 +95,9 @@ appropriately colored bands, which must be worn as armbands or headbands at all
 times.<br>
 
 Each team has a home territory, either Wean or Doherty. All other spaces
-excluding Scott Hall (outside, Newell Simon, etc.) are neutral. Certain areas
-(labs, clusters, Scott Hall, any normally inaccessible or restricted areas) are
-forbidden territory: no player may enter these at any time during the game.<br>
+(outside, Scott Hall, Newell Simon, etc.) are neutral. Certain areas (labs,
+clusters, any normally inaccessible or restricted areas) are forbidden
+territory: no player may enter these at any time during the game.<br>
 
 A player is in a team's territory if any part of their body is in the team's
 territory. If he is in neither team's territory, he is in neutral territory,
