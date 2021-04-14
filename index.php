@@ -71,6 +71,11 @@ Risk plus Stuff makes Cosmic Encounter. Rock-Scissors-Paper plus Stuff
 makes Magic: the Gathering. Capture-the-Flag plus Stuff makes... <b>Capture-the-Flag
 With Stuff</b>.
 <p>In Fall of '07, Randall Munroe came to speak at CMU, on the very night of that semester's Capture-the-Flag with Stuff.  Ed Ryan publicly invited him to play, and this led to by far the largest game ever played, with over 250 people playing.  This led to discussion on how to adapt the game to its ever-growing size, out of which came several new idea.  And thus, <b>Capture the Flag with Stuff Version Too Point Eau was born.</b>
+
+<p>In Spring of '21, due to a relentless onslaught of paninis, CtFwS was held in Minecraft, with a scale model of Wean and Doherty built by members of the KGB.</p>
+
+<img src="ctfwsm.png" alt="Screenshot of Wean and Doherty exterior in Minecraft" width="1000" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+
 <p>In an attempt to make the game more understandable to those not willing to spend hours understanding every nuance of the rules, there are now three different rules pages:
 
 <ul>
