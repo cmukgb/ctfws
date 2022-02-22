@@ -230,13 +230,13 @@ that item since the last time you saw it in their possession.
 
 !!{flags} Flags
 * Flags are large pieces of cloth or felt. Each team has three or more flags.
-* Flags must be placed during the initial setup time, and their
+*[flag_placement] Flags must be placed during the initial setup time, and their
 placement must be supervised by a judge. They must be placed no higher
 than six feet above the floor; the flag must be clearly visible from most
 angles; flags must be placed no more than one flag per
 hallway or corridor. If the flag is placed inside a container, there
 must be an obvious way to remove the flag in one smooth motion.
-* No flag may ever exist in an area with fewer than two exits,
+*[flag_exits] No flag may ever exist in an area with fewer than two exits,
 unless it is being carried. If a flag is dropped in an area with only
 one exit, a judge must move it the shortest possible distance to a
 valid location.
@@ -253,6 +253,12 @@ must be informed of this fact before the set up of the game in which this takes 
 * A player who brings a flag to the judges room earns for their
 team the number of points associated with the flag. The flag is then
 out of play for the remainder of the game.
+:* For the purposes of flag placement under [[flag_placement]] and
+[[flag_exits]], the portion of the Wean 4600 corridor from 4602 through 4616
+and the entirety of the Wean 4700 corridor shall each be treated as one hallway
+and therefore each shall have no more than one flag.  Exact boundaries between
+these two hallways shall be enforced at judges' discretion, but in no case may
+more than two flags be placed in the combined area.
 
 !!{judges} Judges
 * Judges are indicated by blue or silver headbands, and are responsible for
