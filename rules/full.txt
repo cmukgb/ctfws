@@ -322,7 +322,7 @@ any stuff. No player can be completely trapped by this glyph.
 until they are captured or returns to neutral space.
 
 !![glyph_of_recharge] Glyph of Recharge
-* The Glyph of Recharge is indicated by the word "Recharge".
+* The Glyph of Recharge is indicated by the (:phrase "Still Going".:)
 * A player may recharge a white magic item (see [[white]]) by holding it
   to a Glyph of Recharge for a period of 10 seconds.
 ** A player may use any Glyph of Recharge in either territory.
