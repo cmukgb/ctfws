@@ -62,8 +62,8 @@
   precedence.
 
 ** E.g. [[may_not_capture]] states that a captor may not capture, while
-[[arnold_may_capture]] states that (:a player wearing Doc Arnold's Belt
-of Many Places at Once may capture multiple times.:)
+[[arnold_may_capture]] states that a player wearing Doc Arnold's Belt
+of Many Places at Once may capture multiple times.
 
 * The judges may choose to change the rules or add or remove stuff into
 the game. Any such rules or stuff changes must be clearly explained before
@@ -214,7 +214,7 @@ is visible to the player at any given moment.
 if they can rotate themself to bring it into their field of view.
 * See: A player sees an item or event if it passes within their field of
 view and they can recognize it.
-* Sacrificial: (:Red items are sacrificial.:) These items may
+* Sacrificial: Red items are sacrificial. These items may
 only be activated in enemy territory, must be dropped upon use, and may not
 be picked up or moved when in enemy territory.
 * Whap: A player is whapped by a wand if it hits them at approximately the same
@@ -281,7 +281,7 @@ to both sides. In all cases, the judge's decision is final.
 * A glyph may not be placed within ten feet of a flag.  If a flag is dropped
   within ten feet of a dispellable glyph, the glyph is dispelled for as long as
   the flag remains, and for one minute after.
-:* A glyph may not be placed such that any part of it is more than 6 feet off
+* A glyph may not be placed such that any part of it is more than 6 feet off
   the ground.
 
 !![glyph_of_jail] Glyph of Jail
@@ -316,10 +316,10 @@ any stuff. No player can be completely trapped by this glyph.
 until they are captured or returns to neutral space.
 
 !![glyph_of_recharge] Glyph of Recharge
-:* The Glyph of Recharge is indicated by the word "Recharge".
-:* A player may recharge a white colored magical item (see [[white]]) by holding it
+* The Glyph of Recharge is indicated by the word "Recharge".
+* A player may recharge a white colored magical item (see [[white]]) by holding it
   to a Glyph of Recharge for a period of 10 seconds.
-:** A player may use any Glyph of Recharge in either territory.
+** A player may use any Glyph of Recharge in either territory.
 
 ![potions] Potions
 
@@ -328,7 +328,7 @@ until they are captured or returns to neutral space.
 * Potions are concealable.
 
 !![ninja] Ninja Potion of Magic Smoke
-* The Ninja Potion of Magic Smoke is red, (:and thus:) sacrificial.
+* The Ninja Potion of Magic Smoke is red, and thus sacrificial.
 * To activate this item a captive throws this potion onto the ground and yells
 as loudly as possible "Poof, I am a Ninja!". All enemy players who hear this
 and are within line of sight of the user are stunned for ten seconds.
@@ -346,30 +346,30 @@ themself and return to a normal state.
 
 !! Potion of Mind Control
 * The Potion of Mind Control is blue.
-* (:To use this potion, a player must capture an enemy player while
+* To use this potion, a player must capture an enemy player while
   using the key word "obey". The enemy becomes the player's captive,
   and must be handed this potion immediately.
-:* A player may capture two people simultaneously with one invocation
+* A player may capture two people simultaneously with one invocation
   of the potion's ability. They must be simultaneously tagged when the
   player says "obey". Both enemies become the player's captive.
-* (:Captive(s):) who (:are:) handed this potion must proceed directly to jail as if
+* Captive(s) who are handed this potion must proceed directly to jail as if
   escorted by the captor, clearly displaying the potion to any members of the
   captor's team they encounter.
-** (:Player(s):) controlled by the Potion of Mind Control (:are:) still
-  (:captive(s):). They may not be stunned, and they ignore opponents' glyphs.
-** No player may take the Potion of Mind Control from (:captive(s):) being
+** Player(s) controlled by the Potion of Mind Control are still
+  captive(s). They may not be stunned, and they ignore opponents' glyphs.
+** No player may take the Potion of Mind Control from captive(s) being
   controlled by it, even if they know they have it.
-** If the Potion of Mind Control is dispelled, the (:captive(s):) under its control
-  (:are:) freed.
-* A captor who uses the Potion of Mind Control (:becomes:) a normal
-  player (:after handing off the potion:). They do not have to escort the
-  (:captive(s):) to jail.
-* The (:captive(s):) may not proceed to jail by a route that is less
+** If the Potion of Mind Control is dispelled, the captive(s) under its control
+  are freed.
+* A captor who uses the Potion of Mind Control becomes a normal
+  player after handing off the potion. They do not have to escort the
+  captive(s) to jail.
+* The captive(s) may not proceed to jail by a route that is less
   than direct, in an effort to explore for flags or for any other
   reason.
-:** If two players were captured, they are controlled by the same
+** If two players were captured, they are controlled by the same
   potion and must stay together.
-:* This potion may be activated while concealed.
+* This potion may be activated while concealed.
 
 
 ![wands] Wands
@@ -381,8 +381,7 @@ the key word.
 * Each use of the key word invokes at most one wand on one subject.
 
 !![vengeance] Wand of Vengeance
-* The Wand of Vengeance has key word "Toast", and is red, (:and
-thus:) sacrificial.
+* The Wand of Vengeance has key word "Toast", and is red, and thus sacrificial.
 * A normal player may whap an enemy in the enemy's home territory.
 The user captures the enemy, and both players become ethereal.  The user
 must lead the enemy back to their jail as directly as possible at reasonable
@@ -413,7 +412,7 @@ one minute.
 * A player can wear at most one belt.
 
 !! Andy Warhol's Belt of Pop Occultism
-* Andy Warhol's Belt of Pop Occultism is red, (:and thus:) sacrificial.
+* Andy Warhol's Belt of Pop Occultism is red, and thus sacrificial.
 * To activate this belt, the wearer must yell as loudly as
 possible some phrase to be determined by the judges before the start of
 the game. Upon activation, all enemy players within line of sight of
@@ -435,15 +434,15 @@ singing along.
 
 !! Doc Arnold's Belt of Many Places at Once
 
-:* Doc Arnold's Belt is blue.
-:*[arnold_may_capture] A player wearing Doc Arnold's Belt may have up
+* Doc Arnold's Belt is blue.
+*[arnold_may_capture] A player wearing Doc Arnold's Belt may have up
     to three captives at once. They may attempt to capture further
     captives beyond their first.
-:* Once any captures have been made, the player must lead the captives
+* Once any captures have been made, the player must lead the captives
     directly to jail as normal. On their way, the player may deviate from
     their route only in the manner described below in
     [[arnold_mechanic]].
-:*[arnold_mechanic] While wearing Doc Arnold's belt, a captor with at
+*[arnold_mechanic] While wearing Doc Arnold's belt, a captor with at
     most two captives may use the key phrase "I'LL BE BACH." If they do, each
     captive of that captor must remain stationary for as long as the
     captor remains within their line of sight, and for a period of 10
@@ -452,39 +451,39 @@ singing along.
     this effect, that captive is freed and becomes a normal player.
     This effect ends after one minute, or when the wearer resumes
     taking captives directly to jail, whichever occurs first.
-:** A captor wearing Doc Arnold's belt may not use the key phrase
+** A captor wearing Doc Arnold's belt may not use the key phrase
     again if they have not brought a new captive back to their waiting
     captive(s) since the last time they used the key phrase.
-:* If the belt is dispelled, all of its wearer's captives except the
+* If the belt is dispelled, all of its wearer's captives except the
     first are freed. If two captives were captured at the same time,
     the captor may choose which one to keep.
 
 ! White Magic Items
 
 !![white]{white} White Magic Items
-:* A white magic item is white.
-:* A white magic item must be charged to be used.
-:** All white magic items are charged at the start of the game
-:* White magic items come in potion, wand, and belt types.
-:* Each white magic item can be used as though it were a magic item of
+* A white magic item is white.
+* A white magic item must be charged to be used.
+** All white magic items are charged at the start of the game
+* White magic items come in potion, wand, and belt types.
+* Each white magic item can be used as though it were a magic item of
   the same type of any other color, and is activated by invoking the
   keyword and action of that item.
-:** A white potion may be activated as any potion defined in [[potions]], a
+** A white potion may be activated as any potion defined in [[potions]], a
     white wand as any wand defined in [[wands]], and a white belt as any belt
     defined in [[belts]].
-:* A white magic item is always white. During its activation, it gains
+* A white magic item is always white. During its activation, it gains
   the color of the magic item which was invoked, and follows all rules
   of that magic item.
-:** In order to activate a white magic item, you must be in a valid
+** In order to activate a white magic item, you must be in a valid
     player state and location for activating that color and type of magic
     item
-:** For example, if a white wand is used to invoke a Wand of
+** For example, if a white wand is used to invoke a Wand of
     Vengeance [[vengeance]], you must be in enemy territory, and the white wand is
     sacrificial.
-:* After the activation of a white magic item, it becomes discharged
+* After the activation of a white magic item, it becomes discharged
   and loses the color of the invoked item.
-:** If a white magic item touches the ground, it becomes discharged.
-:* In order to recharge a white magic item, a player must hold it to
+** If a white magic item touches the ground, it becomes discharged.
+* In order to recharge a white magic item, a player must hold it to
   either a Glyph of Recharge (see [[glyph_of_recharge]]) or their own
   Glyph of Jail (see [[glyph_of_jail]]) for a period of ten seconds.
 
@@ -506,7 +505,7 @@ may not conceal, obfuscate, or lie about.
 * You may not lie about the status of the game.
 ** For example, whether the game has started or ended.
 * You may not lie about what non-concealable items you have.
-* You may not lie about cooldown, dispel, (:or charge:) status of items.
+* You may not lie about cooldown, dispel, or charge status of items.
 * You may not lie about any player's status.
 * You may not make jazz hands unless you are ethereal.
 * You may not display a Potion of Mind Control in enemy territory unless you
