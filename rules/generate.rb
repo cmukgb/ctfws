@@ -243,13 +243,14 @@ def write_html(file, sections, plain)
    if file then
       File.open(file, "w") { |f|
          if plain then
+          require "erb"
           f.puts(PLAINHTML_HEADER)
           f.puts("			<div id=\"rhs-nav\">")
           sections.each { |s|
             s[2, s.length].each { |ss|
               if ss[0] =~ /^\{([^}]*)\}/ then
-                f.print("<a href=\"\##$1\"><img width=\"100%\" src=\"data:image/png;base64,")
-                File.open("texfiles/#$1.png.b64") { |g| f.print g.read }
+                f.print("<a href=\"\##$1\"><img alt=\"#$1 icon\" width=\"100%\" src=\"data:image/svg+xml,")
+                File.open("texfiles/#$1.svg") { |g| f.print ( ERB::Util.url_encode( g.read ) ) }
                 f.print("\" /></a>\n")
               end
             }
