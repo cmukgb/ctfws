@@ -569,24 +569,38 @@ h3, .h3
     background: transparent; /* make scrollbar transparent */
 }
 
-</style></script></head><body>
+a:link {
+  color: #ff4000;
+}
 
-<html>
-	<body bgcolor="#ffffff" text="#000000" link="#ff4000" alink="#ffde2a" vlink="#da3700" topmargin="0" leftmargin="0" bottommargin="0" rightmargin="0">
+a:active {
+  color: #ffde2a;
+}
+
+a:visited {
+  color: #da3700;
+}
+
+body {
+  background-color: white;
+  text-color: black;
+}
+
+</style></head><body>
 EOH
 
 # Only used for testing; the PHP footer is normally used.
 PLAINHTML_FOOTER = <<EOH
 
 			<br />
-			<hr size="2" color="#000000" />
+			<hr style="height:2px;color:black;" />
 			<div class="small">
 				<p>
 					Copyright &copy; <a href="mailto:exec@cmukgb.org">The Carnegie Mellon KGB</a>.<br>
 				</p>
 			</div>
 		</div>
-	</body>
+</body>
 </html>
 EOH
 
