@@ -22,12 +22,6 @@ history.html: rules/history.html
 	cp rules/history.html history.html
 
 handbook.html: rules/generate.rb rules/full.txt
-handbook.html: $(patsubst %.svg,%.png.b64,$(wildcard rules/texfiles/*.svg))
 handbook.html:
 	cd rules && ruby generate.rb -T $@
 	cp rules/handbook.html .
-
-rules/texfiles/%.png : rules/texfiles/%.svg
-	convert -density 1200 $< $@
-%.b64 : %
-	base64 -w 0 < $< > $@

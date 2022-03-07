@@ -8,7 +8,5 @@ handbook.html
 *.out
 archive
 rules/texfiles/rules.tex
-rules/texfiles/*.png
-rules/texfiles/*.png.b64
 .*.sw*
 build/
