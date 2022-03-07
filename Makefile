@@ -8,7 +8,6 @@ all: full.php useful.php history.html handbook.html
 	cp useful.php archive/${DATE}/useful.php
 	cp history.html archive/${DATE}/history.html
 	cp handbook.pdf archive/${DATE}/handbook.pdf
-	cp presentation.pdf archive/${DATE}/presentation.pdf
 
 full.php: rules/full.txt rules/generate.rb
 	# Also generates the PDF handbook

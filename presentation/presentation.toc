@@ -1,9 +1,0 @@
-\beamer@endinputifotherversion {3.07pt}
-\select@language {english}
-\beamer@sectionintoc {1}{Preview}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{You won't understand yet}{4}{0}{1}
-\beamer@sectionintoc {2}{View}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{Things should start to click}{8}{0}{2}
-\beamer@sectionintoc {3}{Postview}{49}{0}{3}
-\beamer@subsectionintoc {3}{1}{One more time through}{50}{0}{3}
-\beamer@subsectionintoc {3}{2}{Things you will forget}{52}{0}{3}
