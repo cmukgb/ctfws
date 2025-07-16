@@ -390,19 +390,12 @@ particular, Goombah's belt is dispelled.<br>
 
 <b>This belt does not function in elevators.</b> <br>
 
-<h3>Doc Arnold's Belt of Many Places at Once (Blue)</h3>
+<h3>Brando's Belt of Time Dilation (Blue)</h3>
 
-A captor wearing Doc Arnold's Belt may have up to three captives at once. They
-may capture multiple players at once. Once a capture has been made, the captor
-must escort their captive(s) to jail, but may capture new players on the way.
-On the way, they may also activate the belt (while in possesion of no more than
-two captives) with the key phrase "I'LL BE BACH." In this case, each captive
-must remain staionary, while the captor goes to find another captive. If the
-captor does not return within a minute, or leaves their captive's line of sight
-for 10 seconds, the captive(s) are freed and become normal players. If the
-captor fails to bring back a new captive they may not use the key phrase again,
-and must continue escorting their captives to jail.  If this belt is dispelled
-all captives except the original first captive are freed. <br>
+This belt is activated by capturing someone and saying "Hold my Celsius®." 
+For one minute after capturing that player, the captor does not have to go directly to jail
+and may capture additional players. Time is counted from the last time the user of the belt used the keyword.
+When the minute is elapsed the captor must proceed with captive(s) to jail as normal.
 
 <h3>White Magic Items (White)</h3>
 
