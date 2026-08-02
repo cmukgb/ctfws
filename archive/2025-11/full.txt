@@ -439,7 +439,7 @@ singing along.
 * This belt does not function in elevators.
 
 !! Sandler's Belt of Time Dilation
-:* Sandler's Belt is blue.
+:* Sandler's Belt is blue and has cooldown.
 :*[arnold_may_capture] A player wearing Sandler's Belt may have more than one captive. They may capture 
     players beyond the first as described in [[arnold_mechanic]].
 :*[arnold_mechanic] While wearing Sandler's belt, and while not a captor, a player may use the key phrase "Click." If they do,

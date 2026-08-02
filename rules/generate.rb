@@ -15,7 +15,7 @@ $htmlfile = "full.php"
 $pdffile = "handbook.pdf"
 $plainhtmlfile = nil
 
-$semester = "Spring 2025"
+$semester = "Spring 2026"
 
 def usage
    puts "Usage: #$0 [-H hoffset] [-V voffset] [-w out.html] [-p out.pdf] [infile]"

@@ -323,6 +323,11 @@ until they are captured or returns to neutral space.
 
 !![glyph_of_recharge] Glyph of Recharge
 * The Glyph of Recharge is indicated by the phrase "Still Going".
+:* By default, a Glyph of Recharge shall be placed in each of the following locations:
+:** On floor B of Doherty Hall, by the door to room B309.
+:** On floor 2 of Doherty Hall, across the hall from room 2210.
+:** On floor 5 of Wean Hall, by the door to room 5403 nearest to the main lobby.
+:** On floor 7 of Wean Hall, between the doors to room 7500.
 * A player may recharge a white magic item (see [[white]]) by holding it
   to a Glyph of Recharge for a period of 10 seconds.
 ** A player may use any Glyph of Recharge in either territory.
@@ -431,23 +436,17 @@ the user are stunned for one minute.
 While singing and skipping continues, the belt is in use, and the wearer is
 immune to capture and stun.
 * Any number of teammates may share the protection of this belt
-by holding hands with the wearer, either directly or through a chain of
+telekinetically, either directly or through a chain of
 teammates, as long as all teammates in the chain are skipping and
 singing along.
 * If any player in the chain is dispelled, all items carried by all members of the chain are dispelled.
 ** In particular, the Goombah's belt is dispelled.
 * This belt does not function in elevators.
 
-!! Sandler's Belt of Time Dilation
-:* Sandler's Belt is blue.
-:*[arnold_may_capture] A player wearing Sandler's Belt may have more than one captive. They may capture 
-    players beyond the first as described in [[arnold_mechanic]].
-:*[arnold_mechanic] While wearing Sandler's belt, and while not a captor, a player may use the key phrase "Click." If they do,
-    enemy players in the user's territory and within line of sight of the user are stunned for 10 seconds. Additionally, for 10 seconds, they are not required to lead captives to jail and
-    may capture additional players.
-:** When the 10 seconds elapse, the captive(s) and captor continue to jail as normal.
-:* If the belt is dispelled, all of its wearer's captives except the
-    first are freed.
+!! Lions' Belt of Atheism
+:* The Lions' belt is blue.
+:* A player wearing the Lions' Belt may not use other magic items or be protected by a teammate's Goombah's Belt.
+:* If a player wearing the Lions' Belt would be affected by the effect of a glyph or another magic item, except for the effect of the Wand of Dispel, they may instead ignore the effect by saying "nuh-uh."
 
 ! White Magic Items
 

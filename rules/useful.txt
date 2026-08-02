@@ -390,12 +390,11 @@ particular, Goombah's belt is dispelled.<br>
 
 <b>This belt does not function in elevators.</b> <br>
 
-<h3>Sandler's Belt of Time Dilation (Blue)</h3>
+<h3>Lions' Belt of Atheism (Blue)</h3>
 
-This belt is activated by saying "Click." 
-For ten (10) seconds, enemy players are stunned and the player does not have to go directly to jail with captives
-and may capture additional players. 
-When the ten seconds are elapsed the captor must proceed with captive(s) to jail as normal.
+A player wearing this belt may not use other stuff or receive protection from a teammate's Green belt.
+
+If a player wearing this belt would be affected by the effect of other Stuff, except for the Wand of Dispel, the wearer may say "nuh-uh" to activate the Lions' Belt and ignore the effect.
 
 <h3>White Magic Items (White)</h3>
 
