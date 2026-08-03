@@ -303,10 +303,10 @@ end
 
 PHP_HEADER = <<EOH
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
 
-
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"><title>Capture the Flag with Stuff</title>
+<?php
+$TEMPLATE_HEADERS=<<<HEAD
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="basic.css">
 <style type="text/css">
@@ -340,9 +340,9 @@ span.change
 {
    color: red;
 }
-</style></head><body>
+</style>
+HEAD;
 
-<?php
 require("../web_kgb_2000/includes/lib.php");
 require("../web_kgb_2000/includes/template.php");
 require("../web_kgb_2000/includes/template_diet.php");
@@ -388,9 +388,6 @@ else
    template_pagebottom();
 
 ?>
-
-
-</body></html>
 EOH
 
 # Only used for testing; the PHP header is normally used.
